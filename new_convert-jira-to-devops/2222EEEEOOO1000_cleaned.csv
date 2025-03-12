@@ -1,0 +1,4586 @@
+Work Item Type,Title,Assigned To,Created By,Priority,State,Created Date,Changed Date,Description
+Bug,(SP25): 400 Status Code Error When Printing Cash Receipt Report,Maha.muhammed,Mohamed Said,2,To Do,2025-03-11T11:31:00.000Z,2025-03-11T11:32:00.000Z,"### Description
+__Title:*
+400 Status Code Error Occurs When Printing Cash Receipt Report Despite Successful Download
+__Description:*
+When a user selects the _From Date_ and _To Date_ in the _Cash Receipt Report_ screen and clicks the _Print_ button, a _400 Bad Request error_ appears in the network console. However, the report is still downloaded successfully. This error may indicate an _incorrect API request_ or _unnecessary validation issues_.
+__Preconditions:*
+* The user is logged into the ERP system.
+_ The _Cash Receipt Report* module is accessible.
+__Steps to Reproduce:*
+- Navigate to _Finance Module > Reports > Cash Receipt Report_.
+- Select a valid _From Date_ and _To Date_ in the date filters.
+- Click the _Print_ button.
+- Observe the network logs in the browser's developer console (_F12 > Network tab_).
+__Expected Result:*
+_ The _report should be printed/downloaded successfully_ without any _error messages*.
+_ No _400 status code* should be logged in the network console.
+_ If there is an issue with the request, a _clear validation or error message* should be displayed to the user.
+__Actual Result:*
+_ The report is _successfully downloaded*.
+_ However, the network console logs a _400 Bad Request error*.
+_ No _informational message* is shown to the user regarding the error.
+__Suggested Fix:*
+_ Investigate _why the request is returning a 400 error* even though the report is being downloaded.
+_ Ensure that the _API request for printing_ is correctly formatted and _does not contain invalid parameters*.
+_ If the request is expected to fail under certain conditions, show a _clear validation message* to the user instead of silently logging an error.
+__Severity:*
+? _Medium_ � The report is still downloaded, but the error might indicate deeper API or validation issues that could cause failures in the future.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4340)
+
+### Attachments
+No Attachments"
+Bug,(SP25): Cash Receipt Report Displays Data Without Any Filter Selection,Maha.muhammed,Mohamed Said,2,To Do,2025-03-11T11:25:00.000Z,2025-03-11T11:26:00.000Z,"### Description
+__Title:*
+Cash Receipt Report Automatically Displays Data Upon Navigation Without Applying Any Filters
+__Description:*
+When navigating to the _Cash Receipt Report_ module, the report automatically displays and loads data _without requiring any user-selected filters_. This can lead to _incorrect or unintended data being displayed_, potentially exposing unnecessary financial information.
+__Preconditions:*
+* The user is logged into the ERP system.
+_ The _Cash Receipt Report* module is accessible.
+__Steps to Reproduce:*
+- Navigate to _Finance Module > Reports > Cash Receipt Report_.
+- Observe that the report _immediately loads and displays data_ without requiring any filter selection.
+__Expected Result:*
+_ The report should _not load or display any data_ unless the user selects the _required filters (e.g., date range, payment method, account, etc.)*.
+_ Instead, an _informational message_ should appear, prompting the user to _apply filters before displaying data*.
+__Actual Result:*
+_ The report _automatically displays data_ upon navigation _without any user input*.
+_ This behavior may lead to _unintended data visibility issues_ and can _impact performance* due to unnecessary data loading.
+__Suggested Fix:*
+* Prevent the report from automatically displaying data upon navigation.
+_ Implement a _filter requirement_, ensuring that users _must select at least one filter* before retrieving report data.
+_ Display an _informational message*: _""Please select filters before generating the report.""_
+__Severity:*
+? _Medium_ � Could lead to unnecessary data exposure and performance inefficiencies.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4339)
+
+### Attachments
+No Attachments"
+Bug,"(SP25): Cash Receipt Report Uses a Single Date Input Field for ""From"" and ""To"" Dates, Causing Inconsistencies",Maha.muhammed,Mohamed Said,2,To Do,2025-03-11T11:18:00.000Z,2025-03-11T11:23:00.000Z,"### Description
+__Title:*
+Cash Receipt Report Uses a Single Date Input Field for ""From"" and ""To"" Dates, Causing Inconsistencies
+__Description:*
+The _Cash Receipt Report_ screen provides only _one date input field with a single calendar_ to select both the _From Date_ and _To Date_. This implementation causes inconsistencies in date selection logic and triggers _unwanted required validation errors_, even when a valid date is selected.
+__Preconditions:*
+* The user is logged into the ERP system.
+_ The _Cash Receipt Report* screen is accessible.
+__Steps to Reproduce:*
+- Navigate to _Finance Module > Reports > Cash Receipt Report_.
+- Open the date input field to select a date range.
+- Select a _From Date_ and observe that the same input is used for the _To Date_.
+- Attempt to generate the report.
+- Notice that an _unnecessary required validation message appears_, even though a valid date has been selected.
+__Expected Result:*
+_ There should be _two separate date fields_ for _From Date_ and _To Date*.
+_ The system should correctly validate the date range without displaying _unnecessary required validation messages*.
+* The report should be generated successfully when valid dates are selected.
+__Actual Result:*
+_ The system provides _only one date input field_ for both _From_ and _To* dates.
+_ The user encounters _inconsistent behavior* when selecting date ranges.
+_ A _required validation error_ is displayed _incorrectly*.
+__Suggested Fix:*
+_ Implement _two separate date input fields_ for selecting _From Date_ and _To Date*.
+_ Ensure that the validation logic _properly checks the selected date range*.
+_ Remove unnecessary _required validation errors* that occur even when valid dates are selected.
+__Severity:*
+? _Medium_ � Causes usability issues and may prevent users from generating reports properly.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4337)
+
+### Attachments
+No Attachments"
+Bug,(Sp25) Cash Payment Report: 400 Status Code Error in Network Log When Printing Report,Maha.muhammed,Mohamed Said,2,To Do,2025-03-11T11:08:00.000Z,2025-03-11T11:08:00.000Z,"### Description
+__Title:*
+400 Status Code Error in Network Log When Printing Report
+__Description:*
+When a user fills in all the required fields, clicks the _View_ button, and successfully downloads the report, the system _throws a 400 status code error in the network log_ upon clicking the _Print_ button. Despite the report being downloaded, no _informational message_ is displayed to the user regarding the error.
+__Preconditions:*
+* The user is logged into the ERP system.
+* The relevant report module is accessible.
+* Required fields are correctly filled.
+__Steps to Reproduce:*
+- Navigate to the _report module_ in the system.
+- Fill in all the _required fields_ with valid data.
+- Click the _View_ button and ensure the report is downloaded successfully.
+- Click the _Print_ button.
+- Observe that the _report is downloaded_, but a _400 status code error appears in the network log_.
+__Expected Result:*
+_ The system should _not trigger a 400 status code error* in the network.
+_ If there is an issue with the request, a _clear informational message* should be displayed to the user.
+_ The _print functionality* should work without generating unnecessary errors.
+__Actual Result:*
+* The report downloads successfully.
+_ A _400 status code error_ is recorded in the _network log*.
+_ No _informational message* is displayed to the user.
+__Suggested Fix:*
+_ Investigate the _root cause* of the 400 status code error in the API request.
+* Ensure that the print request is properly formatted before sending it.
+_ Display a _clear error message* if there is an issue instead of logging it silently.
+_ If the error is _non-impactful_, handle it _gracefully* in the system to avoid misleading logs.
+__Severity:*
+? _Medium_ � Functionality is working, but the error could indicate an underlying issue.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4336)
+
+### Attachments
+No Attachments"
+Bug,"(Sp25): Cash Payment Report Uses a Single Date Input for ""From"" and ""To"" Dates, Causing Inconsistencies and Validation Issues",Maha.muhammed,Mohamed Said,3,To Do,2025-03-11T11:00:00.000Z,2025-03-11T11:01:00.000Z,"### Description
+__Title:*
+Cash Payment Report Uses a Single Date Input for ""From"" and ""To"" Dates, Causing Inconsistencies and Validation Issues
+__Description:*
+The _Cash Payment Report_ screen allows users to filter reports using a _date range_; however, it only provides a _single date input field with one calendar_ to select both the _""From"" and ""To"" dates_. This implementation leads to _inconsistencies_ in user input and causes the system to display _unwanted required validation messages_, making it difficult to generate reports correctly.
+__Preconditions:*
+* The user is logged into the ERP system.
+_ The _Cash Payment Report* screen is accessible.
+__Steps to Reproduce:*
+- Navigate to _Finance App > Reports > Cash Payment Report_.
+- Locate the _date input field_ for selecting the date range.
+- Click the _calendar icon_ and select a date.
+- Observe that the same _single date input field is used_ for both _""From"" and ""To""_ dates.
+- Try to generate the report, and observe the _validation messages_.
+__Expected Result:*
+_ The report should have _two separate date input fields*:
+__ _""From Date""_: Start of the date range.
+__ _""To Date""_: End of the date range.
+_ Users should be able to _select the date range correctly* without confusion.
+_ The system should _not display unnecessary validation errors*.
+__Actual Result:*
+_ A _single date input field* is used for both ""From"" and ""To"" dates.
+_ The system displays _inconsistent required validation messages*.
+_ Users _cannot properly define a date range_, leading to _incorrect report filtering*.
+__Suggested Fix:*
+_ Replace the _single date input field_ with _two separate date pickers* for ""From"" and ""To"" dates.
+* Ensure the validation logic correctly checks whether both dates are selected.
+_ Prevent _invalid date ranges* (e.g., ""To Date"" should not be earlier than ""From Date"").
+__Severity:*
+? _High_ � Affects usability and accuracy of financial reports.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4335)
+
+### Attachments
+No Attachments"
+Bug,(Sp25)Cash Payment Report: Incorrect Required Validation Message When Selecting a Date,Maha.muhammed,Mohamed Said,2,To Do,2025-03-11T10:50:00.000Z,2025-03-11T10:54:00.000Z,"### Description
+__Title:*
+Validation Message Incorrectly Displays After Selecting a Date from the Calendar in [Cash Payment Report|https://ibrahimmohamed.microtecdev.com:2050/finance/reports/cash-payment-report]
+__Description:*
+When the user selects a _day_ from the _calendar widget_ and clicks once, the selected date is correctly _inputted in the label_, but the system _still displays a required validation message_ incorrectly. However, when the user _clicks the same date twice_, the validation message does _not_ appear unnecessarily. This behavior causes _user confusion_ as the field appears valid but is still flagged as required.
+__Preconditions:*
+* The user is logged into the ERP system.
+_ A date input field with a _calendar widget* is available.
+__Steps to Reproduce:*
+- Navigate to thein [Cash Payment Report|https://ibrahimmohamed.microtecdev.com:2050/finance/reports/cash-payment-report]
+- Click the calendar  _date input field_ to open the _date picker_.
+- Select _any day_ and click it _once_.
+- Observe that the _date is displayed in the field_, but a required validation message appears.
+- Click the same date _twice_.
+- Observe that the validation message disappears.
+__Expected Result:*
+_ _After a single click_, the system should recognize the selected date and _not display the required validation message*.
+_ The validation message should _only_ appear if the user attempts to submit the form _without selecting a date*.
+__Actual Result:*
+_ After _one click_, the date is set correctly, but the required validation message _is incorrectly displayed*.
+_ After _two clicks_, the validation message _disappears*, even though the selection was already valid after the first click.
+__Suggested Fix:*
+_ Ensure the _validation check_ properly detects that a date is selected _after one click*.
+_ Remove any _unnecessary validation triggers* when the user selects a date.
+_ Test the date picker behavior to ensure _consistent input handling*.
+__Severity:*
+? _Medium_ � Causes _user confusion_ but does not block form submission.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4334)
+
+### Attachments
+No Attachments"
+Bug,(Sp25): Printing Cash Payment Receipt Without Input Data Returns a 400 Error Without Informational Message,Maha.muhammed,Mohamed Said,3,To Do,2025-03-11T10:35:00.000Z,2025-03-11T10:37:00.000Z,"### Description
+__Title:*
+Printing Cash Payment Receipt Without Input Data Returns a 400 Error Without Informational Message
+__Description:*
+When the user clicks the _Print_ button on the _Cash Payment Receipt_ screen _without selecting or inputting any data_, the system triggers a _400 Bad Request error_ in the network. Additionally, the API request _incorrectly includes a_ {{payment method}} _query parameter_, even though no valid input was provided. The system does not display an _informational message_ to inform the user about the missing required data.
+__Preconditions:*
+* The user is logged into the ERP system with appropriate access.
+_ The _Cash Payment Receipt* module is accessible.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Transactions ? Cash Payment Receipt_.
+- Do _not_ select or input any required data (e.g., Payment Details, Amount, Payment Method).
+- Click the _Print_ button.
+- Observe the system behavior and network logs.
+__Expected Result:*
+_ The system should _not trigger a 400 error*.
+_ An _informational message* should be displayed:
+_""Please enter the required details before printing the payment receipt.""_
+_ The _API request should not include invalid query parameters (e.g.,_ {{payment method}}_)* when no input is provided.
+__Actual Result:*
+_ A _400 Bad Request* error is triggered in the network log.
+* The request includes an incorrect {{payment method}} parameter despite no input.
+* No validation message is displayed, leaving the user without guidance.
+__Suggested Fix:*
+_ _Implement validation* to prevent the print action if required fields are empty.
+_ Display a _clear informational message* before attempting to send the request.
+_ Ensure the API request _does not include invalid parameters* when no data is provided.
+__Severity:*
+?? _High_ � The issue affects core functionality, causing errors and a poor user experience.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4332)
+
+### Attachments
+No Attachments"
+Bug,(Sp25): Payment Reconciliation Summary Prints Empty Report Without Required Filters,Maha.muhammed,Mohamed Said,2,To Do,2025-03-11T10:23:00.000Z,2025-03-11T10:26:00.000Z,"### Description
+__Title:*
+Payment Reconciliation Summary Report Prints Empty Report When No Filters Are Selected
+__Description:*
+When the user clicks the _Print Summary_ button in the _Payment Reconciliation Report_ screen _without selecting any required filters_, the system still generates an empty report instead of preventing the action. The expected behavior is for the system to _display an informational message_ instructing the user to select the necessary filters before proceeding.
+__Preconditions:*
+* The user is logged into the ERP system with appropriate access.
+_ The _Payment Reconciliation Report* module is accessible.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Reports ? Payment Reconciliation Report_.
+- Do _not_ select any required filter data (e.g., Customer, Payment Date, Invoice).
+- Click the _Print Summary_ button.
+- Observe that the system generates an _empty report_ instead of providing feedback.
+__Expected Result:*
+_ The system should _not generate an empty report* when required filters are missing.
+_ An _informational message* should be displayed:
+_""Please select the required filters before printing the summary report.""_
+__Actual Result:*
+_ The system generates and prints an _empty summary report* without any data.
+* No validation message is displayed to guide the user.
+__Suggested Fix:*
+_ Implement _validation before printing*, preventing the action if required filters are missing.
+_ Display an _informational message_ when the user clicks _Print Summary* without selecting filters.
+* Ensure the backend does not process empty or invalid summary report requests.
+__Severity:*
+?? _Medium_ � This issue affects report accuracy and user experience but does not cause system crashes.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4331)
+
+### Attachments
+No Attachments"
+Bug,(Sp25): Payment Reconciliation Report Prints Empty Report When No Filters Are Selected,Maha.muhammed,Mohamed Said,2,To Do,2025-03-11T10:21:00.000Z,2025-03-11T10:26:00.000Z,"### Description
+__Title:*
+Payment Reconciliation Report Prints Empty Report When No Filters Are Selected
+__Description:*
+When the user clicks the _Print_ button in the _Payment Reconciliation Report_ screen _without selecting any required filters_, the system still generates an empty report instead of preventing the action. The expected behavior is for the system to _display an informational message_ instructing the user to select the necessary filters before proceeding.
+__Preconditions:*
+* The user is logged into the ERP system with appropriate access.
+* The Payment Reconciliation Report module is accessible.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Reports ? Payment Reconciliation Report_.
+- Do _not_ select any required filter data (e.g., Customer, Payment Date, Invoice).
+- Click the _Print_ button.
+- Observe that the system generates an _empty report_ instead of providing feedback.
+__Expected Result:*
+_ The system should _not generate an empty report*.
+_ An _informational message* should be displayed:
+_""Please select the required filters before printing the report.""_
+__Actual Result:*
+_ The system generates and prints an _empty report* without any data.
+* No validation message is shown to guide the user.
+__Suggested Fix:*
+_ Implement _validation before printing*, preventing the action if filters are missing.
+_ Display an _informational message* when the user clicks Print without selecting required filters.
+* Ensure the backend does not process empty or invalid report requests.
+__Severity:*
+?? _Medium_ � This issue affects report accuracy and user experience but does not cause system crashes.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4330)
+
+### Attachments
+No Attachments"
+Bug,(Sp25): Payment Reconciliation History Report Sends Invalid Request When No Customer or Invoice is Selected,Maha.muhammed,Mohamed Said,2,To Do,2025-03-11T10:12:00.000Z,2025-03-11T10:26:00.000Z,"### Description
+__Title:*
+Payment Reconciliation History Report Sends Invalid Request When No Customer or Invoice is Selected
+__Description:*
+When the user clicks the _View_ button in the _Payment Reconciliation History Report_ screen _without selecting any customer or invoice_, the system _unexpectedly sends a request_ with an invalid or unintended _customer ID_ instead of preventing the request. This behavior may lead to incorrect data retrieval or API failures. The expected behavior is for the system to _prevent the request_ and display an _informational message_ prompting the user to select a valid customer or invoice before proceeding.
+__Preconditions:*
+* The user is logged into the ERP system with the necessary permissions.
+* The Payment Reconciliation History Report screen is accessible.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Reports ? Payment Reconciliation History Report_.
+- Do _not_ select any _customer or invoice_.
+- Click the _View_ button.
+- Open _Developer Tools (F12) ? Network Tab_.
+- Observe that the system _sends an API request with an unintended or incorrect customer ID_.
+__Expected Result:*
+_ The system should _not send any API request* if no customer or invoice is selected.
+_ An _informational message* should be displayed:
+_""Please select a customer or invoice before generating the report.""_
+__Actual Result:*
+_ The system _sends a request with an unintended customer ID*, leading to incorrect results or API failures.
+* No validation message is displayed to the user.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4329)
+
+### Attachments
+No Attachments"
+Bug,(Sp25): Treasury Statement Print Functionality Fails with 500 Server Error,Maha.muhammed,Mohamed Said,4,To Do,2025-03-11T10:02:00.000Z,2025-03-11T10:04:00.000Z,"### Description
+__Title:*
+Treasury Statement Print Functionality Fails � No Report Printed & 500 Server Error
+__Description:*
+When the user attempts to print the _Treasury Statement_, the system fails to generate any report. Upon inspecting the _Network Log (Developer Tools ? Network Tab)_, the print API request returns a _500 Internal Server Error_, indicating a backend failure. This issue prevents users from retrieving Treasury Statement reports, impacting financial operations.
+__Preconditions:*
+* The user is logged into the ERP system with the required permissions.
+* There are treasury transactions available for the selected date range.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Reports ? Treasury Statement_.
+- Fill in all the _required fields_ with valid data.
+- Click the _View_ button to generate the report.
+- Click the _Print_ button.
+- Observe that _no report is printed_.
+- Open _Developer Tools (F12) ? Network Tab_.
+- Notice that the _print API request returns a 500 Internal Server Error_.
+__Expected Result:*
+_ The system should successfully generate and display the _Treasury Statement print preview*.
+_ The API request should return a _valid response* with the report data.
+_ No _server errors (500)* should occur.
+__Actual Result:*
+_ The _Treasury Statement is not printed*.
+_ The _print API request fails with a 500 Internal Server Error*.
+_ The system does not provide _any error message or feedback* to the user.
+__Suggested Fix:*
+_ Investigate and _fix the backend issue* causing the 500 error.
+_ Check if the API is receiving _correct request parameters*.
+_ Implement _error handling* to show a meaningful message instead of failing silently.
+* Ensure the print API properly processes Treasury Statement data.
+__Severity:*
+?? _Critical_ � The issue _completely blocks_ users from printing the Treasury Statement, impacting financial reporting.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4328)
+
+### Attachments
+No Attachments"
+Bug,(Sp25): Print Button Triggers 400 Error in Network Log but Successfully Downloads Report,Maha.muhammed,Mohamed Said,2,To Do,2025-03-11T09:53:00.000Z,2025-03-11T09:55:00.000Z,"### Description
+__Title:*
+Print Button Generates 400 Status Code Error in Network Log, but Report Downloads Successfully
+__Description:*
+When the user fills in all the required fields with _valid data_, clicks the _View_ button to generate the report, and then clicks the _Print_ button, the system successfully downloads the report. However, inspecting the _Network Log (Developer Tools ? Network Tab)_ reveals a _400 Bad Request_ error for the print API request. This issue suggests that while the report is being generated and downloaded, there is an incorrect or unnecessary request that results in an error.
+__Preconditions:*
+* The user is logged into the ERP system with the necessary permissions.
+_ The _required fields* for report generation are correctly filled.
+_ The _View* button is clicked to generate the report.
+__Steps to Reproduce:*
+- Navigate to the relevant _reporting screen_.
+- Fill in all required fields with _valid_ input.
+- Click the _View_ button to generate the report.
+- Once the report is displayed, click the _Print_ button.
+- Observe the _report successfully downloading_.
+- Open _Developer Tools (F12) ? Network Tab_.
+- Notice that a _400 Bad Request_ error appears in the network log for the print request.
+__Expected Result:*
+_ The _Print_ button should trigger a _valid API request* without errors.
+_ No _400 Bad Request* error should appear in the network log.
+_ The report should _download successfully* without unnecessary failed requests.
+__Actual Result:*
+_ The report _successfully downloads_, but a _400 Bad Request* error appears in the network log.
+_ This may indicate _an incorrect API request being made*, possibly with missing or invalid parameters.
+__Suggested Fix:*
+_ Investigate why an _invalid API request* is being made when clicking the Print button.
+* Ensure the request parameters are correctly formatted before sending the print API request.
+* Prevent unnecessary or duplicate API calls that may lead to errors.
+_ Implement error handling to _log and ignore failed requests* if they do not impact functionality.
+__Severity:*
+?? _Medium_ � The report successfully downloads, but the error may indicate _underlying issues_ that could cause future failures.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4327)
+
+### Attachments
+No Attachments"
+Bug,(SP25): Payment Out Print Action Fails Due to 404 API Error,Maha.muhammed,Mohamed Said,3,To Do,2025-03-11T00:16:00.000Z,2025-03-11T10:28:00.000Z,"### Description
+__Title:*
+Payment Out Print Action Fails � API Returns 404 Not Found
+__Description:*
+When users attempt to print a _Payment Out_ transaction from the _Payment Out List View_, the system does not respond, and no action is performed. Upon investigation in the browser _Developer Tools (Network Tab)_, the API request for printing returns a _404 Not Found_ error, indicating a broken API endpoint or incorrect URL mapping.
+__Preconditions:*
+* The user is logged into the ERP system with the necessary permissions.
+_ There are existing _Payment Out* transactions in the list view.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Transactions ? Payment Out List View_.
+- Select an existing _Payment Out_ transaction.
+- Click the _Print_ action button.
+- Observe that _no print preview or action is triggered_.
+- Open the _Developer Tools (F12) ? Network Tab_ and review the print API request.
+- Notice that the request _returns a 404 Not Found_ error.
+__Expected Result:*
+_ The system should successfully generate a _print preview_ for the selected _Payment Out* transaction.
+* The API request should return a valid response with the formatted print data.
+_ If the API endpoint is missing or incorrect, the system should display a _meaningful error message* instead of failing silently.
+__Actual Result:*
+_ Clicking the _Print* button does nothing.
+_ The API request fails with a _404 Not Found* error.
+* No feedback or error message is displayed to the user.
+__Suggested Fix:*
+_ _Verify and correct* the API endpoint used for printing Payment Out transactions.
+_ Ensure that the _correct URL* is mapped in the backend API.
+_ Implement _error handling* to inform the user when the print action fails.
+* Add logging to capture and report failed API requests for debugging purposes.
+__Severity:*
+?? _Critical_ � This issue prevents users from printing Payment Out transactions, which may impact financial operations and reporting.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4326)
+
+### Attachments
+No Attachments"
+Bug,(SP25):  Failure to Generate Statement of Financial Position Due to 400 Status Code API Error,Maha.muhammed,Mohamed Said,3,To Do,2025-03-11T00:05:00.000Z,2025-03-11T00:11:00.000Z,"### Description
+__Title:*
+Statement of Financial Position Fails to Generate Due to API Request Error (400 Status Code)
+__Description:*
+When users attempt to generate the _Statement of Financial Position_ report, the system fails to display the report due to an API request failure. The _network logs show a 400 status code error_, indicating an issue with the request parameters. As a result, the report cannot be viewed or printed.
+__Preconditions:*
+_ The user is logged into the ERP system with access to the _Statement of Financial Position Report* module.
+_ A valid _financial period* exists.
+* The user enters valid filter criteria (e.g., date range, account selection).
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Reports ? Statement of Financial Position_.
+- Input valid _Information for all the Required Fields_
+- Click the _View_ button to generate the report.
+- Click _Print_ Button
+- Observe that the report does not load.
+- Open the browser _Developer Tools (F12) ? Network Tab_ and check the API request.
+- Observe that the API request _fails with a 400 status code error_.
+__Expected Result:*
+_ The system should successfully generate and display the _Statement of Financial Position* based on the selected filters.
+* The API request should be properly structured and return valid report data.
+_ If an error occurs, an _informative message* should be displayed to the user.
+__Actual Result:*
+_ The _Statement of Financial Position report does not load*.
+_ The _API request fails with a 400 status code error*.
+_ No _user-friendly error message* is displayed, making it difficult for users to understand the issue.
+__Suggested Fix:*
+_ Investigate and _correct the request parameters* sent to the API to prevent 400 errors.
+_ Implement _validation checks* on the frontend before making the API request.
+* Ensure that the API endpoint is correctly configured to handle the request.
+_ Display an _informative error message* when the API request fails.
+__Severity:*
+?? _Critical_ � This issue prevents users from generating essential financial reports, impacting financial analysis and business operations.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4323)
+
+### Attachments
+No Attachments"
+Bug,(SP25): Failure to Generate Income Statement Due to 400 Status Code API Error,Maha.muhammed,Mohamed Said,3,To Do,2025-03-11T00:03:00.000Z,2025-03-11T00:23:00.000Z,"### Description
+__Title:*
+Income Statement Fails to Generate Due to API Request Error (400 Status Code)
+__Description:*
+When users attempt to generate the _Income Statement_ report, the system fails to display the report due to an API request failure. The _network logs show a 400 status code error_, indicating an issue with the request parameters. As a result, the report cannot be viewed or printed.
+__Preconditions:*
+_ The user is logged into the ERP system with access to the _Income Statement Report* module.
+_ A valid _financial period* exists.
+* The user enters valid filter criteria (e.g., date range, account selection).
+__Steps to Reproduce:*
+- Navigate to _Accounting App? Reports ? Income Statement_.
+- Input valid _Information in all the required fields_
+- Click the _View_ button to generate the report.
+- Click _Print_ Button
+- Observe that the report does not load.
+- Open the browser _Developer Tools (F12) ? Network Tab_ and check the API request.
+- Observe that the API request _fails with a 400 status code error_.
+__Expected Result:*
+_ The system should successfully generate and display the _Income Statement* based on the selected filters.
+* The API request should be properly structured and return valid report data.
+_ If an error occurs, an _informative message* should be displayed to the user.
+__Actual Result:*
+_ The _Income Statement report is downloaded but without any Information*.
+_ The _API request fails with a 400 status code error*.
+_ No _user-friendly error message* is displayed, making it difficult for users to understand the issue.
+__Suggested Fix:*
+_ Investigate and _correct the request parameters* sent to the API to prevent 400 errors.
+_ Implement _validation checks* on the frontend before making the API request.
+* Ensure that the API endpoint is correctly configured to handle the request.
+_ Display an _informative error message* when the API request fails.
+__Severity:*
+?? _Critical_ � This issue prevents users from generating financial reports, impacting decision-making and financial analysis.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4322)
+
+### Attachments
+No Attachments"
+Bug,(Sp25):Failure to Generate Account Statement Report Due to Incorrect API Request URL,Maha.muhammed,Mohamed Said,4,To Do,2025-03-10T23:52:00.000Z,2025-03-11T00:24:00.000Z,"### Description
+__Title:*
+Account Statement Report Fails to Generate Due to Incorrect API Request URL
+__Description:*
+When users attempt to generate and print the _Account Statement Report_, the system fails to display the report. Upon investigation, it was found that the _API request responsible for fetching the report data has an incorrect URL_, causing a _failed request_. As a result, users are unable to generate or print the account statement.
+__Preconditions:*
+_ The user is logged into the ERP system with access to the _Account Statement Report* module.
+_ A valid _financial period* exists.
+* The user enters valid filter criteria (e.g., account selection, date range).
+__Steps to Reproduce:*
+- Navigate to _Accounting App ? Reports ? Account Statement Report_.
+- Input valid _From Date_ and _To Date_ within the financial period.
+- Select an account from the dropdown.
+- Click the _View_ button to generate the report.
+- Click the _Print_ button to print the report.
+- Open the browser _Developer Tools (F12) ? Network Tab_ and check the API request details.
+- Observe that the API request _fails_ due to an incorrect URL.
+__Expected Result:*
+_ The system should generate and display the _Account Statement Report* based on the selected filters.
+_ The _Print_ button should trigger a _successful API request* with the correct URL.
+_ If the API request fails, the system should display an _informative error message* instead of failing silently.
+__Actual Result:*
+_ The _API request fails* due to an incorrect URL.
+_ The _report does not load* and remains empty.
+_ No _error message* is displayed to the user, making the issue unclear.
+__Suggested Fix:*
+_ _Correct the API request URL* in the backend to ensure it matches the expected endpoint.
+_ Implement _error handling* to display an informative message when the API request fails.
+_ Ensure _proper testing* of API requests before deployment to avoid similar issues.
+_ Verify if other _financial reports* using API calls also have incorrect URLs.
+__Severity:*
+?? _Critical_ � Users are unable to generate or print account statement reports, affecting financial reporting and auditing.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4321)
+
+### Attachments
+No Attachments"
+Bug,(SP25): Cost Center Report Generates Empty Print Reports Due to API Failure,Maha.muhammed,Mohamed Said,4,To Do,2025-03-10T23:41:00.000Z,2025-03-11T10:27:00.000Z,"### Description
+__Title:*
+Cost Center Report Fails to Generate Data Due to API Request Error
+__Description:*
+When users attempt to generate the _Cost Center Report_ by providing a valid _From Date_ and _To Date_, the report screen returns an _empty report_. Upon investigating network logs, it was found that the API request responsible for fetching report data _fails_ due to an issue with the query parameters. The _""From Date"" parameter in the API request is incorrect_, causing a backend error. Additionally, an error is displayed in the browser console.
+__Preconditions:*
+_ The user is logged into the ERP system with access to the _Cost Center Report* module.
+_ A valid _financial period* exists.
+_ The user enters valid _From Date_ and _To Date* values.
+__Steps to Reproduce:*
+- Navigate to _Accounting App ? Reports ? Cost Center Report_.
+- Input a valid _From Date_ and _To Date_ within the financial period.
+- Open the browser _Developer Tools (F12) ? Network Tab_, and check the API request.
+- Click the _View_ button to generate the report.
+- click _Print_ Button
+- Observe that the report screen is _empty_ with no data.
+- Observe that the API request _fails_, and the _From Date parameter_ is incorrect.
+- Open the _Console Tab_ and check for errors.
+__Expected Result:*
+_ The report should fetch and display the correct cost center data based on the _From Date_ and _To Date* provided.
+_ The API request should be _successfully executed* with correctly formatted query parameters.
+_ If the API fails, an _informative error message* should be displayed instead of an empty report.
+__Actual Result:*
+_ The Print report _displays no data*, even when valid dates are provided.
+_ The API request _fails_ due to an issue with the _From Date query parameter*.
+* An error is logged in the browser console.
+__Suggested Fix:*
+_ Fix the _From Date query parameter formatting issue* in the API request.
+_ Implement _error handling* to display an informative message when the API request fails.
+_ Validate the _API response* and ensure proper data mapping before rendering the report.
+* Test other date-based reports to verify if similar API request issues exist.
+__Severity:*
+?? _Critical_ � This issue prevents users from generating essential cost center reports, impacting financial analysis and decision-making.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4320)
+
+### Attachments
+No Attachments"
+Bug,(SP25): Trial Balance Print Button Not Working,Maha.muhammed,Mohamed Said,3,To Do,2025-03-10T23:33:00.000Z,2025-03-10T23:33:00.000Z,"### Description
+__Title:*
+Trial Balance Print Button Does Not Function After Viewing the Report
+__Description:*
+On the _Trial Balance Report_ screen, after the user _inputs valid ""From"" and ""To"" dates_ within the financial period and clicks the _View_ button, the report is correctly displayed. However, when the user clicks the _Print_ button, _no action occurs_�the print preview does not open, and no error message is shown.
+__Preconditions:*
+_ The user is logged into the ERP system with access to the _Trial Balance Report* module.
+_ A valid _financial period* exists.
+* The user enters a valid date range within the financial period.
+__Steps to Reproduce:*
+- Navigate to _Accounting App ? Reports ? Trial Balance_.
+- Input a valid _From Date_ and _To Date_ within the financial period.
+- Click the _View_ button to generate the trial balance report.
+- Click the _Print_ button.
+- Observe that _nothing happens_�the print preview does not open.
+- Choose accounts have balance
+- Click the _View_ button to generate the trial balance report.
+- Click the _Print_ button.
+- Observe that _nothing happens_�the print preview does not open.
+__Expected Result:*
+_ Clicking the _Print_ button should open the print preview for the _Trial Balance Report*.
+_ If an issue prevents printing, the system should display an _informative error message* instead of failing silently.
+__Actual Result:*
+_ Clicking the _Print_ button does _not trigger any action*.
+* No error message is displayed, making it unclear whether the issue is due to a system error or missing data.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4319)
+
+### Attachments
+No Attachments"
+Bug,"Stock Transfer Allowed with Same Warehouse in ""From"" and ""To"" Fields",Mohamed Hammad,Tassneem fathi,3,To Do,2025-03-09T14:13:00.000Z,2025-03-09T14:13:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4318)
+
+### Attachments
+undefined"
+Bug,Stock Transfer Bugs,Maha.muhammed,Tassneem fathi,2,To Do,2025-03-09T14:08:00.000Z,2025-03-11T10:27:00.000Z,"### Description
+No description available.
+
+### Environment
+Not Provided
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4317)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Sales Invoice Add & Edit Screens, Missing The Validation of Deleting Item In Sales Invoice (Deleting Item Line Not Working).",Mohamed Fathy,Yassmin,2,Code review,2025-03-09T12:47:00.000Z,2025-03-11T12:04:00.000Z,"### Description
+When I delete the item, delete line is not working properly cause it is not calling the back-end API.
+_Expected Result:_ The Popup window should appear to the user to ask if he already want to delete this item.
+_Actual Result:_ The Popup window doesn�t appear.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4316)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Sales Invoice View Screen, Missing Payment Information Tab & Cited Limit Bar In Sales Invoice View Screen.",Mohamed Fathy,Yassmin,2,To Do,2025-03-09T12:31:00.000Z,2025-03-09T12:31:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4315)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Sales Invoice Add & Edit Screen, The Cancel Button Doesn't Work.",Mohamed Fathy,Yassmin,2,Code review,2025-03-09T12:13:00.000Z,2025-03-11T11:55:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4314)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Sales Invoice Edit Screen, The Bug of Reset The Invoice When Changing The Customer.",Mohamed Fathy,Yassmin,2,Code review,2025-03-09T12:00:00.000Z,2025-03-11T11:52:00.000Z,"### Description
+When I Change The Customer,
+_Expected Result:_ Only the data in payment information should be updated Without any change in invoice details.
+_Actual Result:_  The system reset the data in invoice details.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4313)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Sales Invoice Edit Screen, The Error Message of Adding New Line of Item. ",Mohamed Fathy,Yassmin,3,Code review,2025-03-09T11:48:00.000Z,2025-03-11T11:48:00.000Z,"### Description
+When I add new Item I got error because the Id is null it should be zero,
+_Expected Result:_ The Returned Id Should be 0.
+_Actual Result:_ The Returned Id Should Is Null.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4312)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24): Sales Invoice Edit Screen, The Credit Limit Always 0 in Edit Screen.",Mohamed Fathy,Yassmin,2,Code review,2025-03-09T11:17:00.000Z,2025-03-11T11:49:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4311)
+
+### Attachments
+No Attachments"
+Bug,"Unrelated Warning Message Appears When Opening ""Account Statement""",Mohamed Said,Hossam Saad,3,Testing,2025-03-03T11:42:00.000Z,2025-03-04T10:19:00.000Z,"### Description
+__Title:*
+Unrelated warning message appears when opening ""Account Statement"" from the side menu
+__Description:*
+When navigating to the ""Account Statement"" screen from the side menu, an unexpected warning message appears. The message does not seem to be related to the action performed, causing confusion for users.
+__Steps to Reproduce:*
+- Open the _Accounting module_.
+- Navigate to the _side menu_ and click on _Account Statement_.
+- Observe the warning message that appears.
+__Actual Result:*
+_ An _unrelated warning message* is displayed upon opening the ""Account Statement"" screen.
+__Expected Result:*
+* No warning message should appear unless there is a valid reason.
+
+### Environment
+Not Provided
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4285)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Customer Definition Add & Edit Screen, The Name of Fields in Legal Tab Should Be Handled.",mohamed Nabil,Yassmin,2,Code review,2025-03-03T00:07:00.000Z,2025-03-05T12:05:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4284)
+
+### Attachments
+No Attachments"
+Bug,(SP24): Print Button Generates Empty Print View Without Informative Message,Maha.muhammed,Mohamed Said,2,To Do,2025-03-02T16:05:00.000Z,2025-03-02T16:06:00.000Z,"### Description
+__Title:*
+Print Button Generates Blank Print View When No Filters Are Applied
+__Description:*
+On the _Payment Reconciliation Report_ screen, when the user clicks the _Print_ button without applying any filters or selecting a customer, the system _generates an empty print preview_ instead of displaying a proper validation message. This can mislead users into thinking there is an issue with the report.
+__Preconditions:*
+_ The user is logged into the ERP system with access to the _Payment Reconciliation Report* module.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Reports ? Payment Reconciliation Report_.
+- Do _not_ apply any filters or select a customer.
+- Click the _Print_ button.
+- Observe that an _empty print preview_ is generated with no data.
+__Expected Result:*
+_ If no filters are applied and no data is available, the system should display an _informative message*, such as:
+_""No data available for printing. Please apply filters and try again.""_
+_ The Print button should be _disabled* until valid data is available for printing.
+__Actual Result:*
+_ The system _generates an empty print preview* with no warning or validation message.
+__Suggested Fix:*
+_ Implement a _validation check* before generating the print view.
+_ Display a _clear message* when no data is available.
+_ Disable the _Print button* until at least one filter is applied or relevant data is retrieved.
+__Severity:*
+?? _Medium_ � This issue affects user experience and may cause confusion, leading to unnecessary troubleshooting.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4282)
+
+### Attachments
+No Attachments"
+Bug,(Sp24): Duplicate Print Buttons in Payment Reconciliation Report,Abanoub.Nabil,Mohamed Said,3,Testing,2025-03-02T16:01:00.000Z,2025-03-09T15:46:00.000Z,"### Description
+__Title:*
+Duplicate Print Buttons in Payment Reconciliation Report Perform the Same Action
+__Description:*
+On the _Payment Reconciliation Report_ screen, there are _two Print buttons_, both of which _navigate to the same print function_ and execute the same action. This redundancy creates confusion for users and leads to unnecessary UI clutter.
+__Preconditions:*
+_ The user is logged into the ERP system with access to the _Payment Reconciliation Report* module.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Reports ? Payment Reconciliation Report_.
+- Observe that there are _two Print buttons_ on the screen.
+- Click the first _Print_ button and note that it generates the reconciliation report print preview.
+- Click the second _Print_ button and observe that it performs the _exact same action_ as the first one.
+__Expected Result:*
+_ There should be _only one Print button* to avoid redundancy.
+_ If multiple print options are needed (e.g., _detailed vs. summary reports_), they should be _clearly labeled* to indicate their function.
+__Actual Result:*
+_ There are _two identical Print buttons_, both triggering the _same print action*.
+_ This creates _UI confusion_ and _unnecessary duplication*.
+__Suggested Fix:*
+_ Remove the _duplicate Print button*.
+_ If different print functionalities are needed, label them clearly (e.g., _Print Detailed Report_ vs. _Print Summary Report*).
+* Conduct a UI review to ensure no similar redundancies exist in other modules.
+__Severity:*
+?? _Medium_ � While this issue does not impact functionality, it leads to UI confusion and unnecessary redundancy.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4280)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Journal Entry Edit Screen, The User Should be Able To Open & View The Attached Photo.",mohamed Nabil,Yassmin,2,To Do,2025-03-02T15:58:00.000Z,2025-03-04T16:37:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4279)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24): Journal Entry Edit Screen, The Journal Status of Unposted Journal Entry Should be ""Un Posted"" Not ""Saved""",Mohamed Fathy,Yassmin,2,To Do,2025-03-02T15:53:00.000Z,2025-03-02T15:54:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4278)
+
+### Attachments
+No Attachments"
+Bug,(SP24): Payment Reconciliation Report Does Not Display Reconciled Invoices for Selected Customer,Mohamed Fathy,Mohamed Said,4,To Do,2025-03-02T15:51:00.000Z,2025-03-03T14:21:00.000Z,"### Description
+__Payment Reconciliation Report Does Not Display Reconciled Invoices for Selected Customer*
+__Title:*
+Payment Reconciliation Report Fails to Display Reconciled Invoices and Shows Incorrect Invoice List
+__Description:*
+On the _Payment Reconciliation Report_ screen, when a user selects a customer, the report _does not display_ the invoices that have been _successfully reconciled_. Instead, the _Select Invoice_ dropdown incorrectly shows _only non-reconciled invoices_, preventing users from accessing reconciliation details. This issue affects financial reporting accuracy and reconciliation tracking.
+__Preconditions:*
+_ The user is logged into the ERP system with access to the _Payment Reconciliation Report* module.
+* At least one invoice has been successfully reconciled for the selected customer.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Reports ? Payment Reconciliation Report_.
+- Select a _customer_ who has reconciled invoices.
+- Open the _Select Invoice_ dropdown.
+- Observe that the dropdown _only lists non-reconciled invoices_ instead of displaying reconciled ones.
+- Attempt to generate a reconciliation report and notice that _no data appears_ for reconciled invoices.
+__Expected Result:*
+_ The _Select Invoice_ dropdown should display _both fully and partially reconciled invoices* for the selected customer.
+_ The report should correctly show _reconciliation details_, including _invoice status, reconciled amount, and remaining balance*.
+__Actual Result:*
+_ The dropdown incorrectly lists only _non-reconciled invoices*, preventing users from selecting reconciled invoices.
+_ The report does not show _any data* for reconciled invoices.
+__Suggested Fix:*
+_ Modify the query logic to _include reconciled invoices_ in the _Select Invoice* dropdown.
+_ Ensure that the _report correctly fetches and displays* reconciliation details.
+_ Validate that the system retrieves _both fully and partially reconciled invoices* for the selected customer.
+__Severity:*
+?? _High_ � This issue impacts financial reporting and reconciliation tracking, leading to incorrect financial records.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4277)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Treasury Definition Add Screen, Clicking The Save Button More Than Once, Leads To Save The Same Treasury More Than Once.",mohamed Nabil,Yassmin,2,Code review,2025-03-02T15:43:00.000Z,2025-03-05T12:37:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4275)
+
+### Attachments
+No Attachments"
+Bug,(SP:24): General Changes in All Print Out,Maha.muhammed,Yassmin,2,To Do,2025-03-02T15:29:00.000Z,2025-03-04T10:21:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4274)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Payment In Add & Edit Screens, The Payment Method Should Appear Based on The Selected Bank Account Not The Selected Bank.",sandra yasser,Yassmin,2,Code review,2025-03-02T15:23:00.000Z,2025-03-04T11:36:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4273)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24): Warehouse Edit Screen, The Warehouse Name Should be Editable.",mohamed Nabil,Yassmin,2,Code review,2025-03-02T15:16:00.000Z,2025-03-05T12:58:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4272)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Chart Of Account Edit Screen, The Account Type Can be Changed When The Account Has Transaction.",Nader Moustafa,Yassmin,2,In Progress,2025-03-02T15:04:00.000Z,2025-03-04T10:29:00.000Z,"### Description
+When the account has transactions and I want to change the account type,
+_Expected Result:_ The Account Type Can be Changed When The Account Has Transaction.
+_Actual Result:_ The account type didn�t change because it has transactions.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4271)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Fund Transfer Add Screen, Incorrect Error Message Appear When I Save The Fund Transfer.",Hager Mostafa,Yassmin,2,Code review,2025-03-02T13:18:00.000Z,2025-03-02T14:12:00.000Z,"### Description
+When I send amount=1000$ and the current balance= 9900$ then click save,
+_Expected Result:_ The system should save this fund transfer without error message.
+_Actual Result:_ Un expected error message appear as the amount to send greater than the current balance.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4270)
+
+### Attachments
+No Attachments"
+Bug,Attachment Upload Issues in journal entry,Maha.muhammed,Hossam Saad,2,To Do,2025-03-02T13:16:00.000Z,2025-03-02T13:16:00.000Z,"### Description
+__Title:*
+Attachment Upload is Inconsistent and Retains Previous Attachments in journal entry
+__Description:*
+Users face issues when uploading attachments in journal entry. Sometimes, the uploaded image does not appear, while other times it uploads successfully. Additionally, after saving an entry and start creating a new one, the previous attachment remains instead of resetting.
+__Steps to Reproduce:*
+- Navigate to the _Accounting Module_.
+-  Transaction => Journal entry => create and upload an attachment.
+- Observe that the attachment _sometimes does not appear_ after uploading.
+- If the attachment appears, save the transaction.
+- Start a _new transaction_ and check the attachment section.
+__Actual Result:*
+_ The attachment _randomly fails to appear* after uploading.
+_ After saving and starting a _new transaction_, the _previous attachment is still displayed*, instead of resetting.
+__Expected Result:*
+_ The attachment should _always appear* after uploading successfully.
+_ When starting a _new transaction_, the attachment field should be _cleared* instead of retaining the previous file.
+
+### Environment
+Not Provided
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4269)
+
+### Attachments
+No Attachments"
+Bug,(Sp24): Amount Field in Add Payment In Screen Accepts Negative Numbers Without Validation,mohamed Nabil,Mohamed Said,4,Code review,2025-03-02T13:15:00.000Z,2025-03-05T12:41:00.000Z,"### Description
+__Title:*
+Negative Amounts Can Be Entered and Saved in Payment In Screen Without Validation
+__Description:*
+On the _Add Payment In_ screen, the _Amount_ field in the _Detail Section_ allows users to enter negative values. The system successfully _saves and posts_ the transaction without any validation or error message. This issue leads to severe inconsistencies in _financial calculations, reconciliation, and related module transactions_, affecting overall system accuracy.
+__Preconditions:*
+_ The user is logged into the ERP system with permission to create and post _Payment In* transactions.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Transactions ? Add Payment In_ screen.
+- In the _Detail Section_, enter a _negative amount_ (e.g., {{-1000}}).
+- Click _Save_, then _Post_ the transaction.
+- Observe that the system allows the transaction to be saved and posted without validation.
+- Check the related financial reports, reconciliation, and transaction history to see discrepancies.
+__Expected Result:*
+_ The system should _not allow_ negative values in the _Amount* field.
+_ If a negative value is entered, an _error message* should be displayed, preventing the user from saving or posting the transaction.
+* Proper validation should be enforced to ensure only positive values are accepted.
+__Actual Result:*
+_ The system allows negative amounts in the _Amount* field.
+* The transaction is successfully saved and posted without any validation.
+_ This leads to financial calculation errors in _balancing, reconciliation, and other dependent modules*.
+__Suggested Fix:*
+_ Implement _validation_ to restrict negative values in the _Amount* field.
+_ Display a clear _error message* when a negative value is entered.
+* Prevent transactions with negative amounts from being saved or posted.
+_ Conduct a _system-wide audit* to check if similar validation issues exist in other financial modules.
+__Severity:*
+?? _Critical_ � This issue impacts financial accuracy, reconciliation, and balance calculations, leading to serious financial discrepancies.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4268)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24): Fund Transfer Add, Edit & View Screens, The ""Send To"" Word Should be ""Receive To""",Esraa.kamel,Yassmin,2,To Do,2025-03-02T13:11:00.000Z,2025-03-04T13:30:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4267)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24): Fund Transfer Add Screen, Missing Error Message When Post Button Doesn't Work Without Selecting Fund Transfer Contra Account.",Esraa.kamel,Yassmin,2,To Do,2025-03-02T12:29:00.000Z,2025-03-06T11:21:00.000Z,"### Description
+When I click the post button without selecting the �Fund Transfer Contra Account� from the general setting screen in finance module,
+_Expected Result:_ The error message should appear as �Failed To Post, Please Set The Fund Transfer Contra Account Form General Setting Screen�
+_Actual Result:_ The error message didn�t appear.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4266)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24): Fund Transfer List View & View Screens, The Source Document of Payment In & Payment Out From Fund Transfer Screen Not Visible.",Esraa.kamel,Yassmin,2,Code review,2025-03-02T12:22:00.000Z,2025-03-09T09:40:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4265)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24): Fund Transfer Screens, The Design of fund Transfer Screens Should be Improved.",Abanoub.Nabil,Yassmin,2,To Do,2025-03-02T12:16:00.000Z,2025-03-04T10:12:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4264)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Fund Transfer List View & View Screens, The links of Payment In & Payment Out Should Open in New Tab.",Mohamed Fathy,Yassmin,2,To Do,2025-03-02T12:07:00.000Z,2025-03-02T12:11:00.000Z,"### Description
+When I click on the payment in or payment out link,
+_Expected Result:_ The related link screen should open in new tab.
+_Actual Result:_ The related link screen  open in the same tab.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4263)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Fund Transfer View Screen, The Bank Account Not Visible.",Mohamed Fathy,Yassmin,2,To Do,2025-03-02T12:00:00.000Z,2025-03-09T13:48:00.000Z,"### Description
+_Expected Result:_ The bank account should be visible in view screen.
+_Actual Result:_ The bank account not visible in view screen.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4262)
+
+### Attachments
+No Attachments"
+Bug,"(SP:24):Fund Transfer List View Screen, Missing Print Button After Posting The Fund Transfer.",Ahmed Gamal,Yassmin,2,Code review,2025-03-02T11:37:00.000Z,2025-03-03T11:53:00.000Z,"### Description
+No description available.
+
+### Environment
+loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+
+Email[:|mailto:mail:Sagik32046@Sablecc.Com] [yoxiso6349@fundapk.com|mailto:yoxiso6349@fundapk.com]
+pass:Test@123
+Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4260)
+
+### Attachments
+No Attachments"
+Bug,(SP24) @General: Search Functionality Not Working in Advanced Search (Select Account Dialog) Across All ERP System Modules (Add/Edit Screens),mohamed Nabil,Mohamed Said,3,Code review,2025-03-02T11:34:00.000Z,2025-03-05T14:00:00.000Z,"### Description
+__Title:*
+Search Functionality Fails in the Advanced Search Dialog for Selecting an Account Across Multiple ERP Modules
+__Description:*
+In multiple modules of the ERP system, including _Treasury Definition, Bank Definition, Payment In, and Payment Out_, the _Advanced Search (Select Account)_ dialog does not filter results when the user enters a search term. This issue prevents users from efficiently finding and selecting an account, leading to delays and poor user experience.
+__Affected Modules:*
+* Treasury Definition Add/Edit
+* Bank Definition Add/Edit
+* Payment In Add/Edit
+* Payment Out Add/Edit
+__Preconditions:*
+* The user is logged into the ERP system with appropriate access to the affected modules.
+* The system contains existing accounts available for selection.
+__Steps to Reproduce:*
+- Navigate to any of the affected modules (e.g., _Treasury Definition Add/Edit_).
+- Click on the _Select Account_ field to open the _Advanced Search Dialog_.
+- In the search input field, type an account name or account code.
+- Observe that no filtering or search results appear based on the entered query.
+__Expected Result:*
+* As the user types in the search field, the system should dynamically filter and display relevant account results.
+_ The search should support filtering based on _account name_ or _account code*.
+_ If no results match the search term, an appropriate _""No results found""* message should be displayed.
+__Actual Result:*
+* The search input does not trigger any filtering of the account list.
+* The full list of accounts remains unchanged, even when entering a search term.
+* Users are unable to efficiently locate specific accounts, leading to a poor user experience.
+__Suggested Fix:*
+* Ensure that the search input field triggers a request to filter the accounts dynamically.
+_ Validate whether _API requests* for search functionality are being made correctly.
+_ Implement _debouncing* to prevent excessive search requests.
+_ Ensure that the search function considers both _account name_ and _account code*.
+* Display an appropriate message when no matching results are found.
+__Severity:*
+_High_ � The inability to search for accounts across multiple modules significantly impacts user workflow and system efficiency.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4259)
+
+### Attachments
+No Attachments"
+Bug,(Sp24): Search Functionality Not Working in Advanced Search (Select Account Dialog) on Bank Definition Add/Edit Screen,mohamed Nabil,Mohamed Said,3,Code review,2025-03-02T10:43:00.000Z,2025-03-05T14:00:00.000Z,"### Description
+__Title:*
+Search Functionality Fails in the Advanced Search Dialog for Selecting an Account in Bank Definition Add/Edit Screen
+__Description:*
+On the _Bank Definition Add/Edit_ screen, when the user opens the _Advanced Search (Select Account)_ dialog and enters a search term in the input field, the system does not return any filtered results. The search functionality appears to be non-responsive, making it difficult for users to efficiently find and select an account.
+__Preconditions:*
+_ The user is logged into the ERP system with appropriate access to the _Bank Module*.
+_ The user navigates to the _Bank Definition Add/Edit* screen.
+* The system has existing accounts available for selection.
+__Steps to Reproduce:*
+- Navigate to _Bank Module ? Bank Definition Add/Edit_ screen.
+- Click on the _Select Account_ field to open the _Advanced Search Dialog_.
+- In the search input field, type an account name or account code.
+- Observe that no filtering or search results appear based on the entered query.
+__Expected Result:*
+* As the user types in the search field, the system should dynamically filter and display relevant account results.
+_ The search should support filtering based on _account name_ or _account code*.
+_ If no results match the search term, an appropriate _""No results found""* message should be displayed.
+__Actual Result:*
+* The search input does not trigger any filtering of the account list.
+* The full list of accounts remains unchanged, even when entering a search term.
+* Users are unable to efficiently locate specific accounts, leading to a poor user experience.
+__Suggested Fix:*
+* Ensure that the search input field triggers a request to filter the accounts dynamically.
+_ Validate whether _API requests* for search functionality are being made correctly.
+_ Implement _debouncing* to prevent excessive search requests.
+_ Ensure that the search function considers both _account name_ and _account code*.
+* Display an appropriate message when no matching results are found.
+__Severity:*
+_High_ � Users are unable to efficiently select an account, which directly impacts their ability to complete Bank Definitions.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4257)
+
+### Attachments
+No Attachments"
+Bug,(Sp24): Search Functionality Not Working in Advanced Search (Select Account Dialog) on Treasury Definition Add/Edit Screen,Maha.muhammed,Mohamed Said,2,To Do,2025-03-02T10:12:00.000Z,2025-03-02T10:13:00.000Z,"### Description
+__Title:*
+Search Functionality Fails in the Advanced Search Dialog for Selecting an Account in Treasury Definition Add/Edit Screen
+__Description:*
+On the _Treasury Definition Add/Edit_ screen, when the user opens the _Advanced Search (Select Account)_ dialog and enters a search term in the input field, the system does not return any filtered results. The search functionality appears to be non-responsive, making it difficult for users to efficiently find and select an account.
+__Preconditions:*
+_ The user is logged into the ERP system with appropriate access to the _Treasury Module*.
+_ The user navigates to _Treasury Definition Add/Edit* screen.
+* The system has existing accounts available for selection.
+__Steps to Reproduce:*
+- Navigate to _Treasury Module ? Treasury Definition Add/Edit_ screen.
+- Click on the Advanced Search Icon of the _Select Account_ field to open the _Advanced Search Dialog_.
+- In the search input field, type an account name or account code.
+- Observe that no filtering or search results appear based on the entered query.
+__Expected Result:*
+* As the user types in the search field, the system should dynamically filter and display relevant account results.
+_ The search should support filtering based on _account name_ or _account code*.
+_ If no results match the search term, an appropriate _""No results found""* message should be displayed.
+__Actual Result:*
+* The search input does not trigger any filtering of the account list.
+* The full list of accounts remains unchanged, even when entering a search term.
+* Users are unable to efficiently locate specific accounts, leading to a poor user experience.
+__Suggested Fix:*
+* Ensure that the search input field triggers a request to filter the accounts dynamically.
+_ Validate whether _API requests* for search functionality are being made correctly.
+_ Implement _debouncing* to prevent excessive search requests.
+_ Ensure that the search function considers both _account name_ and _account code*.
+* Display an appropriate message when no matching results are found.
+__Severity:*
+_High_ � Users are unable to efficiently select an account, which directly impacts their ability to complete Treasury Definitions.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4252)
+
+### Attachments
+No Attachments"
+Bug,(SP24): Missing column filtration functionality in the Fund Transfer List View.,Ahmed Gamal,Mohamed Said,2,Code review,2025-02-27T16:46:00.000Z,2025-03-03T11:53:00.000Z,"### Description
+__Title:*
+Missing column filtration functionality in the Fund Transfer List View.
+----
+__Description:*
+In the _Fund Transfer List View_, the column filtration feature is missing. Users are unable to filter the data displayed in the table by specific columns (e.g., Code, Date, Transferred Amount, From Payment Hub, To Payment Hub, etc.). This functionality is essential for users to quickly locate and analyze specific Fund Transfer records based on their criteria.
+----
+__Precondition:*
+- The user is logged in with the necessary permissions.
+- The _Fund Transfer List View_ is accessible.
+- Multiple Fund Transfer records exist in the system.
+----
+__Steps to Reproduce:*
+- Navigate to _Finance Module > Transaction Submenu > Fund Transfer_.
+- Observe the table displaying Fund Transfer records.
+- Observe the Top Screen above the Table.
+----
+__Expected Result:*
+* The system should provide column filtration functionality, allowing users to filter the data by specific columns (e.g., Code, Date, Transferred Amount, From Payment Hub, To Payment Hub, etc.).
+* Users should be able to apply filters (e.g., text search, date range, dropdown selection) to narrow down the displayed records.
+* The filtered data should update dynamically based on the applied filters.
+----
+__Actual Result:*
+* The column filtration functionality is missing in the Fund Transfer List View.
+* Users cannot filter the data by specific columns, making it difficult to locate and analyze specific records.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4248)
+
+### Attachments
+No Attachments"
+Bug,"(SP24): Incorrect icon for the Print button, incorrect order of action buttons, and missing tooltips in the Fund Transfer List View.",Ahmed Gamal,Mohamed Said,3,Code review,2025-02-27T16:36:00.000Z,2025-03-03T11:54:00.000Z,"### Description
+__Title:*
+Incorrect icon for the Print button, incorrect order of action buttons, and missing tooltips in the Fund Transfer List View.
+----
+__Description:*
+In the _Fund Transfer List View_, the following issues are observed:
+- The _Print_ button has the same icon as the _View_ button, causing confusion for users.
+- The order of the action buttons (e.g., View, Edit, Delete, Print) is not correct or consistent with the application's design standards.
+- No tooltips are displayed when hovering over the action buttons, making it difficult for users to understand their functionality.
+These issues affect the usability and user experience of the Fund Transfer List View.
+----
+__Precondition:*
+- The user is logged in with the necessary permissions.
+- The _Fund Transfer List View_ is accessible.
+- At least one Fund Transfer record exists in the system.
+----
+__Steps to Reproduce:*
+- Navigate to _Finance Module > Transaction Submenu > Fund Transfer_.
+- Observe the action buttons (e.g., View, Edit, Delete, Print) in the List View.
+- Hover over each action button to check for tooltips.
+- Click on the _Print_ button and observe its icon.
+- Verify the order of the action buttons.
+----
+__Expected Result:*
+- The _Print_ button should have a distinct icon (e.g., a printer icon) that differentiates it from the _View_ button.
+- The action buttons should be displayed in a logical and consistent order (e.g., View, Edit, Delete, Print).
+- Tooltips should appear when hovering over each action button, describing their functionality (e.g., ""View,"" ""Edit,"" ""Delete,"" ""Print"").
+----
+__Actual Result:*
+- The _Print_ button has the same icon as the _View_ button, causing confusion.
+- The order of the action buttons is incorrect or inconsistent.
+- No tooltips are displayed when hovering over the action buttons.
+----
+__Impact:*
+* Users may accidentally click the wrong button due to the incorrect icon and lack of tooltips.
+* The inconsistent button order and missing tooltips reduce the usability and user experience of the Fund Transfer List View.
+* This issue may lead to user frustration and errors in navigating the system.
+----
+__Severity:*
+_Medium_ � This is a usability issue that affects the user experience but does not prevent core functionality from working.
+----
+__Priority:*
+_High_ � The issues need to be addressed to improve usability and align with the application's design standards.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4247)
+
+### Attachments
+No Attachments"
+Bug,"(SP24): Unexpected error message ""Cost centers are required for this account: Automation Detailed account."" displayed when posting a Fund Transfer from Treasury (Cash) to Bank (Transfer).",Mohamed Fathy,Mohamed Said,4,Testing,2025-02-27T16:27:00.000Z,2025-03-04T10:16:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4246)
+
+### Attachments
+undefined"
+Bug,(SP24): Non-descriptive error message displayed in a pop-up when selecting a Bank account with an invalid payment method.,Hager Mostafa,Mohamed Said,2,Code review,2025-02-27T15:59:00.000Z,2025-03-02T14:12:00.000Z,"### Description
+__Title:*
+Non-descriptive error message displayed in a pop-up when selecting a Bank account with an invalid payment method.
+----
+__Description:*
+When a user selects a _Bank account_ that has a payment method other than _Transfer_ (e.g., Visa or Span) in the _Fund Transfer Add_ screen, a non-descriptive error message is displayed in a pop-up at the bottom layer. The message reads:
+_""Error you can't select bank without payment method.""_
+This message is not informative, does not guide the user to resolve the issue, and appears in an incorrect view (pop-up at the bottom layer). According to the business rules, only Bank accounts with the _Transfer_ payment method should be selectable for Fund Transfers.
+----
+__Precondition:*
+- The user is logged in with the necessary permissions.
+- The _Fund Transfer Add_ screen is accessible.
+- At least one Bank account exists in the system with a payment method other than _Transfer_ (e.g., Visa or Span).
+----
+__Steps to Reproduce:*
+- Navigate to _Finance Module > Transaction Submenu > Fund Transfer_.
+- Click on the _Add_ button to open the Fund Transfer Add screen.
+- In the _Send From_ section:
+-_ Select _Bank_ in the _Payment Hub* field.
+-_ In the _Payment Hub Details_ field, select a Bank account that has a payment method other than _Transfer* (e.g., Visa or Span).
+- Observe the system behavior.
+----
+__Expected Result:*
+_ The system should display a _clear and informative error message_ in the correct view (e.g., near the _Payment Hub Details* field or in a modal dialog).
+_ The error message should guide the user to select a Bank account with the _Transfer* payment method.
+* Example of an informative message:
+_""Invalid Payment Method: Please select a Bank account with the 'Transfer' payment method.""_
+----
+__Actual Result:*
+* A non-descriptive error message is displayed in a pop-up at the bottom layer:
+_""Error you can't select bank without payment method.""_
+* The message does not specify the issue or guide the user to resolve it.
+* The pop-up appears in an incorrect view (bottom layer), making it less noticeable.
+----
+__Impact:*
+* Users are confused by the non-descriptive error message and may not understand how to resolve the issue.
+* The incorrect placement of the pop-up (bottom layer) makes it easy to miss, leading to frustration and delays in completing the transaction.
+* This issue affects the user experience and may result in incorrect data entry or abandoned transactions.
+----
+__Severity:*
+_Medium_ � This is a usability issue that impacts the user experience but does not prevent the core functionality from working.
+----
+__Priority:*
+_High_ � The error message needs to be improved to ensure users can complete their tasks efficiently.
+----
+__Attachments:*
+- Screenshot of the non-descriptive error message in the pop-up.
+- Screenshot of the Fund Transfer Add screen with the selected Bank account.
+- Logs or additional error details from the system.
+----
+__Root Cause Analysis (If Available):*
+The issue occurs because:
+- The system allows the selection of Bank accounts with payment methods other than _Transfer_, even though the business rules specify that only _Transfer_ is acceptable.
+- The error message is hardcoded and does not provide sufficient context or guidance.
+- The pop-up is displayed in an incorrect view (bottom layer), making it less noticeable and user-friendly.
+----
+__Suggested Fix:*
+- _Validation Rule:_
+-_ Update the system to filter and display only Bank accounts with the _Transfer_ payment method in the _Payment Hub Details* dropdown.
+-* If a Bank account with an invalid payment method is selected, prevent the selection and display an informative error message in the correct view.
+- _Error Message:_
+-* Replace the non-descriptive message with a clear and informative one, such as:
+-_""Invalid Payment Method: Please select a Bank account with the 'Transfer' payment method.""_
+- _UI/UX Improvement:_
+-_ Display the error message near the _Payment Hub Details* field or in a modal dialog for better visibility.
+-* Ensure the message is displayed in a user-friendly format (e.g., red text with an icon).
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4245)
+
+### Attachments
+No Attachments"
+Bug,(Sp24): Error message with status code 500 displayed in the network log when transferring funds from Bank (Transfer) to Treasury (Cash).,Mohamed Fathy,Mohamed Said,3,Testing,2025-02-27T15:46:00.000Z,2025-03-04T10:17:00.000Z,"### Description
+__Title:*
+Error message with status code 500 displayed in the network log when transferring funds from Bank (Transfer) to Treasury (Cash).
+----
+__Description:*
+When a user attempts to transfer a valid amount of money from a _Bank_ account (with _Transfer_ payment method) to a _Treasury_ account (with _Cash_ payment method) using the _Fund Transfer Add_ screen, the system fails to save the transaction. An error message is displayed in the network log with a status code _500_, and the transaction is not processed.
+----
+__Precondition:*
+- The user is logged in with the necessary permissions.
+- Valid _Bank_ and _Treasury_ accounts are available in the system.
+- The _Bank_ account has a _Transfer_ payment method, and the _Treasury_ account has a _Cash_ payment method.
+----
+__Steps to Reproduce:*
+- Navigate to _Finance Module > Transaction Submenu > Fund Transfer_.
+- Click on the _Add_ button to open the Fund Transfer Add screen.
+- Set the _Date_ (defaults to today).
+- In the _Send From_ section:
+-_ Select _Bank_ in the _Payment Hub* field.
+-_ Select a valid Bank and Bank Account in the _Payment Hub Details* field.
+-_ Ensure the _Payment Method_ is set to _Transfer*.
+- In the _Receive To_ section:
+-_ Select _Treasury_ in the _Payment Hub* field.
+-_ Select a valid Treasury in the _Payment Hub Details* field.
+-_ Ensure the _Payment Method_ is set to _Cash*.
+- Enter a valid _Amount to Send_.
+- Click on the _Save_ button.
+- Observe the network log using browser developer tools (F12).
+----
+__Expected Result:*
+* The system should save the Fund Transfer record successfully.
+* The transaction should be processed without errors.
+* No error messages should be displayed in the network log.
+----
+__Actual Result:*
+* The system fails to save the Fund Transfer record.
+* An error message is displayed in the network log with the following details:
+{color:-ffffff}json{color}
+{color:-ffffff}Copy{color}
+{noformat}{
+  ""correlationId"": ""f40e9ff5-740d-442d-925d-13b40edfaba6"",
+  ""message"": ""An error occurred while saving the entity changes. See the inner exception for details."",
+  ""messageCode"": 3006,
+  ""validationErrors"": null
+}{noformat}
+_ The status code in the network log is _500 (Internal Server Error)*.
+----
+__Impact:*
+* Users cannot complete Fund Transfer transactions from Bank (Transfer) to Treasury (Cash).
+* This issue disrupts the workflow of the Finance team and may lead to delays in financial operations.
+----
+__Severity:*
+_High_ � This is a critical functionality issue that prevents users from performing essential financial transactions.
+----
+__Priority:*
+_Urgent_ � This issue needs immediate attention as it affects core functionality.
+----
+__Attachments:*
+- Screenshot of the error message in the network log.
+- Screenshot of the Fund Transfer Add screen with the entered data.
+- Logs or additional error details from the server.
+----
+__Root Cause Analysis (If Available):*
+The error message suggests that the issue occurs while saving the entity changes. The inner exception (not visible in the logs) may provide more details about the specific cause. Possible causes include:
+* A mismatch between the payment methods (Transfer and Cash) during the transaction processing.
+* A database constraint or validation rule that is not being handled correctly.
+* An issue with the entity mapping or data persistence logic.
+----
+__Suggested Fix:*
+- Investigate the inner exception details to identify the exact cause of the error.
+- Ensure that the system handles the combination of _Transfer_ (Bank) and _Cash_ (Treasury) payment methods correctly.
+- Validate the entity mapping and database constraints to ensure they align with the business rules.
+- Add proper error handling and user-friendly messages to guide users in case of similar issues.
+----
+__Additional Notes:*
+* This issue should be tested in the development environment before deploying to production.
+* Regression testing should be performed to ensure that other Fund Transfer scenarios (e.g., Bank to Bank, Treasury to Treasury) are not affected.
+----
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4244)
+
+### Attachments
+No Attachments"
+Bug,(SP24): Save Button Successfully Saves Reconciliation but Does Not Redirect or Reset the Screen,Ahmed Gamal,Mohamed Said,3,Code review,2025-02-27T14:24:00.000Z,2025-03-03T11:53:00.000Z,"### Description
+__Title:*
+Save Button Successfully Saves Reconciliation but Does Not Redirect or Reset the Screen
+__Description:*
+On the _Payment Reconciliation_ screen in the _Finance App_, after clicking the _Save_ button, the reconciliation is successfully saved, and a _success popup_ is displayed. However, the screen remains stuck, and all manipulated fields still retain the same data and state instead of refreshing or redirecting. This creates confusion for users as they are unsure whether the reconciliation has been processed correctly.
+__Preconditions:*
+_ The user is logged into the ERP system with access to the _Finance App*.
+_ The user has navigated to _Finance Module ? Transactions ? Payment Reconciliation*.
+* A customer and a payment have been selected.
+* One or more invoices have been selected for reconciliation.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Transactions ? Payment Reconciliation_.
+- Select a customer from the _Customer Selection_ popup.
+- Select a payment from the _Payment Selection_ popup.
+- Choose one or more invoices for reconciliation.
+- Click the _Reconcile_ button to apply the payment.
+- Click the _Save_ button.
+- Observe that the reconciliation is successfully saved, and a _success popup_ appears.
+- Notice that the screen does not refresh or redirect, and the fields still show the same data.
+__Expected Result:*
+* After successful reconciliation, the screen should either:
+__ Redirect the user to the _Payment Reconciliation List_ screen.
+__ Refresh and reset the fields to their default state.
+* The previously reconciled invoices should no longer appear as pending reconciliation.
+_ The UI should provide a _clear indication* that the process has been completed.
+__Actual Result:*
+_ The _Save* button successfully saves the reconciliation and displays a success popup.
+* The screen remains unchanged with all manipulated fields retaining the same data.
+* Users are unsure whether the reconciliation was actually processed.
+__Suggested Fix:*
+_ Implement a _screen refresh or redirection* after successful reconciliation.
+_ Automatically _reset all fields* and update the invoice list to reflect the reconciliation.
+_ Ensure that reconciled invoices are _removed from the pending list*.
+* Provide a clear confirmation message indicating that the process is complete and that no further action is required.
+__Severity:*
+_Medium-High_ � The issue does not prevent reconciliation but causes confusion and inefficiency for users.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4236)
+
+### Attachments
+No Attachments"
+Bug,(SP24): Cancel Button is Not Actionable in Payment Reconciliation Screen,Esraa.kamel,Mohamed Said,3,Code review,2025-02-27T14:19:00.000Z,2025-03-05T15:25:00.000Z,"### Description
+__Title:*
+Cancel Button is Not Functioning on the Payment Reconciliation Screen
+__Description:*
+On the _Payment Reconciliation_ screen in the _Finance App_, the _Cancel_ button is not actionable when a user attempts to cancel a reconciliation action. As a result, users cannot revert any unsaved changes, leading to potential errors and requiring manual reloading of the page.
+__Preconditions:*
+_ The user is logged into the ERP system with access to the _Finance App*.
+_ The user has navigated to _Finance Module ? Transactions ? Payment Reconciliation*.
+* A customer and a payment have been selected.
+* One or more invoices have been selected for reconciliation.
+__Steps to Reproduce:*
+- Navigate to _Finance Module ? Transactions ? Payment Reconciliation_.
+- Select a customer from the _Customer Selection_ popup.
+- Select a payment from the _Payment Selection_ popup.
+- Choose one or more invoices for reconciliation.
+- Click the _Reconcile_ button to apply the payment.
+- Click the _Cancel_ button to discard the reconciliation action.
+__Expected Result:*
+_ The _Cancel* button should successfully revert any unsaved reconciliation actions.
+_ The _invoice list_ and _payment allocation* should return to their previous state.
+_ A _confirmation prompt* should appear (if applicable), asking the user to confirm cancellation.
+__Actual Result:*
+_ The _Cancel* button is not actionable (clicking it does not trigger any response).
+* Unsaved reconciliation changes remain on the screen.
+_ Users are forced to _reload the page manually* to undo changes.
+__Suggested Fix:*
+_ Ensure the _Cancel* button is correctly bound to a function that reverts changes.
+_ Implement a _confirmation popup* to confirm the cancellation of actions.
+* Ensure that unsaved changes are discarded, and the original state is restored.
+_ Validate error logs to check if there are _JavaScript errors or missing event listeners*.
+__Severity:*
+_High_ � Prevents users from efficiently managing reconciliations, leading to potential financial inaccuracies.
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4235)
+
+### Attachments
+No Attachments"
+Bug,Device entity already exists in vanSales schema,Maha.muhammed,Mostafa,2,To Do,2025-02-27T12:36:00.000Z,2025-03-11T10:27:00.000Z,"### Description
+No description available.
+
+### Environment
+Not Provided
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4233)
+
+### Attachments
+No Attachments"
+Bug,(SP21): System Unable to Delete Created Invoices in Admin Portal,Mohamed Hammad,Mohamed Said,3,To Do,2025-02-23T13:46:00.000Z,2025-03-04T10:18:00.000Z,"### Description
+_Title:_
+System Unable to Delete Created Invoices in Admin Portal
+----
+_Description:_
+In the _Admin Portal_, the system does not allow the deletion of created invoices. When an admin user attempts to delete an invoice, the operation fails, and the invoice remains in the system without any error message or feedback. This issue prevents administrators from managing invoices efficiently.
+----
+_Precondition:_
+* The ERP system is accessible, and the user is logged in with admin privileges.
+* There are existing invoices available for deletion.
+----
+_Steps to Reproduce:_
+- Log in to the _Admin Portal_ as an administrator.
+- Navigate to the _Invoices Management_ section.
+- Select an existing invoice.
+- Click the _Delete_ button.
+- Confirm the deletion action.
+----
+_Expected Result:_
+* The selected invoice should be successfully deleted from the system.
+* A success message should be displayed confirming the deletion.
+----
+_Actual Result:_
+* The invoice remains in the system after attempting to delete it.
+* No confirmation or error message is displayed, leaving the user uncertain about the operation status.
+
+### Environment
+[https://microtecsaudi.com:2006/admin-portal/bussiness-owners/invoices|https://microtecsaudi.com:2006/admin-portal/bussiness-owners/invoices]
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4138)
+
+### Attachments
+No Attachments"
+Bug,Save Button Not Functioning in General Settings,Abanoub.Nabil,Hossam Saad,3,To Do,2025-02-23T13:30:00.000Z,2025-03-03T15:04:00.000Z,"### Description
+_Description:_
+In the _Accounting App_ under _Master Data >> General Settings_, clicking the _Save_ button does not trigger any action. As a result, users cannot save their configurations.
+_Steps to Reproduce:_
+- Navigate to _Accounting App >> Master Data >> General Settings_.
+- Modify Current Year Earning Account.
+- Click the _Save_ button.
+_Actual Result:_
+_ The _Save* button does not respond, and changes are not saved.
+_Expected Result:_
+_ The _Save_ button should properly save any modifications made in _General Settings* or display error message.
+
+### Environment
+Not Provided
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4137)
+
+### Attachments
+No Attachments"
+Bug,(SP21) @General: Search Functionality Sends Excessive Requests Due to Lack of Debouncing ,Abanoub.Nabil,Mohamed Said,3,To Do,2025-02-23T11:29:00.000Z,2025-02-23T12:21:00.000Z,"### Description
+_Title:_
+Search Functionality Sends Excessive Requests Due to Lack of Debouncing
+----
+_Description:_
+The search functionality does not efficiently handle user input, causing an excessive number of requests to be sent to the server. Each time the user types a character, a request is immediately triggered, even if the time between keystrokes is less than one second. This can lead to server overload, performance issues, and unnecessary network traffic. Implementing _debouncing_ should optimize the search behavior.
+----
+_Precondition:_
+* The ERP system is accessible, and the user has access to the search feature.
+----
+_Steps to Reproduce:_
+- Log in to the ERP system.
+- Navigate to a screen where the search functionality is available.
+- Start typing a search term letter by letter.
+- Observe that each keystroke triggers a request without waiting for a pause in typing.
+----
+_Expected Result:_
+_ The search functionality should implement _debouncing*, meaning it waits for a short delay (e.g., 500�800ms) after the user stops typing before sending a request.
+* This reduces unnecessary server requests and improves performance.
+----
+_Actual Result:_
+* A request is sent for every character typed, even if the delay between keystrokes is very short.
+* This causes excessive API calls, leading to increased server load and potential performance degradation.
+----
+_Suggested Fix:_
+_ Implement _Debouncing* in the search functionality to delay API requests until the user has stopped typing for a defined period (e.g., 500�800ms).
+
+### Environment
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4129)
+
+### Attachments
+No Attachments"
+Bug,(SP21): Payment Confirmation Issue When Paying for Invoice Online,Mohamed Fathy,Mohamed Said,4,Testing,2025-02-20T14:15:00.000Z,2025-03-03T14:25:00.000Z,"### Description
+_Title:_
+Payment Confirmation Issue When Paying for Invoice Online
+----
+_Description:_
+When a user attempts to pay for an invoice online, the payment confirmation process encounters an issue, preventing successful transaction completion. This may result in incorrect payment statuses, missing confirmations, or failed transactions.
+----
+_Precondition:_
+* The ERP system is accessible, and the user is logged in with permissions to make online payments.
+* An invoice is available for online payment.
+* A valid payment method is selected.
+----
+_Steps to Reproduce:_
+- Log in to the _Admin Portal_ system.
+- Navigate to the _Invoices_ section.
+- Click _Add New Invoice_
+- Fill all Required fields
+- Proceed with the payment process.
+- Complete the transaction and observe the confirmation process.
+----
+_Expected Result:_
+* After completing the payment, a confirmation message should be displayed.
+* The invoice status should update to ""Paid.""
+* The payment record should be properly stored in the system.
+----
+_Actual Result:_
+* The payment confirmation does not appear after completing the transaction.
+* The invoice status remains unchanged (e.g., still marked as ""Pending"").
+* The user is unsure if the payment was successful, leading to potential duplicate transactions.
+
+### Environment
+[https://microtecsaudi.com:2006/admin-portal/|https://microtecsaudi.com:2006/admin-portal/]
+
+muhammed.saeed@microtec.com.eg
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4124)
+
+### Attachments
+No Attachments"
+Bug,(Sp21): Unable to Save Return Purchase Invoice Due to Unposted Transaction,Abanoub.Nabil,Mohamed Said,3,To Do,2025-02-17T15:52:00.000Z,2025-03-03T15:03:00.000Z,"### Description
+__Title: Unable to Save Return Purchase Invoice Due to Unposted Transaction*
+__Issue Description:*
+When the user attempts to _return items_ using the _""Return Purchase Invoice"" Add_ screen and saves the transaction without posting it, they are unable to create another return transaction for the same invoice.
+On the second attempt to return items from the same invoice, clicking the _Save_ button _does nothing_, and the _network log_ shows an error with _Status Code 500_.
+__Steps to Reproduce:*
+- Navigate to _Return Purchase Invoice Add_ screen.
+- Select a _Purchase Invoice_ to return items from.
+- Fill in all _required data_ and return _each item's available quantity_.
+- Click _Save_ (but do not post the transaction).
+- Open the _Return Purchase Invoice Add_ screen again and select the _same invoice_.
+- Fill in all _required data_ and attempt to _return the items again_.
+- Click _Save_ and observe that _nothing happens_.
+- Check the _network log_, which shows _HTTP 500 Internal Server Error_.
+__Expected Behavior:*
+_ The system should _display an informative message_ if there is an _unposted* return transaction related to the same Purchase Invoice.
+_ The message should guide the user to either _post_ or _cancel* the pending return before proceeding with a new one.
+_ The system should _not fail silently*, and it should prevent the user from facing an unexpected error.
+__Actual Behavior:*
+_ When the user attempts to save a second _Return Purchase Invoice* for the same invoice:
+__ Clicking the _Save_ button does _nothing_.
+__ The _network log_ shows an _HTTP 500 Internal Server Error_.
+__ No error message is displayed to the user, leaving them confused.
+h4. 
+__Impact:*
+_ Prevents users from _processing valid returns*.
+_ Causes _confusion* due to the lack of an error message.
+_ Results in _system instability* (HTTP 500 errors).
+_ Affects the _accuracy of purchase return records*.
+__Severity:_ _High*
+This issue blocks users from completing return transactions, affecting inventory accuracy and financial records.
+__Suggested Fix:*
+_ Implement _validation logic_ to check if an _unposted return transaction_ exists for the selected _Purchase Invoice*.
+_ Display a _clear error message* before saving, such as:
+_""There is an unposted return transaction related to this Purchase Invoice. Please post or cancel it before creating a new one.""_
+_ Ensure that the system _does not trigger a 500 error* and handles this scenario gracefully.
+
+### Environment
+[https://intmicrotec.com:2006/bussiness-owners/|https://intmicrotec.com:2006/bussiness-owners/]
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4085)
+
+### Attachments
+No Attachments"
+Bug,"(SP21): Incorrect ""Amount Exceeds the Price in RowRow3"" Error in Purchase Invoice Add Screen",Abanoub.Nabil,Mohamed Said,3,To Do,2025-02-17T14:03:00.000Z,2025-03-03T15:00:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4084)
+
+### Attachments
+undefined"
+Bug,(SP21): Help Button Navigation Issues,Abanoub.Nabil,Mohamed Said,3,To Do,2025-02-17T13:24:00.000Z,2025-02-17T14:50:00.000Z,"### Description
+__Bug Report: Help Button Navigation Issues*
+__Issue Description:*
+When the user clicks the _Help_ button on any screen, the system navigates to the Help Pages. However, the following issues occur:
+- _No Return to Previous Screen:_ There is no option to return back to the previous screen from the Help Pages.
+- _Incorrect Back Navigation Behavior:_ If the user manually navigates back, it returns to the parent-related Help Pages instead of the previous screen.
+- _Side Menu Displays Incorrect Options:_ The side menu incorrectly displays _General Settings_ module options instead of maintaining the context of the previously accessed screen.
+__Steps to Reproduce:*
+- Navigate to any module or transaction screen (e.g., Sales Invoice, Purchase Order, etc.).
+- Click on the _Help_ button.
+- Observe that the system navigates to the _Help Pages_ instead of opening in a new tab.
+- Attempt to navigate back using the browser back button.
+- Notice that it does not return to the previous screen but instead loads parent-related help pages.
+- Observe the side menu displaying _General Settings_ instead of the relevant module options.
+__Expected Behavior:*
+_ The Help Page should open in a _new window_ or _new tab* instead of redirecting the user from the current screen.
+_ If the Help Page is opened in the same window, a _clear return option* should be provided to navigate back to the previously accessed screen.
+* The side menu should remain consistent with the user's previously selected module / App, not default to General Settings.
+__Actual Behavior:*
+* The system redirects the user away from their current work screen when they click the Help button.
+* There is no direct way to return to the screen where the user clicked the Help button.
+_ The side menu shows _General Settings* options instead of the appropriate module.
+__Impact:*
+* Interrupts user workflow as they lose their place in the system.
+* Causes confusion due to incorrect navigation and missing return functionality.
+* Leads to inefficiency since users have to manually navigate back to the intended module.
+__Severity:_ _Medium to High*
+This issue affects usability and navigation across all modules, causing disruptions in user experience.
+__Suggested Fix:*
+_ Modify the Help Button functionality to _open the Help Pages in a new tab or window* instead of navigating away.
+_ Ensure that if the Help Page opens in the same window, there is a _Return to Previous Page* button.
+* Maintain the side menu context based on the user's current module instead of defaulting to General Settings.
+
+### Environment
+[https://intmicrotec.com:2006/bussiness-owners/|https://intmicrotec.com:2006/bussiness-owners/]
+[semob83188@maonyn.com|mailto:semob83188@maonyn.com]
+e01144778899A$*
+[https://ibrahimmohamed.microtecdev.com:2050/erp/|https://ibrahimmohamed.microtecdev.com:2050/erp/]
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4083)
+
+### Attachments
+No Attachments"
+Bug,(SP21): Missing Column Filtering Functionality in Help Pages List View Screen,Maha.muhammed,Mohamed Said,3,To Do,2025-02-13T16:42:00.000Z,2025-02-13T16:43:00.000Z,"### Description
+_Title: Missing Column Filtering Functionality in Help Pages List View Screen_
+_Module:_ Help Pages
+_Screen:_ Help Pages List View Screen
+_Severity:_ Major
+_Priority:_ High
+----
+__Description:*
+The Help Pages List View Screen lacks column filtering functionality, preventing users from filtering records based on column values.
+----
+__Steps to Reproduce:*
+- Navigate to the Help Pages module in the ERP system.
+- Open the List View Screen.
+- Attempt to filter any column using the column filtration functionality.
+----
+__Expected Result:*
+Each Important column in the Help Pages List View Screen should have a filtering icon or option to allow users to filter records based on column values.
+----
+__Actual Result:*
+No filtering functionality is provided for any column in the Help Pages List View Screen.
+----
+
+### Environment
+[https://microtecsaudi.com:2006/admin-portal/|https://microtecsaudi.com:2006/admin-portal/]
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4072)
+
+### Attachments
+No Attachments"
+Bug,(SP21): Unable to Change Fonts Family in Help Pages Text Editor,Maha.muhammed,Mohamed Said,3,To Do,2025-02-13T16:34:00.000Z,2025-02-13T16:35:00.000Z,"### Description
+_Title: Unable to Change Fonts Family in Help Pages Text Editor_
+_Module:_ Admin Portal - Help Pages
+_Severity:_ Major
+_Priority:_ High
+----
+__Description:*
+The text editor used in the Admin Portal's Help Pages does not allow users to change fonts. Despite selecting different font options from the toolbar, the applied text remains in the default font style.
+----
+__Steps to Reproduce:*
+- Navigate to Admin Portal >  Help Pages.
+- Open an existing Help Page or create a new one.
+- Highlight a text segment in the editor.
+- Attempt to change the font using the toolbar options.
+----
+__Expected Result:*
+The selected text should reflect the chosen font style.
+----
+__Actual Result:*
+The selected text remains in the default font, regardless of the chosen font.
+
+### Environment
+[https://microtecsaudi.com:2006/admin-portal/|https://microtecsaudi.com:2006/admin-portal/]
+
+
+Operating System: Windows 11
+Browser: Chrome, Edge
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4071)
+
+### Attachments
+No Attachments"
+Bug,SP21:  Arabic Text Formatting and Localization Issues in Admin Portal CMS Text Editor,Maha.muhammed,Mohamed Said,2,To Do,2025-02-13T15:49:00.000Z,2025-02-13T15:51:00.000Z,"### Description
+__Title: Arabic Text Formatting and Localization Issues in Admin Portal Text Editor*
+__Module:* Admin Portal � CMS Text Editor
+__Severity:_ ?? _High*
+__Priority:_ ?? _Medium*
+__Environment:*
+* ERP System Admin Portal (Web)
+* Help Pages Text Editor
+__Description:*
+The CMS Text Editor in the _Admin Portal_ fails to provide proper support for _Arabic text formatting_. Users are unable to apply _Right-to-Left (RTL) directionality_, and both _numeric and non-numeric lists_ are not formatted correctly. Additional _localization issues_ are also present.
+__Steps to Reproduce:*
+- Log in to the _Admin Portal_ of the ERP system.
+- Navigate to the _Help Pages Text Editor_ module.
+- Input _Arabic text_ into the editor.
+- Attempt to format the text to _RTL directionality_.
+- Create _numeric and non-numeric lists_ with Arabic text.
+__Actual Result:*
+_ Arabic text cannot be formatted to _RTL* directionality.
+_ _Numeric and non-numeric lists* do not reflect proper formatting in Arabic.
+_ Other _localization issues* like misaligned text, incorrect date formats, and untranslated labels are evident.
+__Expected Result:*
+_ Users should be able to format Arabic text to _RTL* directionality seamlessly.
+_ _Lists* should be correctly formatted according to Arabic standards.
+_ All _localization elements* should be correctly implemented for Arabic content.
+
+### Environment
+Not Provided
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4067)
+
+### Attachments
+No Attachments"
+Bug,"(SP21): Invalid Login Attempt"" Error for Authorized Users Navigating Between ERP System Apps",Nader Moustafa,Mohamed Said,4,Testing,2025-02-11T12:57:00.000Z,2025-03-03T14:27:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4014)
+
+### Attachments
+undefined"
+Bug,(SP21):  Incorrect Column Header Label in Purchase Invoice View Screen,Maha.muhammed,Mohamed Said,2,To Do,2025-02-11T12:32:00.000Z,2025-02-11T12:33:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-4013)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Vendor Statement Report Screen, Missing Required Message For All Data.",Abanoub.Nabil,Yassmin,2,To Do,2025-02-06T14:45:00.000Z,2025-03-04T10:19:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3953)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Vendor Opening Balance Screen, The Data of Distributed Popup Deleted When I Click The Discard Button. ",Mohamed Fathy,Yassmin,2,To Do,2025-02-05T16:41:00.000Z,2025-03-09T14:00:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3939)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Vendor Opening Balance Screen, The Error Message of Exceeded The Journal Line Amount Should be Handled.",Abanoub.Nabil,Yassmin,2,To Do,2025-02-05T16:25:00.000Z,2025-03-04T10:20:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3938)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Vendor Opening Balance Screen, The Validation Message of Adding Vendor Opening Balance Should be Handled.",Abanoub.Nabil,Yassmin,2,To Do,2025-02-05T16:08:00.000Z,2025-03-04T10:20:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3937)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Treasury Definition Edit Screen, Incorrect Current Balance Displayed When Edit The Treasury Name.",Maha.muhammed,Yassmin,3,Testing,2025-02-05T13:21:00.000Z,2025-03-03T14:58:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3936)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Payment Reconciliation Screen , Disapplied of Auto Distribute & Reconcile & Save Buttons Until I Select Payment.",mohamed Nabil,Yassmin,2,In Progress,2025-02-05T10:56:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3918)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Payment Reconciliation Screen, The Customer Invoices Should be Appear Once User Selected.",mohamed Nabil,Yassmin,2,In Progress,2025-02-05T10:37:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+""_As BRs:_ When I Select Customer,
+
+### Environment
+Not Provided
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3917)
+
+### Attachments
+No Attachments"
+Bug,"(SP:22):Payment Reconciliation Screen, The Required Message of Select Customer or Payment.",mohamed Nabil,Yassmin,2,In Progress,2025-02-04T15:37:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3914)
+
+### Attachments
+undefined"
+Bug,(SP21): Exported PDF Report from Return Sales Invoice List View Contains Unformatted Text,Maha.muhammed,Mohamed Said,3,Testing,2025-02-03T17:50:00.000Z,2025-03-03T14:57:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3907)
+
+### Attachments
+undefined"
+Bug,(Sp21): System Fails to Navigate to List View Screen After Successfully Posting a Return Sales Invoice,mohamed Nabil,Mohamed Said,3,In Progress,2025-02-03T17:34:00.000Z,2025-02-04T15:28:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3906)
+
+### Attachments
+undefined"
+Bug,(SP21): System Accepts Return Sales Invoice with Return Date Before Sales Invoice Date,Eslam Amgad,Mohamed Said,3,Code review,2025-02-03T17:28:00.000Z,2025-02-04T15:13:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3905)
+
+### Attachments
+undefined"
+Bug,(SP21): Cancel button not actionable in return sales invoice Add Screen,Ahmed Gamal,Mohamed Said,3,Code review,2025-02-03T17:15:00.000Z,2025-02-09T13:04:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3904)
+
+### Attachments
+undefined"
+Bug,"(SP21): Print Button in ""Return Sales Invoice"" List View is Not Actionable",Ahmed Gamal,Mohamed Said,3,Code review,2025-02-03T17:00:00.000Z,2025-02-09T13:04:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3903)
+
+### Attachments
+undefined"
+Bug,(SP21): Deleted Unposted Sales Invoice Still Appears in List View Until Browser Refresh,Ahmed Gamal,Mohamed Said,2,Code review,2025-02-03T16:32:00.000Z,2025-02-09T13:04:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3901)
+
+### Attachments
+undefined"
+Bug,(SP21): Missing Column Filtering Functionality in Return Sales Invoice List View,Maha.muhammed,Mohamed Said,3,Testing,2025-02-03T16:24:00.000Z,2025-03-03T14:57:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3900)
+
+### Attachments
+undefined"
+Bug,(SP21): Missing Values in Printed Sales Invoice Report,Ahmed Gamal,Mohamed Said,3,Code review,2025-02-03T16:17:00.000Z,2025-02-09T13:04:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3898)
+
+### Attachments
+undefined"
+Bug,SP 22 - Unit of Measurement: Save Button Shows Error Messages on First Click but Works on Second Click,mohamed Nabil,Tassneem fathi,2,Testing,2025-02-03T15:39:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3894)
+
+### Attachments
+undefined"
+Bug,(SP21):  Stock Out Print Report Issues,Ahmed Gamal,Mohamed Said,3,Code review,2025-02-03T15:24:00.000Z,2025-02-09T13:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3893)
+
+### Attachments
+undefined"
+Bug,(SP21): Stock In Print Report Issues,Ahmed Gamal,Mohamed Said,3,Code review,2025-02-03T15:16:00.000Z,2025-02-09T13:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3892)
+
+### Attachments
+undefined"
+Bug,(SP21) @General : Advanced Item Search Dialog Fails to Filter Items Based on Multiple Conditions,Mohamed Hammad,Mohamed Said,2,Code review,2025-02-03T15:01:00.000Z,2025-02-05T09:28:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3891)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Purchase Invoice Add Screen, The ""Empty"" Word Appears in The List When I Open The Advanced Search.",mohamed Nabil,Yassmin,2,To Do,2025-02-03T00:45:00.000Z,2025-03-02T23:13:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3883)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Purchase Invoice Add Screen, Undescriptive Error Message of required set tracking.",mohamed Nabil,Yassmin,2,To Do,2025-02-03T00:35:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3882)
+
+### Attachments
+undefined"
+Bug,(SP21):  Multiple Stock In Entries Created When Clicking Save Button Multiple Times,mohamed Nabil,Mohamed Said,3,Testing,2025-02-02T14:07:00.000Z,2025-03-03T14:55:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3879)
+
+### Attachments
+undefined"
+Bug,(SP21): Return Sales Invoice Add Screen Missing Walkthrough Guide with Instructional Steps,Ahmed Gamal,Mohamed Said,2,To Do,2025-02-02T13:26:00.000Z,2025-02-05T11:48:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3877)
+
+### Attachments
+undefined"
+Bug,(SP21):  Sales Invoice Add Screen Missing Walkthrough Guide with Instructional Steps,Ahmed Gamal,Mohamed Said,2,To Do,2025-02-02T13:21:00.000Z,2025-02-05T11:49:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3876)
+
+### Attachments
+undefined"
+Bug,"(SP21): Missing Walkthrough Guide for the ""Fund Transfer"" Module in Finance App",Ahmed Gamal,Mohamed Said,2,To Do,2025-02-02T13:01:00.000Z,2025-02-05T11:50:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3874)
+
+### Attachments
+undefined"
+Bug,(SP21): Purchase Invoice Screen Guide Walkthrough Does Not Display Steps After Step 9 /13,Ahmed Gamal,Mohamed Said,3,Code review,2025-02-02T12:47:00.000Z,2025-02-09T13:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3873)
+
+### Attachments
+undefined"
+Bug,(Sp21): Unexpected Stock Increase When Posting a Purchase Invoice Multiple Times,mohamed Nabil,Mohamed Said,3,Testing,2025-02-02T12:32:00.000Z,2025-03-03T14:54:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3872)
+
+### Attachments
+undefined"
+Bug,SP 22 - Inventory Opening Balance: Financial Year and GL Account Fields Do Not Return Data in the List,Eslam Amgad,Tassneem fathi,2,Testing,2025-02-02T11:35:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3871)
+
+### Attachments
+undefined"
+Bug,(SP21): Exported Return Purchase Invoice PDF Report Has Multiple Text Formatting Issues,Maha.muhammed,Mohamed Said,3,Testing,2025-02-02T10:40:00.000Z,2025-03-03T14:54:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3863)
+
+### Attachments
+undefined"
+Bug,(SP21): Missing Column Filtering Functionality in the 'Return Purchase Invoice' List View,Maha.muhammed,Mohamed Said,3,Testing,2025-02-02T10:29:00.000Z,2025-03-03T14:53:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3862)
+
+### Attachments
+undefined"
+Bug,(SP21): The 'Print' Button in the 'Return Purchase Invoice' List View is Not Actionable,Ahmed Gamal,Mohamed Said,3,Code review,2025-02-02T09:29:00.000Z,2025-02-09T13:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3860)
+
+### Attachments
+undefined"
+Bug,(SP21): System Allows Posting 'Return Purchase Invoice' with a Date Before the 'Purchase Invoice' Date,Eslam Amgad,Mohamed Said,3,Code review,2025-02-02T09:04:00.000Z,2025-02-04T15:13:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3856)
+
+### Attachments
+undefined"
+Bug,(SP21): The 'Return Purchase Invoice' Add Screen Allows Item Deletion in the Items Table Section,Maha.muhammed,Mohamed Said,3,Testing,2025-02-02T08:55:00.000Z,2025-03-03T14:52:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3855)
+
+### Attachments
+undefined"
+Bug,(Sp21): Show/Hide Column Functionality Has Responsive Issues in Purchase Invoice List View,mohamed Nabil,Mohamed Said,2,To Do,2025-01-30T15:13:00.000Z,2025-02-04T11:17:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3852)
+
+### Attachments
+undefined"
+Bug,"(SP21): ""Print"" Action Button in Purchase Invoice List View Is Not Actionable and Lacks Hover Tooltip",Maha.muhammed,Mohamed Said,3,Testing,2025-01-30T15:07:00.000Z,2025-03-03T14:51:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3851)
+
+### Attachments
+undefined"
+Bug,(Sp21): Localization Issues in Exported Purchase Invoice Excel Report,Ahmed Gamal,Mohamed Said,2,Code review,2025-01-30T14:52:00.000Z,2025-02-09T13:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3850)
+
+### Attachments
+undefined"
+Bug,(Sp21): Delete and Edit Action Buttons Are Incorrectly Displayed for Posted Purchase Invoice,Ahmed Gamal,Mohamed Said,3,Code review,2025-01-30T14:43:00.000Z,2025-02-09T13:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3849)
+
+### Attachments
+undefined"
+Bug,"(SP21): Title of Inventory Opening Balance Should Be ""Inventory Opening Balance"" for Clarity",Ahmed Gamal,Mohamed Said,2,Code review,2025-01-30T13:38:00.000Z,2025-02-09T13:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3847)
+
+### Attachments
+undefined"
+Bug,(SP21): System Accepts Discount Amount Greater Than Cost in Purchase Invoice but Displays Incorrect Validation After Save and Post,mohamed Nabil,Mohamed Said,3,Testing,2025-01-30T12:11:00.000Z,2025-03-03T14:50:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3844)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Vendor Definition View Screen, The Design of Cancel Button Should be Handled When I Minimize The Screen.",Abanoub.Nabil,Yassmin,2,To Do,2025-01-29T16:30:00.000Z,2025-03-04T10:29:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3836)
+
+### Attachments
+undefined"
+Bug,"(SP21): ""Forget Password"" Link is Missing in the Login Screen",Eslam Amgad,Mohamed Said,3,Testing,2025-01-29T14:34:00.000Z,2025-03-03T14:49:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3832)
+
+### Attachments
+undefined"
+Bug,"(SP:22): Vendor Category List View, The Show & Hide Column Icon Doesn't Work.",Mohamed Fathy,Yassmin,2,To Do,2025-01-29T12:20:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3830)
+
+### Attachments
+undefined"
+Bug,"(SP21): ""Fill Items Data with Excel"" functionality not populating items in the ""Add Price Policy"" screen.",Abanoub.Nabil,Mohamed Said,3,To Do,2025-01-28T16:22:00.000Z,2025-03-03T14:48:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3825)
+
+### Attachments
+undefined"
+Bug,(SP21): Select Tax Dropdown Displays Non-Existent Tax Definitions in Tax Definition Edit Screen,Hager Mostafa,Mohamed Said,2,To Do,2025-01-28T15:56:00.000Z,2025-02-04T15:53:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3823)
+
+### Attachments
+undefined"
+Bug,(SP21):  Add Item Catalog Quick Add Form Size Issue,Abanoub.Nabil,Mohamed Said,2,To Do,2025-01-28T14:33:00.000Z,2025-02-04T15:54:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3818)
+
+### Attachments
+undefined"
+Bug,SP 22 - Item Catalog: Item Catalog Records Are Deletable in Item Catalog Screen,Mohamed Hammad,Tassneem fathi,4,Testing,2025-01-28T13:58:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3817)
+
+### Attachments
+undefined"
+Bug,(SP21): Payment Out Add Screen Freezes When Payment Method Details Are Incomplete,Abanoub.Nabil,Mohamed Said,3,To Do,2025-01-28T12:56:00.000Z,2025-03-02T13:48:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3812)
+
+### Attachments
+undefined"
+Bug,(SP21): Payment Out Edit Screen has undescriptive Error Message When Payment Method Details Are Incomplete,Ahmed Gamal,Mohamed Said,3,Testing,2025-01-28T12:54:00.000Z,2025-03-03T14:44:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3811)
+
+### Attachments
+undefined"
+Bug,(SP21): @General Links Not Opening in New Tab or New Window,Abanoub.Nabil,Mohamed Said,2,To Do,2025-01-28T12:37:00.000Z,2025-02-04T15:55:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3810)
+
+### Attachments
+undefined"
+Bug,"(SP21): Payment Out Add screen displays ""Invalid number"" validation message when a float/double value is entered in the amount field.",Ahmed Gamal,Mohamed Said,2,Code review,2025-01-28T12:36:00.000Z,2025-02-09T13:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3809)
+
+### Attachments
+undefined"
+Bug,(SP21): Issues with Print Action Icon Button in Payment Out List View,Ahmed Gamal,Mohamed Said,3,Code review,2025-01-28T12:09:00.000Z,2025-02-09T13:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3806)
+
+### Attachments
+undefined"
+Bug,(SP21): Issues with Print Action Icon Button in Payment In List View,Ahmed Gamal,Mohamed Said,3,Code review,2025-01-28T11:59:00.000Z,2025-02-09T13:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3805)
+
+### Attachments
+undefined"
+Bug,SP 22 - Financial Calendar: Error Missing When Closing Year Without Posting Journal Entries.,Nader Moustafa,Tassneem fathi,3,Testing,2025-01-27T16:49:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3804)
+
+### Attachments
+undefined"
+Bug,Financial calendar Bugs,Maha.muhammed,Tassneem fathi,2,Testing,2025-01-27T16:47:00.000Z,2025-02-04T15:59:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3803)
+
+### Attachments
+undefined"
+Bug,"(SP:21): Fund Transfer List View Screen, The Design of Show & Hide Column Button Should be Handled.",mohamed Nabil,Yassmin,2,To Do,2025-01-26T16:10:00.000Z,2025-03-02T11:28:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3791)
+
+### Attachments
+undefined"
+Bug,(SP21): System Allows Deletion of Tax Groups Assigned to Tax Definitions,Eslam Amgad,Mohamed Said,3,Code review,2025-01-26T14:27:00.000Z,2025-01-27T09:38:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3787)
+
+### Attachments
+undefined"
+Bug,(SP21) : Longitude and Latitude Not Auto-Filled After Selecting a Map Point in Address Tab,Maha.muhammed,Mohamed Said,2,Testing,2025-01-26T13:04:00.000Z,2025-02-04T16:01:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3782)
+
+### Attachments
+undefined"
+Bug,"(SP21): ""Show/Hide Columns"" Not Actionable Due to Responsive Issues in Vender Category List View",mohamed Nabil,Mohamed Said,2,To Do,2025-01-26T12:51:00.000Z,2025-02-04T16:02:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3781)
+
+### Attachments
+undefined"
+Bug,(SP21): Infinite Loading When Adding Customer Definition Without an Open Financial Year,Mohamed Hammad,Mohamed Said,3,Testing,2025-01-26T12:36:00.000Z,2025-01-28T11:01:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3780)
+
+### Attachments
+undefined"
+Bug,"(SP21): ""IsDetail"" Switch Component Not Actionable on Empty Item Category Tree Screen",Mohamed Hammad,Mohamed Said,3,Testing,2025-01-26T11:47:00.000Z,2025-01-26T17:15:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3757)
+
+### Attachments
+undefined"
+Bug,(SP20) Treasury: Localization Issues in Column Headers of Exported PDF/Excel Reports,Maha.muhammed,Mohamed Said,2,To Do,2025-01-23T10:55:00.000Z,2025-01-23T10:55:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3735)
+
+### Attachments
+undefined"
+Bug,(SP20) @General: Export Button Does Not Display Informative Message When List View Is Empty,Maha.muhammed,Mohamed Said,3,To Do,2025-01-23T10:34:00.000Z,2025-01-23T10:34:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3734)
+
+### Attachments
+undefined"
+Bug,(SP20) Treasury Edit Screen: Column Filtering in Select JL Account Advanced Dialog Allows User to Select Account Without Viewing Details,Maha.muhammed,Mohamed Said,3,To Do,2025-01-23T10:27:00.000Z,2025-01-23T10:27:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3733)
+
+### Attachments
+undefined"
+Bug,(SP20): Treasury Statement Fails to Display Opening Balance for Treasuries with No Transactions,Maha.muhammed,Mohamed Said,2,To Do,2025-01-23T10:17:00.000Z,2025-01-23T10:17:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3732)
+
+### Attachments
+undefined"
+Bug,SP 21 - Barcode and Field Behavior in Item Definition: Barcode Disappears and Field Data Misalignment,Maha.muhammed,Tassneem fathi,3,To Do,2025-01-23T00:38:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3727)
+
+### Attachments
+undefined"
+Bug,SP 21 - Financial Calendar: Success Message for Row Deletion Needs to Be Handled,Maha.muhammed,Tassneem fathi,2,Testing,2025-01-22T23:24:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3725)
+
+### Attachments
+undefined"
+Bug,SP 21 - Journal Entry Opening Balance: Branch Field Displays Required Error Message Despite Existing Value,Mohamed Hammad,Tassneem fathi,3,Testing,2025-01-22T23:10:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3724)
+
+### Attachments
+undefined"
+Bug,(SP20):  Unresponsive Save Buttons and Screen Freeze in Edit Treasury Form,Maha.muhammed,Mohamed Said,3,To Do,2025-01-22T16:26:00.000Z,2025-01-22T16:27:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3721)
+
+### Attachments
+undefined"
+Bug,(SP20): Search Input Hidden in Chart of Accounts (Tree View) on Vertical Scroll,Maha.muhammed,Mohamed Said,2,To Do,2025-01-22T15:43:00.000Z,2025-01-22T15:44:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3720)
+
+### Attachments
+undefined"
+Bug,"(SP20) @General: Search Functionality Not Working in ""Choose an Account"" Advanced Dialog",Maha.muhammed,Mohamed Said,2,To Do,2025-01-22T15:37:00.000Z,2025-01-22T15:38:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3719)
+
+### Attachments
+undefined"
+Bug,(SP20): System Fails to Delete Sub UOMs in Edit Screen Despite Displaying Success Message,Maha.muhammed,Mohamed Said,3,To Do,2025-01-22T13:14:00.000Z,2025-02-02T09:32:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3717)
+
+### Attachments
+undefined"
+Bug,(SP20): Unable to Delete Unused UOM from List View,Maha.muhammed,Mohamed Said,3,To Do,2025-01-22T13:08:00.000Z,2025-02-02T09:32:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3716)
+
+### Attachments
+undefined"
+Bug,Inventory opening balance Bugs,Maha.muhammed,Tassneem fathi,2,To Do,2025-01-21T11:58:00.000Z,2025-02-02T11:35:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3702)
+
+### Attachments
+undefined"
+Bug,(SP20) Attribute Edit Screen: System Does Not Return to List View After Successful Editing,Maha.muhammed,Mohamed Said,2,To Do,2025-01-20T17:09:00.000Z,2025-01-20T17:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3701)
+
+### Attachments
+undefined"
+Bug,(SP20) Attribute Edit Screen: Missing Required Validation Messages,Maha.muhammed,Mohamed Said,3,To Do,2025-01-20T17:08:00.000Z,2025-01-20T17:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3700)
+
+### Attachments
+undefined"
+Bug,(SP20) Attribute Edit Screen: Save Button Infinite Loading and Unresponsive Components,Maha.muhammed,Mohamed Said,3,To Do,2025-01-20T17:07:00.000Z,2025-01-20T17:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3699)
+
+### Attachments
+undefined"
+Bug,(SP20): Profile Link Not Actionable in Business Owner Screen,Maha.muhammed,Mohamed Said,3,To Do,2025-01-19T10:08:00.000Z,2025-01-19T10:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3688)
+
+### Attachments
+undefined"
+Bug,(SP20): Dark Mode Not Applying in Business Owner Screen,Maha.muhammed,Mohamed Said,3,To Do,2025-01-19T10:03:00.000Z,2025-01-19T10:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3687)
+
+### Attachments
+undefined"
+Bug,(SP20): Language and Localization Not Changing in Business Owner Screen,Maha.muhammed,Mohamed Said,3,To Do,2025-01-19T09:55:00.000Z,2025-01-19T09:55:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3686)
+
+### Attachments
+undefined"
+Bug,(SP20): Missing field with Tax Label and Applied Tax value in Add Invoice and Invoice Payment screens,Mohamed Hammad,Mohamed Said,3,To Do,2025-01-16T11:46:00.000Z,2025-03-04T10:36:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3683)
+
+### Attachments
+undefined"
+Bug,"(SP20): Required validation messages in (CMS Add/Edit Screen) are displayed in black color font, making them hard to distinguish",Mohamed Fathy,Mohamed Said,2,To Do,2025-01-16T11:41:00.000Z,2025-01-16T11:41:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3682)
+
+### Attachments
+undefined"
+Bug,(SP20): System cannot delete the saved CMS; returns status code 405 without a descriptive message,Maha.muhammed,Mohamed Said,3,To Do,2025-01-16T11:35:00.000Z,2025-03-04T10:35:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3681)
+
+### Attachments
+undefined"
+Bug,"(SP20): Missing tooltips on ""Proceed to Offline Payment"" and ""Proceed to Online Payment"" buttons",Mohamed Fathy,Mohamed Said,2,To Do,2025-01-16T11:19:00.000Z,2025-01-16T11:19:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3680)
+
+### Attachments
+undefined"
+Bug,"(SP20): System enables multiple success payment operations upon repeated clicks of ""Proceed to Offline Payment"" and ""Proceed to Online Payment"" Buttons",Mohamed Fathy,Mohamed Said,3,Testing,2025-01-16T11:16:00.000Z,2025-03-04T10:35:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3679)
+
+### Attachments
+undefined"
+Bug,"(SP20): Missing descriptive validation error when clicking ""Proceed to Offline Payment"" with an incorrectly formatted password",Mohamed Fathy,Mohamed Said,2,To Do,2025-01-16T10:32:00.000Z,2025-01-16T10:34:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3678)
+
+### Attachments
+undefined"
+Bug,(SP20): Search functionality not working in the Invoice List,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-16T10:15:00.000Z,2025-01-16T10:18:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3676)
+
+### Attachments
+undefined"
+Bug,(SP20): Invoice List lacks View and Edit action buttons for unpaid invoices,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-16T10:04:00.000Z,2025-01-16T10:05:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3675)
+
+### Attachments
+undefined"
+Bug,(SP20): Multiple un-understandable errors occur when sending an invoice with Some Empty Required Fields,Mohamed Hammad,Mohamed Said,3,To Do,2025-01-16T09:40:00.000Z,2025-03-04T10:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3673)
+
+### Attachments
+undefined"
+Bug,(SP20): App side slider menu does not collapse or expand when clicking the toggler icon,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-16T09:24:00.000Z,2025-01-16T09:24:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3672)
+
+### Attachments
+undefined"
+Bug,(SP20): Logo Icon does not redirect to the Home screen and opens an empty web page,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-16T09:15:00.000Z,2025-01-16T09:15:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3671)
+
+### Attachments
+undefined"
+Bug,(SP20): Incorrect search functionality in the Business Owners List View,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-15T15:45:00.000Z,2025-01-15T15:45:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3670)
+
+### Attachments
+undefined"
+Bug,(SP20): System does not send the invoice link to the receiver's phone number via SMS,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-15T15:11:00.000Z,2025-01-15T15:11:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3669)
+
+### Attachments
+undefined"
+Bug,(SP20): Unexpected redirection behaviors of Action Icon buttons in the Business Owners screen,Mohamed Hammad,Mohamed Said,3,To Do,2025-01-15T15:05:00.000Z,2025-03-04T10:52:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3668)
+
+### Attachments
+undefined"
+Bug,(SP20): No redirection option after successful payment of the invoice,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-15T14:27:00.000Z,2025-01-16T08:58:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3667)
+
+### Attachments
+undefined"
+Bug,(SP20): App Checkboxes Not Clearly Visible Leading to Uncalculated Costs in Invoice,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-15T14:12:00.000Z,2025-01-19T10:57:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3666)
+
+### Attachments
+undefined"
+Bug,(SP20): Valid Till field displays incorrect date in the Add Invoice section,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-15T14:01:00.000Z,2025-01-15T14:01:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3665)
+
+### Attachments
+undefined"
+Bug,(SP20): Incorrect title displayed on the Business Owners screen,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-15T13:41:00.000Z,2025-01-15T13:41:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3659)
+
+### Attachments
+undefined"
+Bug,(SP20): Localization issues in the Manage Business Owners screen,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-15T13:35:00.000Z,2025-01-15T13:35:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3658)
+
+### Attachments
+undefined"
+Bug,(SP20): Domains Button in Manage Business Owners screen is not actionable,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-15T13:27:00.000Z,2025-01-15T13:27:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3657)
+
+### Attachments
+undefined"
+Bug,(SP20): Business Owners List displays a saved business owner despite no creation by the admin user,Mohamed Fathy,Mohamed Said,2,To Do,2025-01-15T13:21:00.000Z,2025-01-15T13:21:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3656)
+
+### Attachments
+undefined"
+Bug,(SP20): ERP Base URL Returns HTTP 301 Status Code After Session Creation,Maha.muhammed,Mohamed Said,3,To Do,2025-01-14T14:08:00.000Z,2025-01-14T14:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3646)
+
+### Attachments
+undefined"
+Bug,General: Search Function Sends Two Requests When Copy-Pasting Text in Payment In Screen.,Maha.muhammed,Hossam Saad,3,To Do,2025-01-13T11:19:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3587)
+
+### Attachments
+undefined"
+Bug,(SP20): Item Description Field Behavior in Stock Out Add Screen,Maha.muhammed,Mohamed Said,2,To Do,2025-01-09T16:19:00.000Z,2025-01-09T16:20:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3585)
+
+### Attachments
+undefined"
+Bug,(SP20) :  Issues in Stock Out Add Screen When First Opening it,Maha.muhammed,Mohamed Said,2,To Do,2025-01-09T09:26:00.000Z,2025-01-09T09:27:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3580)
+
+### Attachments
+undefined"
+Bug,(SP20): Missing Registration Option on Login Screen,Maha.muhammed,Mohamed Said,3,To Do,2025-01-08T13:49:00.000Z,2025-01-08T13:50:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3579)
+
+### Attachments
+undefined"
+Bug,"(SP20):Sales Invoice View Screen, Total After Vat is Not Displayed Correctly in Invoice Summary.",Maha.muhammed,Yassmin,2,Code review,2025-01-06T12:35:00.000Z,2025-03-11T11:39:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3576)
+
+### Attachments
+undefined"
+Bug,(SP20): Design Issues in Branches List View,Maha.muhammed,Mohamed Said,2,To Do,2025-01-06T12:07:00.000Z,2025-01-06T12:07:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3575)
+
+### Attachments
+undefined"
+Bug,(SP20): Design Inconsistency in Edit Branch Dialog,Maha.muhammed,Mohamed Said,2,To Do,2025-01-06T12:01:00.000Z,2025-01-06T12:02:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3574)
+
+### Attachments
+undefined"
+Bug,(SP20):The Message of Edit Price Policy Should be handled.,Maha.muhammed,Yassmin,2,To Do,2025-01-06T11:38:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3573)
+
+### Attachments
+undefined"
+Bug,(SP20): Selected Items Unchecked When Navigating Pages in Item Code Advanced Search Dialog,Maha.muhammed,Mohamed Said,2,To Do,2025-01-06T11:37:00.000Z,2025-01-06T11:38:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3572)
+
+### Attachments
+undefined"
+Bug,(SP20): Unformatted Text in Exported PDF Report – Payment Out,Maha.muhammed,Mohamed Said,2,To Do,2025-01-06T10:56:00.000Z,2025-01-06T10:56:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3571)
+
+### Attachments
+undefined"
+Bug,(SP20): Unformatted Text in Exported PDF Report – Payment In,Maha.muhammed,Mohamed Said,3,To Do,2025-01-06T10:50:00.000Z,2025-01-28T11:40:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3570)
+
+### Attachments
+undefined"
+Bug,(SP20): Show/Hide Columns in Payment Term Displays Only Actions Column When All Options Are Unchecked,Maha.muhammed,Mohamed Said,2,To Do,2025-01-05T16:48:00.000Z,2025-01-05T16:48:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3569)
+
+### Attachments
+undefined"
+Bug,(SP20): Incomplete Data in Exported Excel and PDF for Treasury Definition,Maha.muhammed,Mohamed Said,3,To Do,2025-01-05T15:51:00.000Z,2025-01-23T10:49:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3568)
+
+### Attachments
+undefined"
+Bug,(SP20) General : Filter Reset in List View When Navigating with Paginator,Maha.muhammed,Mohamed Said,2,To Do,2025-01-05T15:34:00.000Z,2025-01-05T15:35:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3567)
+
+### Attachments
+undefined"
+Bug,(SP20): Unposted Payment Out Displayed in Recent Outgoing Transactions,Amr Yousry,Mohamed Said,2,To Do,2025-01-05T15:03:00.000Z,2025-01-05T15:21:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3566)
+
+### Attachments
+undefined"
+Bug,(SP20): Duplicate Journal Line Component in Customer Opening Balance Edit Screen,Maha.muhammed,Mohamed Said,2,To Do,2025-01-05T13:44:00.000Z,2025-01-05T13:45:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3565)
+
+### Attachments
+undefined"
+Bug,Missing scroll bar in the Configuration popup window.,Maha.muhammed,Hossam Saad,2,To Do,2025-01-05T12:42:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3563)
+
+### Attachments
+undefined"
+Bug,(SP20) : Duplicate Item Error in Price Policy Edit Screen,Ahmed Gamal,Mohamed Said,3,To Do,2025-01-05T12:08:00.000Z,2025-01-06T12:08:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3562)
+
+### Attachments
+undefined"
+Bug,(SP20):General:  Unwanted Image Details Displayed in View Mode,Maha.muhammed,Mohamed Said,2,To Do,2025-01-05T11:33:00.000Z,2025-01-06T12:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3561)
+
+### Attachments
+undefined"
+Bug,(SP20): Misaligned Buttons in Subdomain Cards – My Subscription Page,Maha.muhammed,Mohamed Said,3,To Do,2025-01-05T11:18:00.000Z,2025-01-05T11:19:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3560)
+
+### Attachments
+undefined"
+Bug,(SP20): General : Missing Scrollbar in Form Dialog,Maha.muhammed,Mohamed Said,3,To Do,2025-01-05T11:04:00.000Z,2025-01-05T11:05:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3559)
+
+### Attachments
+undefined"
+Bug,(SP20): Excessive Padding and Margins in Bank Account Statement Screen,Maha.muhammed,Mohamed Said,2,To Do,2025-01-05T10:51:00.000Z,2025-01-05T10:53:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3558)
+
+### Attachments
+undefined"
+Bug,Incorrect Success Message After Editing Account,Mahmoud Zaki,Hossam Saad,2,To Do,2024-12-31T14:29:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3552)
+
+### Attachments
+undefined"
+Bug,Localization Issue in Account Statement List View,Mahmoud Zaki,Hossam Saad,2,To Do,2024-12-31T13:38:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3551)
+
+### Attachments
+undefined"
+Bug,Exported Sheets Contain Blank Columns in Chart of Account,Maha.muhammed,Hossam Saad,2,To Do,2024-12-31T13:23:00.000Z,2025-03-03T11:34:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3550)
+
+### Attachments
+undefined"
+Bug,"(SP20):Return Purchase Invoice Add Screen, The System Generated Batch is Not Displayed.  ",Mahmoud Zaki,Yassmin,2,To Do,2024-12-31T11:43:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3548)
+
+### Attachments
+undefined"
+Bug,(SP20):The Redirect of Return Purchase Invoice in Journal Entry List View Not Working.,Mahmoud Zaki,Yassmin,2,To Do,2024-12-31T11:34:00.000Z,2025-02-06T14:33:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3547)
+
+### Attachments
+undefined"
+Bug,"(SP20):Return Purchase Invoice Add & Edit Screens, The Subtotal is Not Calculated Correctly. ",Mahmoud Zaki,Yassmin,2,To Do,2024-12-31T11:26:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3546)
+
+### Attachments
+undefined"
+Bug,No Validation for Negative Rate Values in Edit Mode of Journal Entry,Mahmoud Zaki,Hossam Saad,2,To Do,2024-12-30T14:37:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3540)
+
+### Attachments
+undefined"
+Bug,Attachment Still Appears After Clicking Cancel in Journal Entry Add Mode,Mahmoud Zaki,Hossam Saad,2,To Do,2024-12-30T14:24:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3539)
+
+### Attachments
+undefined"
+Bug,"(SP20):Customer Definition List View Screen, The Bug of Export Data With Filtered data",Maha.muhammed,Yassmin,2,To Do,2024-12-30T12:52:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3538)
+
+### Attachments
+undefined"
+Bug,(SP20):The Message of Deleting The Customer Category Using in Transaction Should be Descriptive ,Maha.muhammed,Yassmin,2,To Do,2024-12-30T12:43:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3535)
+
+### Attachments
+undefined"
+Bug,(SP20): Save Button Not Functioning in Warehouse Edit Screen,Mostafa Elbagory,Mohamed Said,4,Testing,2024-12-30T12:38:00.000Z,2025-03-03T14:27:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3533)
+
+### Attachments
+undefined"
+Bug,(SP20):Customer Category Name Field Accept More Than 50 Characters,mohamed Nabil,Yassmin,2,To Do,2024-12-30T12:27:00.000Z,2025-03-02T23:18:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3531)
+
+### Attachments
+undefined"
+Bug,(SP20):Customer Category Search Doesn't Work With All Columns,Mohamed Magdy,Yassmin,2,To Do,2024-12-30T12:23:00.000Z,2025-03-02T23:22:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3530)
+
+### Attachments
+undefined"
+Bug,"(SP20):Customer Category List View Screen, The Bug of Export Data With Filtered data",Maha.muhammed,Yassmin,2,To Do,2024-12-30T12:00:00.000Z,2025-03-02T23:57:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3528)
+
+### Attachments
+undefined"
+Bug,Duplicate accounts with the same details should not be allowed.,Mahmoud Zaki,Hossam Saad,2,To Do,2024-12-28T16:17:00.000Z,2025-01-12T13:09:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3506)
+
+### Attachments
+undefined"
+Bug,Warning message for required fields in Opening Balance Journal Entry is unclear in both Arabic and English.,Mahmoud Zaki,Hossam Saad,2,Code review,2024-12-28T13:14:00.000Z,2025-01-12T13:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3504)
+
+### Attachments
+undefined"
+Bug,SP 20: Error Message Not Handled for Duplicate Serial in Stock Out,Hager Mostafa,Tassneem fathi,3,To Do,2024-12-28T05:21:00.000Z,2025-01-12T13:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3502)
+
+### Attachments
+undefined"
+Bug,(SP20): Missing Column Filtering in Purchase Invoice,Maha.muhammed,Mohamed Said,3,To Do,2024-12-26T16:29:00.000Z,2025-01-13T10:02:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3491)
+
+### Attachments
+undefined"
+Bug,No Error Message for Required CR or DB in Edit Mode,Mahmoud Zaki,Hossam Saad,2,Code review,2024-12-26T15:22:00.000Z,2025-01-12T13:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3488)
+
+### Attachments
+undefined"
+Bug,(SP20): Incorrect Calculation of Debit and Credit Sums in Bank Account Statement,Maha.muhammed,Mohamed Said,3,To Do,2024-12-26T12:33:00.000Z,2024-12-26T12:34:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3483)
+
+### Attachments
+undefined"
+Bug,Sidebar Menu Not Responsive in Arabic Mode,Mahmoud Zaki,Hossam Saad,2,To Do,2024-12-26T11:40:00.000Z,2025-01-12T13:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3481)
+
+### Attachments
+undefined"
+Bug,(SP20)General: Unexpected Behavior in Show/Hide Column Functionality,Mahmoud Zaki,Mohamed Said,2,To Do,2024-12-26T10:43:00.000Z,2025-01-23T10:46:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3478)
+
+### Attachments
+undefined"
+Bug,Current Date in Cost Center Report Does Not Align with Current Financial Year,Mahmoud Zaki,Hossam Saad,2,To Do,2024-12-26T10:43:00.000Z,2025-01-12T13:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3477)
+
+### Attachments
+undefined"
+Bug,Account Code Redirects to Account Statement Report with Incorrect Search Criteria,Mahmoud Zaki,Hossam Saad,3,Code review,2024-12-25T13:19:00.000Z,2025-01-12T13:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3469)
+
+### Attachments
+undefined"
+Bug,Data in Print Sheet Does Not Match Real Data in List View,Mahmoud Zaki,Hossam Saad,2,To Do,2024-12-25T13:06:00.000Z,2025-01-12T13:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3468)
+
+### Attachments
+undefined"
+Bug,"(SP:20): In Vendor Opening Balance Add Screen, The System Should Display Warning Message if Amount of Journal Line is Not Equal The Sum Amount of Balance Column",sandra yasser,Yassmin,2,To Do,2024-12-25T12:50:00.000Z,2025-02-05T16:02:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3463)
+
+### Attachments
+undefined"
+Bug,"(SP20): General: Descriptive Columns (e.g., Code, Name) Can Be Unchecked in Show/Hide Column Feature",Maha.muhammed,Mohamed Said,3,To Do,2024-12-25T10:47:00.000Z,2024-12-25T14:26:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3457)
+
+### Attachments
+undefined"
+Bug,(SP20): Delete Buttons Enabled for Posted Payments in Payment In List View,Maha.muhammed,Mohamed Said,3,Code review,2024-12-25T10:01:00.000Z,2024-12-26T10:20:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3452)
+
+### Attachments
+undefined"
+Bug,(SP20): Date Picker Malfunction in Payment Out Screen,Maha.muhammed,Mohamed Said,2,Code review,2024-12-25T09:29:00.000Z,2024-12-26T10:26:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3451)
+
+### Attachments
+undefined"
+Bug,(SP20): Date Picker Malfunction in Payment In Screen,mohamed Nabil,Mohamed Said,2,Code review,2024-12-25T09:28:00.000Z,2024-12-26T09:35:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3450)
+
+### Attachments
+undefined"
+Bug,SP20: Incorrect Calculations in UOM Screen,mohamed Nabil,Tassneem fathi,2,Testing,2024-12-24T23:40:00.000Z,2025-02-23T15:37:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3443)
+
+### Attachments
+undefined"
+Bug, SP20: Missing Data in Exported Files,mohamed Nabil,Tassneem fathi,2,To Do,2024-12-24T16:03:00.000Z,2025-01-12T13:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3440)
+
+### Attachments
+undefined"
+Bug,(SP20): Show/Hide Columns Functionality Not Displaying in Return Purchase Invoice Screen,Maha.muhammed,Mohamed Said,3,To Do,2024-12-24T15:53:00.000Z,2024-12-29T01:13:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3439)
+
+### Attachments
+undefined"
+Bug,(SP20): Missing Arabic Translation for Column Titles in Show/Hide Functionality,Maha.muhammed,Mohamed Said,2,To Do,2024-12-24T15:48:00.000Z,2024-12-24T15:48:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3438)
+
+### Attachments
+undefined"
+Bug,(SP20):  Incorrect Scrollbar Position in Arabic Language Mode,Maha.muhammed,Mohamed Said,2,To Do,2024-12-24T15:21:00.000Z,2024-12-24T15:21:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3434)
+
+### Attachments
+undefined"
+Bug,(SP:20): Vendor Definition List View: Export PDF Report without Text Formatting,Maha.muhammed,Yassmin,2,To Do,2024-12-24T14:59:00.000Z,2025-01-12T13:10:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3431)
+
+### Attachments
+undefined"
+Bug,(SP20): Inappropriate Validation Message on Sequence Screen,Ahmed Ismail,Mohamed Said,2,Code review,2024-12-24T12:23:00.000Z,2024-12-26T10:06:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3414)
+
+### Attachments
+undefined"
+Bug,(SP20): ERP Side Slider - Modules Not Actionable in Arabic Mode When The Side Slider is Collapsed,Maha.muhammed,Mohamed Said,2,Code review,2024-12-24T11:49:00.000Z,2024-12-26T10:25:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3411)
+
+### Attachments
+undefined"
+Bug,(SP20): Localization Issues in Payment Out  List Views,Maha.muhammed,Mohamed Said,2,To Do,2024-12-24T11:39:00.000Z,2024-12-24T11:42:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3409)
+
+### Attachments
+undefined"
+Bug,(SP20): Localization Issues in Payment In  List Views,Maha.muhammed,Mohamed Said,2,To Do,2024-12-24T11:38:00.000Z,2024-12-25T10:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3408)
+
+### Attachments
+undefined"
+Bug,(SP20): No Descriptive Message When Printing Without Data - Bank Account Statement Report,mohamed Nabil,Mohamed Said,2,Code review,2024-12-24T10:58:00.000Z,2024-12-26T11:53:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3407)
+
+### Attachments
+undefined"
+Bug,(SP20): No Descriptive Message When Printing Without Data - Treasury Statement Report,Maha.muhammed,Mohamed Said,2,Code review,2024-12-24T10:56:00.000Z,2024-12-26T12:57:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3406)
+
+### Attachments
+undefined"
+Bug,(SP20): Handle Buttons Design in Vendor Category Add & Edit screens.,Maha.muhammed,Yassmin,2,To Do,2024-12-24T10:48:00.000Z,2025-01-29T12:14:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3405)
+
+### Attachments
+undefined"
+Bug,(SP20): Bank Definition Edit Screen Does Not Display Actual Balance,Maha.muhammed,Mohamed Said,3,Code review,2024-12-24T10:32:00.000Z,2024-12-26T08:57:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3404)
+
+### Attachments
+undefined"
+Bug,(SP20): Treasury Related Currency Not Displayed in Treasury Statements,mohamed Nabil,Mohamed Said,3,Code review,2024-12-24T09:28:00.000Z,2024-12-26T12:41:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3401)
+
+### Attachments
+undefined"
+Bug,(SP20): Missing Translations in App Selection Dialog,Maha.muhammed,Mohamed Said,2,To Do,2024-12-23T16:59:00.000Z,2024-12-23T16:59:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3399)
+
+### Attachments
+undefined"
+Bug,Localization Issue as Date Field Dropdown Misaligned in Journal Entry List View,Mahmoud Zaki,Hossam Saad,2,To Do,2024-12-23T16:56:00.000Z,2025-01-12T13:16:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3398)
+
+### Attachments
+undefined"
+Bug,(SP20): Export Report Not Applying Filters in Payment In,Maha.muhammed,Mohamed Said,2,In Progress,2024-12-23T15:37:00.000Z,2024-12-24T18:50:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3396)
+
+### Attachments
+undefined"
+Bug,(SP20): View and Edit Buttons Enabled for Posted Payments Out List View,mohamed Nabil,Mohamed Said,3,Code review,2024-12-23T15:07:00.000Z,2024-12-26T10:24:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3392)
+
+### Attachments
+undefined"
+Bug,(SP20): Incorrect Data Displayed in Payment Method List View Paginator,Amr Yousry,Mohamed Said,2,To Do,2024-12-22T15:40:00.000Z,2024-12-26T09:11:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3376)
+
+### Attachments
+undefined"
+Bug,(SP20): Payment Method Deletion Allowed Despite Existing Transactions,Amr Yousry,Mohamed Said,3,To Do,2024-12-22T15:06:00.000Z,2024-12-26T10:36:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3375)
+
+### Attachments
+undefined"
+Bug,(SP20): Incorrect Icon Button Order in Treasury Definition List View,Maha.muhammed,Mohamed Said,2,Code review,2024-12-22T14:53:00.000Z,2024-12-25T13:52:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3374)
+
+### Attachments
+undefined"
+Bug,(Sp20):  Incorrect Icon Button Order in Payment Term List View,Maha.muhammed,Mohamed Said,2,Code review,2024-12-22T14:51:00.000Z,2024-12-26T09:00:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3372)
+
+### Attachments
+undefined"
+Bug,(SP20)Payment Term: Export Button not Actionable,Maha.muhammed,Mohamed Said,3,To Do,2024-12-22T14:19:00.000Z,2025-01-23T12:11:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3370)
+
+### Attachments
+undefined"
+Bug,(SP20): Opening Balance Filter in Treasury Definition List View Displays Actual Balance Column,Maha.muhammed,Mohamed Said,2,To Do,2024-12-22T13:27:00.000Z,2024-12-25T13:52:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3367)
+
+### Attachments
+undefined"
+Bug,(SP20):  Incorrect Actual Balance Displayed in Treasury Definition,Maha.muhammed,Mohamed Said,3,To Do,2024-12-22T12:59:00.000Z,2024-12-22T12:59:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3365)
+
+### Attachments
+undefined"
+Bug,(SP20): Padding Issue in Treasury Definition Confirmation Dialog,mohamed Nabil,Mohamed Said,2,Code review,2024-12-22T11:21:00.000Z,2024-12-25T13:50:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3363)
+
+### Attachments
+undefined"
+Bug,(SP20): Company Activation Status Not Retained,Maha.muhammed,Mohamed Said,3,To Do,2024-12-19T13:18:00.000Z,2024-12-19T13:18:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3323)
+
+### Attachments
+undefined"
+Bug,(SP20): Branch Activation Status Not Retained in Branches List View,Maha.muhammed,Mohamed Said,2,To Do,2024-12-19T13:12:00.000Z,2024-12-19T13:12:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3322)
+
+### Attachments
+undefined"
+Bug,(SP20): Company Name Text Overflows in Manage Companies List View,Maha.muhammed,Mohamed Said,2,To Do,2024-12-19T13:01:00.000Z,2024-12-19T13:02:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3321)
+
+### Attachments
+undefined"
+Bug,(SP20): Missing Navigation Menu Link in Edit Company Menu to Manage Companies List View,Maha.muhammed,Mohamed Said,2,To Do,2024-12-19T12:52:00.000Z,2024-12-19T12:52:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3320)
+
+### Attachments
+undefined"
+Bug,(SP20): Export Functionality Not Working in Company Branches List View,Maha.muhammed,Mohamed Said,2,To Do,2024-12-19T12:42:00.000Z,2024-12-19T12:42:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3319)
+
+### Attachments
+undefined"
+Bug,(Sp20): Unable to Save New Branch in Edit Company Screen,Maha.muhammed,Mohamed Said,3,To Do,2024-12-19T12:18:00.000Z,2024-12-19T12:19:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3317)
+
+### Attachments
+undefined"
+Bug,(SP20): Missing Column Sorting in Manage Companies List View,Maha.muhammed,Mohamed Said,2,To Do,2024-12-19T12:01:00.000Z,2024-12-19T12:01:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3316)
+
+### Attachments
+undefined"
+Bug,(Sp20): Export Button in Manage Companies List View Fails to Export,Maha.muhammed,Mohamed Said,2,To Do,2024-12-19T11:56:00.000Z,2024-12-19T11:56:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3315)
+
+### Attachments
+undefined"
+Bug,(SP20): Inappropriate Error Screen for Unlinked Microsoft Account Login,Maha.muhammed,Mohamed Said,2,To Do,2024-12-19T11:02:00.000Z,2024-12-19T11:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3312)
+
+### Attachments
+undefined"
+Bug,(SP20): Inappropriate Error Screen for Unlinked Google Account Login,Maha.muhammed,Mohamed Said,2,To Do,2024-12-19T10:57:00.000Z,2024-12-22T17:15:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3311)
+
+### Attachments
+undefined"
+Bug,"(Sp20): UI Issues in Fonts, Spacing, and Language Directionality in Login Screen",Maha.muhammed,Mohamed Said,2,To Do,2024-12-19T10:44:00.000Z,2024-12-19T11:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3310)
+
+### Attachments
+undefined"
+Bug,(SP20):Design Issues in the New Login Screen of Microtec ERP,Maha.muhammed,Mohamed Said,2,To Do,2024-12-19T10:33:00.000Z,2024-12-19T11:03:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3309)
+
+### Attachments
+undefined"
+Bug,(SP20): Browser Refresh Required to Load Business Owner Home Screen After Successful Login,Maha.muhammed,Mohamed Said,3,To Do,2024-12-18T16:52:00.000Z,2024-12-18T16:54:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3302)
+
+### Attachments
+undefined"
+Bug,(SP20): Multiple Browser Refreshes Required to Launch Business Owner Login Screen,Maha.muhammed,Mohamed Said,3,To Do,2024-12-18T16:51:00.000Z,2024-12-18T16:54:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3301)
+
+### Attachments
+undefined"
+Bug,(Sp20): Missing Navigation Link to Manage Companies List View in Edit Company Menu,Maha.muhammed,Mohamed Said,2,To Do,2024-12-18T14:53:00.000Z,2024-12-18T14:54:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3289)
+
+### Attachments
+undefined"
+Bug,(SP20): Missing Required Validation Message for Subsidiary Field in Add New Company Dialog,Maha.muhammed,Mohamed Said,3,To Do,2024-12-18T14:05:00.000Z,2024-12-18T14:05:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3282)
+
+### Attachments
+undefined"
+Bug,"(SP20) Add Company Screen: Missing Required Validation for ""Country"" and ""Currency"" Drop-Down Fields",Maha.muhammed,Mohamed Said,2,To Do,2024-12-18T12:50:00.000Z,2024-12-18T12:50:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3278)
+
+### Attachments
+undefined"
+Bug,General Settings: Large Padding in Text Menu After Closing Left Sidebar,Maha.muhammed,Hossam Saad,2,To Do,2024-12-16T15:51:00.000Z,2025-01-12T13:12:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3245)
+
+### Attachments
+undefined"
+Bug,(SP19): Numeric Counter Not Functional in Bulk Update Price Policy Dialog,AhmedSaad15,Mohamed Said,2,To Do,2024-12-12T15:50:00.000Z,2024-12-18T14:34:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3196)
+
+### Attachments
+undefined"
+Bug,(SP19): Unformatted Text in Customer Category PDF Exported Report,AhmedSaad15,Mohamed Said,2,To Do,2024-12-11T11:35:00.000Z,2025-01-05T12:56:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3171)
+
+### Attachments
+undefined"
+Bug,(SP19): Incorrect Total Balance Calculation in Customer Opening Balance Edit Screen,Maha.muhammed,Mohamed Said,2,To Do,2024-12-10T13:50:00.000Z,2025-02-17T17:35:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3152)
+
+### Attachments
+undefined"
+Bug,(SP19):  Incorrect Total Balance Calculation in Customer Opening Balance View Screen,Maha.muhammed,Mohamed Said,2,To Do,2024-12-10T13:45:00.000Z,2025-02-17T17:38:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3151)
+
+### Attachments
+undefined"
+Bug,(SP19): Mismatch in Amount Value Between View and Edit Screens in Customer Opening Balance,AhmedSaad15,Mohamed Said,2,To Do,2024-12-10T13:09:00.000Z,2025-01-05T14:18:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3148)
+
+### Attachments
+undefined"
+Bug,(SP19): Customer Code Dropdown Displays Incorrect Data in Customer Definition Opening Balance Add Screen,Mohamed Magdy,Mohamed Said,2,Testing,2024-12-10T12:49:00.000Z,2025-01-12T13:13:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3147)
+
+### Attachments
+undefined"
+Bug,(Sp19): Poor Formatting in Exported PDF of Customer Definition Screen,AhmedSaad15,Mohamed Said,2,To Do,2024-12-10T11:33:00.000Z,2024-12-18T14:27:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3140)
+
+### Attachments
+undefined"
+Bug,(Sp19): Exported Data in Customer Definition List View Ignores Applied Filters or Search,AhmedSaad15,Mohamed Said,2,To Do,2024-12-10T11:28:00.000Z,2025-01-05T14:27:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3139)
+
+### Attachments
+undefined"
+Bug,SP19-Stock Out: Subtotal Not Updating When Changing Cost in Stock In Add Screen,mohamed Nabil,Hossam Saad,3,Code review,2024-12-04T14:09:00.000Z,2025-01-12T13:11:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3017)
+
+### Attachments
+undefined"
+Bug,(SP19):Network Error (500) on Uploading Attachment for New Employee,Maha.muhammed,Mohamed Said,2,To Do,2024-12-04T10:26:00.000Z,2024-12-04T12:08:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-3001)
+
+### Attachments
+undefined"
+Bug,(SP19)-Stock out: Exported PDF Sheet Missing Data in Status Column,Maha.muhammed,Hossam Saad,2,To Do,2024-12-02T17:00:00.000Z,2025-01-12T13:02:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-2982)
+
+### Attachments
+undefined"
+Bug,(Sp18):Exported Purchase Invoice PDF Report Contains Unformatted Text,Maha.muhammed,Mohamed Said,3,To Do,2024-12-02T16:10:00.000Z,2025-01-30T14:47:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-2978)
+
+### Attachments
+undefined"
+Bug,(Sp18):Payment Term and Reference Fields Display Default Text When No Values Are Provided in Purchase Invoice View,Maha.muhammed,Mohamed Said,2,To Do,2024-12-02T13:15:00.000Z,2024-12-02T13:15:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-2966)
+
+### Attachments
+undefined"
+Bug,Sprint 19 - Purchase Invoice Screen: Missing Fields in Purchase Module,mohamed Nabil,Tassneem fathi,3,To Do,2024-12-02T13:10:00.000Z,2025-01-12T13:02:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-2964)
+
+### Attachments
+undefined"
+Bug,"(Sp18): ""Scan Barcode"" Button Not Actionable in Purchase Invoice Add Screen",Maha.muhammed,Mohamed Said,2,To Do,2024-12-02T12:22:00.000Z,2024-12-02T16:11:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-2960)
+
+### Attachments
+undefined"
+Bug,"(Sp18): ""Import Item"" Button Not Actionable in Purchase Invoice Add Screen",Maha.muhammed,Mohamed Said,2,To Do,2024-12-02T12:21:00.000Z,2024-12-02T16:11:00.000Z,"### Description
+No description available.
+
+### Environment
+undefined
+
+### Original Issue
+[View in Jira](https://microtec.atlassian.net/browse/ME-2959)
+
+### Attachments
+undefined"

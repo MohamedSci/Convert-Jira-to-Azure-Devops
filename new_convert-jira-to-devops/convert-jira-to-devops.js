@@ -5,7 +5,7 @@ const createCsvWriter = require("csv-writer").createObjectCsvWriter;
 // File paths
 const defaultFieldsFile = "new_convert-jira-to-devops/default_fields.csv"; // CSV with required fields
 const allFieldsFile = "new_convert-jira-to-devops/all_fields.csv"; // CSV with all data
-const outputFile = "new_convert-jira-to-devops/EEEEOOO1000_cleaned.csv";
+const outputFile = "new_convert-jira-to-devops/2222EEEEOOO1000_cleaned.csv";
 
 // Base URL for Jira issue links
 const JIRA_BASE_URL = "https://microtec.atlassian.net/browse/";
