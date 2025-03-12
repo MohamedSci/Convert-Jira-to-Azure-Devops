@@ -1,0 +1,20 @@
+1. تعلم بايثون- المتغيرات وجملة الطباعة (Python- Variables and Print Statement).mp4
+11. تعلم بايثون- استخدام الدوال (Learn Python- Using Functions).mp4
+12. تعلم بايثون- حل تحدي عدّ الحروف والأرقام والمسافات في الجمل النصية.mp4
+13. تعلم بايثون- الكلاس والكائنات خطوة بخطوة (Learn Python- Classes and Objects Step by Step).mp4
+14. بايثون بانداز- إنشاء، قراءة، وكتابة البيانات (Python Pandas- Creating, Reading, and Writing Data).mp4
+15. بايثون بانداز- الدوال و Apply و Map (Python Pandas- Functions, Apply, and Map).mp4
+15. تعلم بايثون بانداز- استخدام loc و iloc و assign (Learn Python Pandas- Using loc, iloc, and assign).mp4
+16. بايثون بانداز- تجميع البيانات خطوة بخطوة -Python Pandas- Grouping Data.mp4
+17.بايثون بانداز- ترتيب البيانات (Python Pandas- Sorting Data).mp4
+18. بايثون بانداز- إعادة تسمية العناصر (Python Pandas- Renaming Elements).mp4
+19. بايثون بانداز- دمج البيانات (Python Pandas- Combining Data).mp4
+2. تنسيق النصوص فى بايثون python String.mp4
+20. بايثون بانداز- الاستبدال في البيانات (Python Pandas- Replacing Data).mp4
+3. تنسيق القوائم فى بايثون  lists in  python.mp4
+4. تعلم بايثون- استخدام المجموعات (Learn Python- Using Tuples).mp4
+5. تعلم بايثون- استخدام المجموعات (Learn Python- Using Sets).mp4
+7. بايثون- جملة if الشرطية - شرح وأمثلة (Python- if Statement ).mp4
+8. بايثون- for و while - شرح كامل مع أمثلة (Python- for and while - Full Explanation with Examples).mp4
+9. تعلم بايثون- تحدي الجمل التكرارية for loop (Learn Python- for loop Iteration Challenge).mp4
+تنسيق القواميس - طرق وأمثلة 6. (Python- Formatting Dictionaries - Methods and Examples).mp4
