@@ -1991,6 +1991,17 @@ muhammed.saeed@microtec.com.eg
 [View in Jira](https://microtec.atlassian.net/browse/ME-4124)
 
 ### Attachments
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
 https://microtec.atlassian.net/rest/api/3/attachment/content/16077"
 Bug,(Sp21): Unable to Save Return Purchase Invoice Due to Unposted Transaction,Abanoub.Nabil,Mohamed Said,3,To Do,2025-02-17T15:52:00.000Z,2025-03-03T15:03:00.000Z,"### Description
 __Title: Unable to Save Return Purchase Invoice Due to Unposted Transaction*
@@ -2220,16 +2231,16 @@ undefined
 ### Attachments
 undefined"
 Bug,"(SP:22): Vendor Statement Report Screen, Missing Required Message For All Data.",Abanoub.Nabil,Yassmin,2,To Do,2025-02-06T14:45:00.000Z,2025-03-04T10:19:00.000Z,"### Description
-""- Select Vendor , From Date , To Date Fields Should Ended with (*).
+No description available.
 
 ### Environment
-Not Provided
+undefined
 
 ### Original Issue
 [View in Jira](https://microtec.atlassian.net/browse/ME-3953)
 
 ### Attachments
-No Attachments"
+undefined"
 Bug,"(SP:22): Vendor Opening Balance Screen, The Data of Distributed Popup Deleted When I Click The Discard Button. ",Mohamed Fathy,Yassmin,2,To Do,2025-02-05T16:41:00.000Z,2025-03-09T14:00:00.000Z,"### Description
 No description available.
 
@@ -2295,9 +2306,7 @@ Not Provided
 [View in Jira](https://microtec.atlassian.net/browse/ME-3917)
 
 ### Attachments
-https://testdo.microtecdev.com|https://testdo.microtecdev.com/]"",Yassmin,,,,63ecd2cf333d0e2ec16edfc9,,,,,,,,,,,,,,,,,ME-3912,,,,,,,,,05/Feb/25
-https://microtec.atlassian.net/rest/api/3/attachment/content/15676,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@13133629,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i01hnf:,,,,,,,,,,ME
-https://microtec.atlassian.net/rest/api/3/attachment/content/15675"
+No Attachments"
 Bug,"(SP:22):Payment Reconciliation Screen, The Required Message of Select Customer or Payment.",mohamed Nabil,Yassmin,2,In Progress,2025-02-04T15:37:00.000Z,2025-02-23T15:37:00.000Z,"### Description
 No description available.
 
@@ -2442,16 +2451,16 @@ undefined
 ### Attachments
 undefined"
 Bug,"(SP:22): Purchase Invoice Add Screen, The ""Empty"" Word Appears in The List When I Open The Advanced Search.",mohamed Nabil,Yassmin,2,To Do,2025-02-03T00:45:00.000Z,2025-03-02T23:13:00.000Z,"### Description
-""When I open the advanced search of vendor name then close it and open the list
+No description available.
 
 ### Environment
-Not Provided
+undefined
 
 ### Original Issue
 [View in Jira](https://microtec.atlassian.net/browse/ME-3883)
 
 ### Attachments
-No Attachments"
+undefined"
 Bug,"(SP:22): Purchase Invoice Add Screen, Undescriptive Error Message of required set tracking.",mohamed Nabil,Yassmin,2,To Do,2025-02-03T00:35:00.000Z,2025-02-23T15:37:00.000Z,"### Description
 No description available.
 
@@ -2665,13 +2674,13 @@ Bug,"(SP:22): Vendor Definition View Screen, The Design of Cancel Button Should 
 No description available.
 
 ### Environment
-""loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+undefined
 
 ### Original Issue
 [View in Jira](https://microtec.atlassian.net/browse/ME-3836)
 
 ### Attachments
-No Attachments"
+undefined"
 Bug,"(SP21): ""Forget Password"" Link is Missing in the Login Screen",Eslam Amgad,Mohamed Said,3,Testing,2025-01-29T14:34:00.000Z,2025-03-03T14:49:00.000Z,"### Description
 No description available.
 
@@ -2687,13 +2696,13 @@ Bug,"(SP:22): Vendor Category List View, The Show & Hide Column Icon Doesn't Wor
 No description available.
 
 ### Environment
-""loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+undefined
 
 ### Original Issue
 [View in Jira](https://microtec.atlassian.net/browse/ME-3830)
 
 ### Attachments
-No Attachments"
+undefined"
 Bug,"(SP21): ""Fill Items Data with Excel"" functionality not populating items in the ""Add Price Policy"" screen.",Abanoub.Nabil,Mohamed Said,3,To Do,2025-01-28T16:22:00.000Z,2025-03-03T14:48:00.000Z,"### Description
 No description available.
 

@@ -1,0 +1,1431 @@
+Work type,Summary,Assignee,Reporter,Priority,Description,Status,Created,Updated
+,(SP25): 400 Status Code Error When Printing Cash Receipt Report,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 1:31 PM,11/Mar/25 1:32 PM
+,(SP25): Cash Receipt Report Displays Data Without Any Filter Selection,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 1:25 PM,11/Mar/25 1:26 PM
+,"(SP25): Cash Receipt Report Uses a Single Date Input Field for ""From"" and ""To"" Dates, Causing Inconsistencies",Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 1:18 PM,11/Mar/25 1:23 PM
+,(Sp25) Cash Payment Report: 400 Status Code Error in Network Log When Printing Report,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 1:08 PM,11/Mar/25 1:08 PM
+,"(Sp25): Cash Payment Report Uses a Single Date Input for ""From"" and ""To"" Dates, Causing Inconsistencies and Validation Issues",Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 1:00 PM,11/Mar/25 1:01 PM
+,(Sp25)Cash Payment Report: Incorrect Required Validation Message When Selecting a Date,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 12:50 PM,11/Mar/25 12:54 PM
+,(Sp25): Printing Cash Payment Receipt Without Input Data Returns a 400 Error Without Informational Message,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 12:35 PM,11/Mar/25 12:37 PM
+,(Sp25): Payment Reconciliation Summary Prints Empty Report Without Required Filters,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 12:23 PM,11/Mar/25 12:26 PM
+,(Sp25): Payment Reconciliation Report Prints Empty Report When No Filters Are Selected,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 12:21 PM,11/Mar/25 12:26 PM
+,(Sp25): Payment Reconciliation History Report Sends Invalid Request When No Customer or Invoice is Selected,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 12:12 PM,11/Mar/25 12:26 PM
+,(Sp25): Treasury Statement Print Functionality Fails with 500 Server Error,Maha.muhammed,Mohamed Said,4,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 12:02 PM,11/Mar/25 12:04 PM
+,(Sp25): Print Button Triggers 400 Error in Network Log but Successfully Downloads Report,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 11:53 AM,11/Mar/25 11:55 AM
+,(SP25): Payment Out Print Action Fails Due to 404 API Error,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 2:16 AM,11/Mar/25 12:28 PM
+,(SP25):  Failure to Generate Statement of Financial Position Due to 400 Status Code API Error,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 2:05 AM,11/Mar/25 2:11 AM
+,(SP25): Failure to Generate Income Statement Due to 400 Status Code API Error,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 2:03 AM,11/Mar/25 2:23 AM
+,(Sp25):Failure to Generate Account Statement Report Due to Incorrect API Request URL,Maha.muhammed,Mohamed Said,4,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 1:52 AM,11/Mar/25 2:24 AM
+,(SP25): Cost Center Report Generates Empty Print Reports Due to API Failure,Maha.muhammed,Mohamed Said,4,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 1:41 AM,11/Mar/25 12:27 PM
+,(SP25): Trial Balance Print Button Not Working,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Mar/25 1:33 AM,11/Mar/25 1:33 AM
+,"Stock Transfer Allowed with Same Warehouse in ""From"" and ""To"" Fields",Mohamed Hammad,Tassneem fathi,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,09/Mar/25 4:13 PM,09/Mar/25 4:13 PM
+,Stock Transfer Bugs,Maha.muhammed,Tassneem fathi,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,09/Mar/25 4:08 PM,11/Mar/25 12:27 PM
+,"(SP:24):Sales Invoice Add & Edit Screens, Missing The Validation of Deleting Item In Sales Invoice (Deleting Item Line Not Working).",Mohamed Fathy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,09/Mar/25 2:47 PM,11/Mar/25 2:04 PM
+,"(SP:24):Sales Invoice View Screen, Missing Payment Information Tab & Cited Limit Bar In Sales Invoice View Screen.",Mohamed Fathy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,09/Mar/25 2:31 PM,09/Mar/25 2:31 PM
+,"(SP:24):Sales Invoice Add & Edit Screen, The Cancel Button Doesn't Work.",Mohamed Fathy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,09/Mar/25 2:13 PM,11/Mar/25 1:55 PM
+,"(SP:24):Sales Invoice Edit Screen, The Bug of Reset The Invoice When Changing The Customer.",Mohamed Fathy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,09/Mar/25 2:00 PM,11/Mar/25 1:52 PM
+,"(SP:24):Sales Invoice Edit Screen, The Error Message of Adding New Line of Item. ",Mohamed Fathy,Yassmin,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,09/Mar/25 1:48 PM,11/Mar/25 1:48 PM
+,"(SP:24): Sales Invoice Edit Screen, The Credit Limit Always 0 in Edit Screen.",Mohamed Fathy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,09/Mar/25 1:17 PM,11/Mar/25 1:49 PM
+,"Unrelated Warning Message Appears When Opening ""Account Statement""",Mohamed Said,Hossam Saad,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,03/Mar/25 1:42 PM,04/Mar/25 12:19 PM
+,"(SP:24):Customer Definition Add & Edit Screen, The Name of Fields in Legal Tab Should Be Handled.",mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,03/Mar/25 2:07 AM,05/Mar/25 2:05 PM
+,(SP24): Print Button Generates Empty Print View Without Informative Message,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 6:05 PM,02/Mar/25 6:06 PM
+,(Sp24): Duplicate Print Buttons in Payment Reconciliation Report,Abanoub.Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,02/Mar/25 6:01 PM,09/Mar/25 5:46 PM
+,"(SP:24):Journal Entry Edit Screen, The User Should be Able To Open & View The Attached Photo.",mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 5:58 PM,04/Mar/25 6:37 PM
+,"(SP:24): Journal Entry Edit Screen, The Journal Status of Unposted Journal Entry Should be ""Un Posted"" Not ""Saved""",Mohamed Fathy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 5:53 PM,02/Mar/25 5:54 PM
+,(SP24): Payment Reconciliation Report Does Not Display Reconciled Invoices for Selected Customer,Mohamed Fathy,Mohamed Said,4,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 5:51 PM,03/Mar/25 4:21 PM
+,"(SP:24):Treasury Definition Add Screen, Clicking The Save Button More Than Once, Leads To Save The Same Treasury More Than Once.",mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Mar/25 5:43 PM,05/Mar/25 2:37 PM
+,(SP:24): General Changes in All Print Out,Maha.muhammed,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 5:29 PM,04/Mar/25 12:21 PM
+,"(SP:24):Payment In Add & Edit Screens, The Payment Method Should Appear Based on The Selected Bank Account Not The Selected Bank.",sandra yasser,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Mar/25 5:23 PM,04/Mar/25 1:36 PM
+,"(SP:24): Warehouse Edit Screen, The Warehouse Name Should be Editable.",mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Mar/25 5:16 PM,05/Mar/25 2:58 PM
+,"(SP:24):Chart Of Account Edit Screen, The Account Type Can be Changed When The Account Has Transaction.",Nader Moustafa,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",In Progress,02/Mar/25 5:04 PM,04/Mar/25 12:29 PM
+,"(SP:24):Fund Transfer Add Screen, Incorrect Error Message Appear When I Save The Fund Transfer.",Hager Mostafa,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Mar/25 3:18 PM,02/Mar/25 4:12 PM
+,Attachment Upload Issues in journal entry,Maha.muhammed,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 3:16 PM,02/Mar/25 3:16 PM
+,(Sp24): Amount Field in Add Payment In Screen Accepts Negative Numbers Without Validation,mohamed Nabil,Mohamed Said,4,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Mar/25 3:15 PM,05/Mar/25 2:41 PM
+,"(SP:24): Fund Transfer Add, Edit & View Screens, The ""Send To"" Word Should be ""Receive To""",Esraa.kamel,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 3:11 PM,04/Mar/25 3:30 PM
+,"(SP:24): Fund Transfer Add Screen, Missing Error Message When Post Button Doesn't Work Without Selecting Fund Transfer Contra Account.",Esraa.kamel,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 2:29 PM,06/Mar/25 1:21 PM
+,"(SP:24): Fund Transfer List View & View Screens, The Source Document of Payment In & Payment Out From Fund Transfer Screen Not Visible.",Esraa.kamel,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Mar/25 2:22 PM,09/Mar/25 11:40 AM
+,"(SP:24): Fund Transfer Screens, The Design of fund Transfer Screens Should be Improved.",Abanoub.Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 2:16 PM,04/Mar/25 12:12 PM
+,"(SP:24):Fund Transfer List View & View Screens, The links of Payment In & Payment Out Should Open in New Tab.",Mohamed Fathy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 2:07 PM,02/Mar/25 2:11 PM
+,"(SP:24):Fund Transfer View Screen, The Bank Account Not Visible.",Mohamed Fathy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 2:00 PM,09/Mar/25 3:48 PM
+,"(SP:24):Fund Transfer List View Screen, Missing Print Button After Posting The Fund Transfer.",Ahmed Gamal,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Mar/25 1:37 PM,03/Mar/25 1:53 PM
+,(SP24) @General: Search Functionality Not Working in Advanced Search (Select Account Dialog) Across All ERP System Modules (Add/Edit Screens),mohamed Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Mar/25 1:34 PM,05/Mar/25 4:00 PM
+,(Sp24): Search Functionality Not Working in Advanced Search (Select Account Dialog) on Bank Definition Add/Edit Screen,mohamed Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Mar/25 12:43 PM,05/Mar/25 4:00 PM
+,(Sp24): Search Functionality Not Working in Advanced Search (Select Account Dialog) on Treasury Definition Add/Edit Screen,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Mar/25 12:12 PM,02/Mar/25 12:13 PM
+,(SP24): Missing column filtration functionality in the Fund Transfer List View.,Ahmed Gamal,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,27/Feb/25 6:46 PM,03/Mar/25 1:53 PM
+,"(SP24): Incorrect icon for the Print button, incorrect order of action buttons, and missing tooltips in the Fund Transfer List View.",Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,27/Feb/25 6:36 PM,03/Mar/25 1:54 PM
+,"(SP24): Unexpected error message ""Cost centers are required for this account: Automation Detailed account."" displayed when posting a Fund Transfer from Treasury (Cash) to Bank (Transfer).",Mohamed Fathy,Mohamed Said,4,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,27/Feb/25 6:27 PM,04/Mar/25 12:16 PM
+,(SP24): Non-descriptive error message displayed in a pop-up when selecting a Bank account with an invalid payment method.,Hager Mostafa,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,27/Feb/25 5:59 PM,02/Mar/25 4:12 PM
+,(Sp24): Error message with status code 500 displayed in the network log when transferring funds from Bank (Transfer) to Treasury (Cash).,Mohamed Fathy,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,27/Feb/25 5:46 PM,04/Mar/25 12:17 PM
+,(SP24): Save Button Successfully Saves Reconciliation but Does Not Redirect or Reset the Screen,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,27/Feb/25 4:24 PM,03/Mar/25 1:53 PM
+,(SP24): Cancel Button is Not Actionable in Payment Reconciliation Screen,Esraa.kamel,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,27/Feb/25 4:19 PM,05/Mar/25 5:25 PM
+,Device entity already exists in vanSales schema,Maha.muhammed,Mostafa,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,27/Feb/25 2:36 PM,11/Mar/25 12:27 PM
+,(SP21): System Unable to Delete Created Invoices in Admin Portal,Mohamed Hammad,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,23/Feb/25 3:46 PM,04/Mar/25 12:18 PM
+,Save Button Not Functioning in General Settings,Abanoub.Nabil,Hossam Saad,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,23/Feb/25 3:30 PM,03/Mar/25 5:04 PM
+,(SP21) @General: Search Functionality Sends Excessive Requests Due to Lack of Debouncing ,Abanoub.Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,23/Feb/25 1:29 PM,23/Feb/25 2:21 PM
+,(SP21): Payment Confirmation Issue When Paying for Invoice Online,Mohamed Fathy,Mohamed Said,4,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,20/Feb/25 4:15 PM,03/Mar/25 4:25 PM
+,(Sp21): Unable to Save Return Purchase Invoice Due to Unposted Transaction,Abanoub.Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,17/Feb/25 5:52 PM,03/Mar/25 5:03 PM
+,"(SP21): Incorrect ""Amount Exceeds the Price in RowRow3"" Error in Purchase Invoice Add Screen",Abanoub.Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,17/Feb/25 4:03 PM,03/Mar/25 5:00 PM
+,(SP21): Help Button Navigation Issues,Abanoub.Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,17/Feb/25 3:24 PM,17/Feb/25 4:50 PM
+,(SP21): Missing Column Filtering Functionality in Help Pages List View Screen,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,13/Feb/25 6:42 PM,13/Feb/25 6:43 PM
+,(SP21): Unable to Change Fonts Family in Help Pages Text Editor,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,13/Feb/25 6:34 PM,13/Feb/25 6:35 PM
+,SP21:  Arabic Text Formatting and Localization Issues in Admin Portal CMS Text Editor,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,13/Feb/25 5:49 PM,13/Feb/25 5:51 PM
+,"(SP21): Invalid Login Attempt"" Error for Authorized Users Navigating Between ERP System Apps",Nader Moustafa,Mohamed Said,4,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,11/Feb/25 2:57 PM,03/Mar/25 4:27 PM
+,(SP21):  Incorrect Column Header Label in Purchase Invoice View Screen,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Feb/25 2:32 PM,11/Feb/25 2:33 PM
+,"(SP:22): Vendor Statement Report Screen, Missing Required Message For All Data.",Abanoub.Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,06/Feb/25 4:45 PM,04/Mar/25 12:19 PM
+,"(SP:22): Vendor Opening Balance Screen, The Data of Distributed Popup Deleted When I Click The Discard Button. ",Mohamed Fathy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Feb/25 6:41 PM,09/Mar/25 4:00 PM
+,"(SP:22): Vendor Opening Balance Screen, The Error Message of Exceeded The Journal Line Amount Should be Handled.",Abanoub.Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Feb/25 6:25 PM,04/Mar/25 12:20 PM
+,"(SP:22): Vendor Opening Balance Screen, The Validation Message of Adding Vendor Opening Balance Should be Handled.",Abanoub.Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Feb/25 6:08 PM,04/Mar/25 12:20 PM
+,"(SP:22): Treasury Definition Edit Screen, Incorrect Current Balance Displayed When Edit The Treasury Name.",Maha.muhammed,Yassmin,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,05/Feb/25 3:21 PM,03/Mar/25 4:58 PM
+,"(SP:22): Payment Reconciliation Screen , Disapplied of Auto Distribute & Reconcile & Save Buttons Until I Select Payment.",mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",In Progress,05/Feb/25 12:56 PM,23/Feb/25 5:37 PM
+,"(SP:22): Payment Reconciliation Screen, The Customer Invoices Should be Appear Once User Selected.",mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",In Progress,05/Feb/25 12:37 PM,23/Feb/25 5:37 PM
+,"(SP:22):Payment Reconciliation Screen, The Required Message of Select Customer or Payment.",mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",In Progress,04/Feb/25 5:37 PM,23/Feb/25 5:37 PM
+,(SP21): Exported PDF Report from Return Sales Invoice List View Contains Unformatted Text,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,03/Feb/25 7:50 PM,03/Mar/25 4:57 PM
+,(Sp21): System Fails to Navigate to List View Screen After Successfully Posting a Return Sales Invoice,mohamed Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",In Progress,03/Feb/25 7:34 PM,04/Feb/25 5:28 PM
+,(SP21): System Accepts Return Sales Invoice with Return Date Before Sales Invoice Date,Eslam Amgad,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,03/Feb/25 7:28 PM,04/Feb/25 5:13 PM
+,(SP21): Cancel button not actionable in return sales invoice Add Screen,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,03/Feb/25 7:15 PM,09/Feb/25 3:04 PM
+,"(SP21): Print Button in ""Return Sales Invoice"" List View is Not Actionable",Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,03/Feb/25 7:00 PM,09/Feb/25 3:04 PM
+,(SP21): Deleted Unposted Sales Invoice Still Appears in List View Until Browser Refresh,Ahmed Gamal,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,03/Feb/25 6:32 PM,09/Feb/25 3:04 PM
+,(SP21): Missing Column Filtering Functionality in Return Sales Invoice List View,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,03/Feb/25 6:24 PM,03/Mar/25 4:57 PM
+,(SP21): Missing Values in Printed Sales Invoice Report,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,03/Feb/25 6:17 PM,09/Feb/25 3:04 PM
+,SP 22 - Unit of Measurement: Save Button Shows Error Messages on First Click but Works on Second Click,mohamed Nabil,Tassneem fathi,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,03/Feb/25 5:39 PM,23/Feb/25 5:37 PM
+,(SP21):  Stock Out Print Report Issues,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,03/Feb/25 5:24 PM,09/Feb/25 3:03 PM
+,(SP21): Stock In Print Report Issues,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,03/Feb/25 5:16 PM,09/Feb/25 3:03 PM
+,(SP21) @General : Advanced Item Search Dialog Fails to Filter Items Based on Multiple Conditions,Mohamed Hammad,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,03/Feb/25 5:01 PM,05/Feb/25 11:28 AM
+,"(SP:22): Purchase Invoice Add Screen, The ""Empty"" Word Appears in The List When I Open The Advanced Search.",mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,03/Feb/25 2:45 AM,03/Mar/25 1:13 AM
+,"(SP:22): Purchase Invoice Add Screen, Undescriptive Error Message of required set tracking.",mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,03/Feb/25 2:35 AM,23/Feb/25 5:37 PM
+,(SP21):  Multiple Stock In Entries Created When Clicking Save Button Multiple Times,mohamed Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,02/Feb/25 4:07 PM,03/Mar/25 4:55 PM
+,(SP21): Return Sales Invoice Add Screen Missing Walkthrough Guide with Instructional Steps,Ahmed Gamal,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Feb/25 3:26 PM,05/Feb/25 1:48 PM
+,(SP21):  Sales Invoice Add Screen Missing Walkthrough Guide with Instructional Steps,Ahmed Gamal,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Feb/25 3:21 PM,05/Feb/25 1:49 PM
+,"(SP21): Missing Walkthrough Guide for the ""Fund Transfer"" Module in Finance App",Ahmed Gamal,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Feb/25 3:01 PM,05/Feb/25 1:50 PM
+,(SP21): Purchase Invoice Screen Guide Walkthrough Does Not Display Steps After Step 9 /13,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Feb/25 2:47 PM,09/Feb/25 3:03 PM
+,(Sp21): Unexpected Stock Increase When Posting a Purchase Invoice Multiple Times,mohamed Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,02/Feb/25 2:32 PM,03/Mar/25 4:54 PM
+,SP 22 - Inventory Opening Balance: Financial Year and GL Account Fields Do Not Return Data in the List,Eslam Amgad,Tassneem fathi,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,02/Feb/25 1:35 PM,23/Feb/25 5:37 PM
+,(SP21): Exported Return Purchase Invoice PDF Report Has Multiple Text Formatting Issues,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,02/Feb/25 12:40 PM,03/Mar/25 4:54 PM
+,(SP21): Missing Column Filtering Functionality in the 'Return Purchase Invoice' List View,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,02/Feb/25 12:29 PM,03/Mar/25 4:53 PM
+,(SP21): The 'Print' Button in the 'Return Purchase Invoice' List View is Not Actionable,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Feb/25 11:29 AM,09/Feb/25 3:03 PM
+,(SP21): System Allows Posting 'Return Purchase Invoice' with a Date Before the 'Purchase Invoice' Date,Eslam Amgad,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,02/Feb/25 11:04 AM,04/Feb/25 5:13 PM
+,(SP21): The 'Return Purchase Invoice' Add Screen Allows Item Deletion in the Items Table Section,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,02/Feb/25 10:55 AM,03/Mar/25 4:52 PM
+,(Sp21): Show/Hide Column Functionality Has Responsive Issues in Purchase Invoice List View,mohamed Nabil,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,30/Jan/25 5:13 PM,04/Feb/25 1:17 PM
+,"(SP21): ""Print"" Action Button in Purchase Invoice List View Is Not Actionable and Lacks Hover Tooltip",Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,30/Jan/25 5:07 PM,03/Mar/25 4:51 PM
+,(Sp21): Localization Issues in Exported Purchase Invoice Excel Report,Ahmed Gamal,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,30/Jan/25 4:52 PM,09/Feb/25 3:03 PM
+,(Sp21): Delete and Edit Action Buttons Are Incorrectly Displayed for Posted Purchase Invoice,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,30/Jan/25 4:43 PM,09/Feb/25 3:03 PM
+,"(SP21): Title of Inventory Opening Balance Should Be ""Inventory Opening Balance"" for Clarity",Ahmed Gamal,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,30/Jan/25 3:38 PM,09/Feb/25 3:03 PM
+,(SP21): System Accepts Discount Amount Greater Than Cost in Purchase Invoice but Displays Incorrect Validation After Save and Post,mohamed Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,30/Jan/25 2:11 PM,03/Mar/25 4:50 PM
+,"(SP:22): Vendor Definition View Screen, The Design of Cancel Button Should be Handled When I Minimize The Screen.",Abanoub.Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,29/Jan/25 6:30 PM,04/Mar/25 12:29 PM
+,"(SP21): ""Forget Password"" Link is Missing in the Login Screen",Eslam Amgad,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,29/Jan/25 4:34 PM,03/Mar/25 4:49 PM
+,"(SP:22): Vendor Category List View, The Show & Hide Column Icon Doesn't Work.",Mohamed Fathy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,29/Jan/25 2:20 PM,23/Feb/25 5:37 PM
+,"(SP21): ""Fill Items Data with Excel"" functionality not populating items in the ""Add Price Policy"" screen.",Abanoub.Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,28/Jan/25 6:22 PM,03/Mar/25 4:48 PM
+,(SP21): Select Tax Dropdown Displays Non-Existent Tax Definitions in Tax Definition Edit Screen,Hager Mostafa,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,28/Jan/25 5:56 PM,04/Feb/25 5:53 PM
+,(SP21):  Add Item Catalog Quick Add Form Size Issue,Abanoub.Nabil,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,28/Jan/25 4:33 PM,04/Feb/25 5:54 PM
+,SP 22 - Item Catalog: Item Catalog Records Are Deletable in Item Catalog Screen,Mohamed Hammad,Tassneem fathi,4,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,28/Jan/25 3:58 PM,23/Feb/25 5:37 PM
+,(SP21): Payment Out Add Screen Freezes When Payment Method Details Are Incomplete,Abanoub.Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,28/Jan/25 2:56 PM,02/Mar/25 3:48 PM
+,(SP21): Payment Out Edit Screen has undescriptive Error Message When Payment Method Details Are Incomplete,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,28/Jan/25 2:54 PM,03/Mar/25 4:44 PM
+,(SP21): @General Links Not Opening in New Tab or New Window,Abanoub.Nabil,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,28/Jan/25 2:37 PM,04/Feb/25 5:55 PM
+,"(SP21): Payment Out Add screen displays ""Invalid number"" validation message when a float/double value is entered in the amount field.",Ahmed Gamal,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,28/Jan/25 2:36 PM,09/Feb/25 3:03 PM
+,(SP21): Issues with Print Action Icon Button in Payment Out List View,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,28/Jan/25 2:09 PM,09/Feb/25 3:03 PM
+,(SP21): Issues with Print Action Icon Button in Payment In List View,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,28/Jan/25 1:59 PM,09/Feb/25 3:03 PM
+,SP 22 - Financial Calendar: Error Missing When Closing Year Without Posting Journal Entries.,Nader Moustafa,Tassneem fathi,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,27/Jan/25 6:49 PM,23/Feb/25 5:37 PM
+,Financial calendar Bugs,Maha.muhammed,Tassneem fathi,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,27/Jan/25 6:47 PM,04/Feb/25 5:59 PM
+,"(SP:21): Fund Transfer List View Screen, The Design of Show & Hide Column Button Should be Handled.",mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,26/Jan/25 6:10 PM,02/Mar/25 1:28 PM
+,(SP21): System Allows Deletion of Tax Groups Assigned to Tax Definitions,Eslam Amgad,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,26/Jan/25 4:27 PM,27/Jan/25 11:38 AM
+,(SP21) : Longitude and Latitude Not Auto-Filled After Selecting a Map Point in Address Tab,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,26/Jan/25 3:04 PM,04/Feb/25 6:01 PM
+,"(SP21): ""Show/Hide Columns"" Not Actionable Due to Responsive Issues in Vender Category List View",mohamed Nabil,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,26/Jan/25 2:51 PM,04/Feb/25 6:02 PM
+,(SP21): Infinite Loading When Adding Customer Definition Without an Open Financial Year,Mohamed Hammad,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,26/Jan/25 2:36 PM,28/Jan/25 1:01 PM
+,"(SP21): ""IsDetail"" Switch Component Not Actionable on Empty Item Category Tree Screen",Mohamed Hammad,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,26/Jan/25 1:47 PM,26/Jan/25 7:15 PM
+,(SP20) Treasury: Localization Issues in Column Headers of Exported PDF/Excel Reports,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,23/Jan/25 12:55 PM,23/Jan/25 12:55 PM
+,(SP20) @General: Export Button Does Not Display Informative Message When List View Is Empty,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,23/Jan/25 12:34 PM,23/Jan/25 12:34 PM
+,(SP20) Treasury Edit Screen: Column Filtering in Select JL Account Advanced Dialog Allows User to Select Account Without Viewing Details,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,23/Jan/25 12:27 PM,23/Jan/25 12:27 PM
+,(SP20): Treasury Statement Fails to Display Opening Balance for Treasuries with No Transactions,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,23/Jan/25 12:17 PM,23/Jan/25 12:17 PM
+,SP 21 - Barcode and Field Behavior in Item Definition: Barcode Disappears and Field Data Misalignment,Maha.muhammed,Tassneem fathi,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,23/Jan/25 2:38 AM,23/Feb/25 5:37 PM
+,SP 21 - Financial Calendar: Success Message for Row Deletion Needs to Be Handled,Maha.muhammed,Tassneem fathi,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,23/Jan/25 1:24 AM,23/Feb/25 5:37 PM
+,SP 21 - Journal Entry Opening Balance: Branch Field Displays Required Error Message Despite Existing Value,Mohamed Hammad,Tassneem fathi,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,23/Jan/25 1:10 AM,23/Feb/25 5:37 PM
+,(SP20):  Unresponsive Save Buttons and Screen Freeze in Edit Treasury Form,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,22/Jan/25 6:26 PM,22/Jan/25 6:27 PM
+,(SP20): Search Input Hidden in Chart of Accounts (Tree View) on Vertical Scroll,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,22/Jan/25 5:43 PM,22/Jan/25 5:44 PM
+,"(SP20) @General: Search Functionality Not Working in ""Choose an Account"" Advanced Dialog",Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,22/Jan/25 5:37 PM,22/Jan/25 5:38 PM
+,(SP20): System Fails to Delete Sub UOMs in Edit Screen Despite Displaying Success Message,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,22/Jan/25 3:14 PM,02/Feb/25 11:32 AM
+,(SP20): Unable to Delete Unused UOM from List View,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,22/Jan/25 3:08 PM,02/Feb/25 11:32 AM
+,Inventory opening balance Bugs,Maha.muhammed,Tassneem fathi,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,21/Jan/25 1:58 PM,02/Feb/25 1:35 PM
+,(SP20) Attribute Edit Screen: System Does Not Return to List View After Successful Editing,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,20/Jan/25 7:09 PM,20/Jan/25 7:10 PM
+,(SP20) Attribute Edit Screen: Missing Required Validation Messages,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,20/Jan/25 7:08 PM,20/Jan/25 7:10 PM
+,(SP20) Attribute Edit Screen: Save Button Infinite Loading and Unresponsive Components,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,20/Jan/25 7:07 PM,20/Jan/25 7:10 PM
+,(SP20): Profile Link Not Actionable in Business Owner Screen,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Jan/25 12:08 PM,19/Jan/25 12:09 PM
+,(SP20): Dark Mode Not Applying in Business Owner Screen,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Jan/25 12:03 PM,19/Jan/25 12:03 PM
+,(SP20): Language and Localization Not Changing in Business Owner Screen,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Jan/25 11:55 AM,19/Jan/25 11:55 AM
+,(SP20): Missing field with Tax Label and Applied Tax value in Add Invoice and Invoice Payment screens,Mohamed Hammad,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Jan/25 1:46 PM,04/Mar/25 12:36 PM
+,"(SP20): Required validation messages in (CMS Add/Edit Screen) are displayed in black color font, making them hard to distinguish",Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Jan/25 1:41 PM,16/Jan/25 1:41 PM
+,(SP20): System cannot delete the saved CMS; returns status code 405 without a descriptive message,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Jan/25 1:35 PM,04/Mar/25 12:35 PM
+,"(SP20): Missing tooltips on ""Proceed to Offline Payment"" and ""Proceed to Online Payment"" buttons",Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Jan/25 1:19 PM,16/Jan/25 1:19 PM
+,"(SP20): System enables multiple success payment operations upon repeated clicks of ""Proceed to Offline Payment"" and ""Proceed to Online Payment"" Buttons",Mohamed Fathy,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,16/Jan/25 1:16 PM,04/Mar/25 12:35 PM
+,"(SP20): Missing descriptive validation error when clicking ""Proceed to Offline Payment"" with an incorrectly formatted password",Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Jan/25 12:32 PM,16/Jan/25 12:34 PM
+,(SP20): Search functionality not working in the Invoice List,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Jan/25 12:15 PM,16/Jan/25 12:18 PM
+,(SP20): Invoice List lacks View and Edit action buttons for unpaid invoices,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Jan/25 12:04 PM,16/Jan/25 12:05 PM
+,(SP20): Multiple un-understandable errors occur when sending an invoice with Some Empty Required Fields,Mohamed Hammad,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Jan/25 11:40 AM,04/Mar/25 12:37 PM
+,(SP20): App side slider menu does not collapse or expand when clicking the toggler icon,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Jan/25 11:24 AM,16/Jan/25 11:24 AM
+,(SP20): Logo Icon does not redirect to the Home screen and opens an empty web page,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Jan/25 11:15 AM,16/Jan/25 11:15 AM
+,(SP20): Incorrect search functionality in the Business Owners List View,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,15/Jan/25 5:45 PM,15/Jan/25 5:45 PM
+,(SP20): System does not send the invoice link to the receiver's phone number via SMS,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,15/Jan/25 5:11 PM,15/Jan/25 5:11 PM
+,(SP20): Unexpected redirection behaviors of Action Icon buttons in the Business Owners screen,Mohamed Hammad,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,15/Jan/25 5:05 PM,04/Mar/25 12:52 PM
+,(SP20): No redirection option after successful payment of the invoice,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,15/Jan/25 4:27 PM,16/Jan/25 10:58 AM
+,(SP20): App Checkboxes Not Clearly Visible Leading to Uncalculated Costs in Invoice,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,15/Jan/25 4:12 PM,19/Jan/25 12:57 PM
+,(SP20): Valid Till field displays incorrect date in the Add Invoice section,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,15/Jan/25 4:01 PM,15/Jan/25 4:01 PM
+,(SP20): Incorrect title displayed on the Business Owners screen,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,15/Jan/25 3:41 PM,15/Jan/25 3:41 PM
+,(SP20): Localization issues in the Manage Business Owners screen,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,15/Jan/25 3:35 PM,15/Jan/25 3:35 PM
+,(SP20): Domains Button in Manage Business Owners screen is not actionable,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,15/Jan/25 3:27 PM,15/Jan/25 3:27 PM
+,(SP20): Business Owners List displays a saved business owner despite no creation by the admin user,Mohamed Fathy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,15/Jan/25 3:21 PM,15/Jan/25 3:21 PM
+,(SP20): ERP Base URL Returns HTTP 301 Status Code After Session Creation,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,14/Jan/25 4:08 PM,14/Jan/25 4:10 PM
+,General: Search Function Sends Two Requests When Copy-Pasting Text in Payment In Screen.,Maha.muhammed,Hossam Saad,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,13/Jan/25 1:19 PM,23/Feb/25 5:37 PM
+,(SP20): Item Description Field Behavior in Stock Out Add Screen,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,09/Jan/25 6:19 PM,09/Jan/25 6:20 PM
+,(SP20) :  Issues in Stock Out Add Screen When First Opening it,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,09/Jan/25 11:26 AM,09/Jan/25 11:27 AM
+,(SP20): Missing Registration Option on Login Screen,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,08/Jan/25 3:49 PM,08/Jan/25 3:50 PM
+,"(SP20):Sales Invoice View Screen, Total After Vat is Not Displayed Correctly in Invoice Summary.",Maha.muhammed,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,06/Jan/25 2:35 PM,11/Mar/25 1:39 PM
+,(SP20): Design Issues in Branches List View,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,06/Jan/25 2:07 PM,06/Jan/25 2:07 PM
+,(SP20): Design Inconsistency in Edit Branch Dialog,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,06/Jan/25 2:01 PM,06/Jan/25 2:02 PM
+,(SP20):The Message of Edit Price Policy Should be handled.,Maha.muhammed,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,06/Jan/25 1:38 PM,12/Jan/25 3:09 PM
+,(SP20): Selected Items Unchecked When Navigating Pages in Item Code Advanced Search Dialog,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,06/Jan/25 1:37 PM,06/Jan/25 1:38 PM
+,(SP20): Unformatted Text in Exported PDF Report – Payment Out,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,06/Jan/25 12:56 PM,06/Jan/25 12:56 PM
+,(SP20): Unformatted Text in Exported PDF Report – Payment In,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,06/Jan/25 12:50 PM,28/Jan/25 1:40 PM
+,(SP20): Show/Hide Columns in Payment Term Displays Only Actions Column When All Options Are Unchecked,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 6:48 PM,05/Jan/25 6:48 PM
+,(SP20): Incomplete Data in Exported Excel and PDF for Treasury Definition,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 5:51 PM,23/Jan/25 12:49 PM
+,(SP20) General : Filter Reset in List View When Navigating with Paginator,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 5:34 PM,05/Jan/25 5:35 PM
+,(SP20): Unposted Payment Out Displayed in Recent Outgoing Transactions,Amr Yousry,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 5:03 PM,05/Jan/25 5:21 PM
+,(SP20): Duplicate Journal Line Component in Customer Opening Balance Edit Screen,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 3:44 PM,05/Jan/25 3:45 PM
+,Missing scroll bar in the Configuration popup window.,Maha.muhammed,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 2:42 PM,12/Jan/25 3:09 PM
+,(SP20) : Duplicate Item Error in Price Policy Edit Screen,Ahmed Gamal,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 2:08 PM,06/Jan/25 2:08 PM
+,(SP20):General:  Unwanted Image Details Displayed in View Mode,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 1:33 PM,06/Jan/25 2:10 PM
+,(SP20): Misaligned Buttons in Subdomain Cards – My Subscription Page,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 1:18 PM,05/Jan/25 1:19 PM
+,(SP20): General : Missing Scrollbar in Form Dialog,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 1:04 PM,05/Jan/25 1:05 PM
+,(SP20): Excessive Padding and Margins in Bank Account Statement Screen,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,05/Jan/25 12:51 PM,05/Jan/25 12:53 PM
+,Incorrect Success Message After Editing Account,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,31/Dec/24 4:29 PM,12/Jan/25 3:09 PM
+,Localization Issue in Account Statement List View,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,31/Dec/24 3:38 PM,12/Jan/25 3:09 PM
+,Exported Sheets Contain Blank Columns in Chart of Account,Maha.muhammed,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,31/Dec/24 3:23 PM,03/Mar/25 1:34 PM
+,"(SP20):Return Purchase Invoice Add Screen, The System Generated Batch is Not Displayed.  ",Mahmoud Zaki,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,31/Dec/24 1:43 PM,12/Jan/25 3:09 PM
+,(SP20):The Redirect of Return Purchase Invoice in Journal Entry List View Not Working.,Mahmoud Zaki,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,31/Dec/24 1:34 PM,06/Feb/25 4:33 PM
+,"(SP20):Return Purchase Invoice Add & Edit Screens, The Subtotal is Not Calculated Correctly. ",Mahmoud Zaki,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,31/Dec/24 1:26 PM,12/Jan/25 3:09 PM
+,No Validation for Negative Rate Values in Edit Mode of Journal Entry,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,30/Dec/24 4:37 PM,12/Jan/25 3:09 PM
+,Attachment Still Appears After Clicking Cancel in Journal Entry Add Mode,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,30/Dec/24 4:24 PM,12/Jan/25 3:09 PM
+,"(SP20):Customer Definition List View Screen, The Bug of Export Data With Filtered data",Maha.muhammed,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,30/Dec/24 2:52 PM,12/Jan/25 3:09 PM
+,(SP20):The Message of Deleting The Customer Category Using in Transaction Should be Descriptive ,Maha.muhammed,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,30/Dec/24 2:43 PM,12/Jan/25 3:09 PM
+,(SP20): Save Button Not Functioning in Warehouse Edit Screen,Mostafa Elbagory,Mohamed Said,4,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,30/Dec/24 2:38 PM,03/Mar/25 4:27 PM
+,(SP20):Customer Category Name Field Accept More Than 50 Characters,mohamed Nabil,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,30/Dec/24 2:27 PM,03/Mar/25 1:18 AM
+,(SP20):Customer Category Search Doesn't Work With All Columns,Mohamed Magdy,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,30/Dec/24 2:23 PM,03/Mar/25 1:22 AM
+,"(SP20):Customer Category List View Screen, The Bug of Export Data With Filtered data",Maha.muhammed,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,30/Dec/24 2:00 PM,03/Mar/25 1:57 AM
+,Duplicate accounts with the same details should not be allowed.,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,28/Dec/24 6:17 PM,12/Jan/25 3:09 PM
+,Warning message for required fields in Opening Balance Journal Entry is unclear in both Arabic and English.,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,28/Dec/24 3:14 PM,12/Jan/25 3:10 PM
+,SP 20: Error Message Not Handled for Duplicate Serial in Stock Out,Hager Mostafa,Tassneem fathi,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,28/Dec/24 7:21 AM,12/Jan/25 3:10 PM
+,(SP20): Missing Column Filtering in Purchase Invoice,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,26/Dec/24 6:29 PM,13/Jan/25 12:02 PM
+,No Error Message for Required CR or DB in Edit Mode,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,26/Dec/24 5:22 PM,12/Jan/25 3:10 PM
+,(SP20): Incorrect Calculation of Debit and Credit Sums in Bank Account Statement,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,26/Dec/24 2:33 PM,26/Dec/24 2:34 PM
+,Sidebar Menu Not Responsive in Arabic Mode,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,26/Dec/24 1:40 PM,12/Jan/25 3:10 PM
+,(SP20)General: Unexpected Behavior in Show/Hide Column Functionality,Mahmoud Zaki,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,26/Dec/24 12:43 PM,23/Jan/25 12:46 PM
+,Current Date in Cost Center Report Does Not Align with Current Financial Year,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,26/Dec/24 12:43 PM,12/Jan/25 3:10 PM
+,Account Code Redirects to Account Statement Report with Incorrect Search Criteria,Mahmoud Zaki,Hossam Saad,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,25/Dec/24 3:19 PM,12/Jan/25 3:10 PM
+,Data in Print Sheet Does Not Match Real Data in List View,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,25/Dec/24 3:06 PM,12/Jan/25 3:10 PM
+,"(SP:20): In Vendor Opening Balance Add Screen, The System Should Display Warning Message if Amount of Journal Line is Not Equal The Sum Amount of Balance Column",sandra yasser,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,25/Dec/24 2:50 PM,05/Feb/25 6:02 PM
+,"(SP20): General: Descriptive Columns (e.g., Code, Name) Can Be Unchecked in Show/Hide Column Feature",Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,25/Dec/24 12:47 PM,25/Dec/24 4:26 PM
+,(SP20): Delete Buttons Enabled for Posted Payments in Payment In List View,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,25/Dec/24 12:01 PM,26/Dec/24 12:20 PM
+,(SP20): Date Picker Malfunction in Payment Out Screen,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,25/Dec/24 11:29 AM,26/Dec/24 12:26 PM
+,(SP20): Date Picker Malfunction in Payment In Screen,mohamed Nabil,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,25/Dec/24 11:28 AM,26/Dec/24 11:35 AM
+,SP20: Incorrect Calculations in UOM Screen,mohamed Nabil,Tassneem fathi,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,25/Dec/24 1:40 AM,23/Feb/25 5:37 PM
+, SP20: Missing Data in Exported Files,mohamed Nabil,Tassneem fathi,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,24/Dec/24 6:03 PM,12/Jan/25 3:10 PM
+,(SP20): Show/Hide Columns Functionality Not Displaying in Return Purchase Invoice Screen,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,24/Dec/24 5:53 PM,29/Dec/24 3:13 AM
+,(SP20): Missing Arabic Translation for Column Titles in Show/Hide Functionality,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,24/Dec/24 5:48 PM,24/Dec/24 5:48 PM
+,(SP20):  Incorrect Scrollbar Position in Arabic Language Mode,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,24/Dec/24 5:21 PM,24/Dec/24 5:21 PM
+,(SP:20): Vendor Definition List View: Export PDF Report without Text Formatting,Maha.muhammed,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,24/Dec/24 4:59 PM,12/Jan/25 3:10 PM
+,(SP20): Inappropriate Validation Message on Sequence Screen,Ahmed Ismail,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,24/Dec/24 2:23 PM,26/Dec/24 12:06 PM
+,(SP20): ERP Side Slider - Modules Not Actionable in Arabic Mode When The Side Slider is Collapsed,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,24/Dec/24 1:49 PM,26/Dec/24 12:25 PM
+,(SP20): Localization Issues in Payment Out  List Views,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,24/Dec/24 1:39 PM,24/Dec/24 1:42 PM
+,(SP20): Localization Issues in Payment In  List Views,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,24/Dec/24 1:38 PM,25/Dec/24 12:03 PM
+,(SP20): No Descriptive Message When Printing Without Data - Bank Account Statement Report,mohamed Nabil,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,24/Dec/24 12:58 PM,26/Dec/24 1:53 PM
+,(SP20): No Descriptive Message When Printing Without Data - Treasury Statement Report,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,24/Dec/24 12:56 PM,26/Dec/24 2:57 PM
+,(SP20): Handle Buttons Design in Vendor Category Add & Edit screens.,Maha.muhammed,Yassmin,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,24/Dec/24 12:48 PM,29/Jan/25 2:14 PM
+,(SP20): Bank Definition Edit Screen Does Not Display Actual Balance,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,24/Dec/24 12:32 PM,26/Dec/24 10:57 AM
+,(SP20): Treasury Related Currency Not Displayed in Treasury Statements,mohamed Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,24/Dec/24 11:28 AM,26/Dec/24 2:41 PM
+,(SP20): Missing Translations in App Selection Dialog,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,23/Dec/24 6:59 PM,23/Dec/24 6:59 PM
+,Localization Issue as Date Field Dropdown Misaligned in Journal Entry List View,Mahmoud Zaki,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,23/Dec/24 6:56 PM,12/Jan/25 3:16 PM
+,(SP20): Export Report Not Applying Filters in Payment In,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",In Progress,23/Dec/24 5:37 PM,24/Dec/24 8:50 PM
+,(SP20): View and Edit Buttons Enabled for Posted Payments Out List View,mohamed Nabil,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,23/Dec/24 5:07 PM,26/Dec/24 12:24 PM
+,(SP20): Incorrect Data Displayed in Payment Method List View Paginator,Amr Yousry,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,22/Dec/24 5:40 PM,26/Dec/24 11:11 AM
+,(SP20): Payment Method Deletion Allowed Despite Existing Transactions,Amr Yousry,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,22/Dec/24 5:06 PM,26/Dec/24 12:36 PM
+,(SP20): Incorrect Icon Button Order in Treasury Definition List View,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,22/Dec/24 4:53 PM,25/Dec/24 3:52 PM
+,(Sp20):  Incorrect Icon Button Order in Payment Term List View,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,22/Dec/24 4:51 PM,26/Dec/24 11:00 AM
+,(SP20)Payment Term: Export Button not Actionable,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,22/Dec/24 4:19 PM,23/Jan/25 2:11 PM
+,(SP20): Opening Balance Filter in Treasury Definition List View Displays Actual Balance Column,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,22/Dec/24 3:27 PM,25/Dec/24 3:52 PM
+,(SP20):  Incorrect Actual Balance Displayed in Treasury Definition,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,22/Dec/24 2:59 PM,22/Dec/24 2:59 PM
+,(SP20): Padding Issue in Treasury Definition Confirmation Dialog,mohamed Nabil,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,22/Dec/24 1:21 PM,25/Dec/24 3:50 PM
+,(SP20): Company Activation Status Not Retained,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 3:18 PM,19/Dec/24 3:18 PM
+,(SP20): Branch Activation Status Not Retained in Branches List View,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 3:12 PM,19/Dec/24 3:12 PM
+,(SP20): Company Name Text Overflows in Manage Companies List View,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 3:01 PM,19/Dec/24 3:02 PM
+,(SP20): Missing Navigation Menu Link in Edit Company Menu to Manage Companies List View,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 2:52 PM,19/Dec/24 2:52 PM
+,(SP20): Export Functionality Not Working in Company Branches List View,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 2:42 PM,19/Dec/24 2:42 PM
+,(Sp20): Unable to Save New Branch in Edit Company Screen,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 2:18 PM,19/Dec/24 2:19 PM
+,(SP20): Missing Column Sorting in Manage Companies List View,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 2:01 PM,19/Dec/24 2:01 PM
+,(Sp20): Export Button in Manage Companies List View Fails to Export,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 1:56 PM,19/Dec/24 1:56 PM
+,(SP20): Inappropriate Error Screen for Unlinked Microsoft Account Login,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 1:02 PM,19/Dec/24 1:03 PM
+,(SP20): Inappropriate Error Screen for Unlinked Google Account Login,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 12:57 PM,22/Dec/24 7:15 PM
+,"(Sp20): UI Issues in Fonts, Spacing, and Language Directionality in Login Screen",Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 12:44 PM,19/Dec/24 1:03 PM
+,(SP20):Design Issues in the New Login Screen of Microtec ERP,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,19/Dec/24 12:33 PM,19/Dec/24 1:03 PM
+,(SP20): Browser Refresh Required to Load Business Owner Home Screen After Successful Login,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,18/Dec/24 6:52 PM,18/Dec/24 6:54 PM
+,(SP20): Multiple Browser Refreshes Required to Launch Business Owner Login Screen,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,18/Dec/24 6:51 PM,18/Dec/24 6:54 PM
+,(Sp20): Missing Navigation Link to Manage Companies List View in Edit Company Menu,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,18/Dec/24 4:53 PM,18/Dec/24 4:54 PM
+,(SP20): Missing Required Validation Message for Subsidiary Field in Add New Company Dialog,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,18/Dec/24 4:05 PM,18/Dec/24 4:05 PM
+,"(SP20) Add Company Screen: Missing Required Validation for ""Country"" and ""Currency"" Drop-Down Fields",Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,18/Dec/24 2:50 PM,18/Dec/24 2:50 PM
+,General Settings: Large Padding in Text Menu After Closing Left Sidebar,Maha.muhammed,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,16/Dec/24 5:51 PM,12/Jan/25 3:12 PM
+,(SP19): Numeric Counter Not Functional in Bulk Update Price Policy Dialog,AhmedSaad15,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,12/Dec/24 5:50 PM,18/Dec/24 4:34 PM
+,(SP19): Unformatted Text in Customer Category PDF Exported Report,AhmedSaad15,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,11/Dec/24 1:35 PM,05/Jan/25 2:56 PM
+,(SP19): Incorrect Total Balance Calculation in Customer Opening Balance Edit Screen,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,10/Dec/24 3:50 PM,17/Feb/25 7:35 PM
+,(SP19):  Incorrect Total Balance Calculation in Customer Opening Balance View Screen,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,10/Dec/24 3:45 PM,17/Feb/25 7:38 PM
+,(SP19): Mismatch in Amount Value Between View and Edit Screens in Customer Opening Balance,AhmedSaad15,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,10/Dec/24 3:09 PM,05/Jan/25 4:18 PM
+,(SP19): Customer Code Dropdown Displays Incorrect Data in Customer Definition Opening Balance Add Screen,Mohamed Magdy,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Testing,10/Dec/24 2:49 PM,12/Jan/25 3:13 PM
+,(Sp19): Poor Formatting in Exported PDF of Customer Definition Screen,AhmedSaad15,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,10/Dec/24 1:33 PM,18/Dec/24 4:27 PM
+,(Sp19): Exported Data in Customer Definition List View Ignores Applied Filters or Search,AhmedSaad15,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,10/Dec/24 1:28 PM,05/Jan/25 4:27 PM
+,SP19-Stock Out: Subtotal Not Updating When Changing Cost in Stock In Add Screen,mohamed Nabil,Hossam Saad,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",Code review,04/Dec/24 4:09 PM,12/Jan/25 3:11 PM
+,(SP19):Network Error (500) on Uploading Attachment for New Employee,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,04/Dec/24 12:26 PM,04/Dec/24 2:08 PM
+,(SP19)-Stock out: Exported PDF Sheet Missing Data in Status Column,Maha.muhammed,Hossam Saad,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Dec/24 7:00 PM,12/Jan/25 3:02 PM
+,(Sp18):Exported Purchase Invoice PDF Report Contains Unformatted Text,Maha.muhammed,Mohamed Said,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Dec/24 6:10 PM,30/Jan/25 4:47 PM
+,(Sp18):Payment Term and Reference Fields Display Default Text When No Values Are Provided in Purchase Invoice View,Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Dec/24 3:15 PM,02/Dec/24 3:15 PM
+,Sprint 19 - Purchase Invoice Screen: Missing Fields in Purchase Module,mohamed Nabil,Tassneem fathi,3,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Dec/24 3:10 PM,12/Jan/25 3:02 PM
+,"(Sp18): ""Scan Barcode"" Button Not Actionable in Purchase Invoice Add Screen",Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Dec/24 2:22 PM,02/Dec/24 6:11 PM
+,"(Sp18): ""Import Item"" Button Not Actionable in Purchase Invoice Add Screen",Maha.muhammed,Mohamed Said,2,"
+
+Environment: Not specified
+
+Original Issue: https://microtec.atlassian.net/browse/undefined",To Do,02/Dec/24 2:21 PM,02/Dec/24 6:11 PM

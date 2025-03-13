@@ -25,7 +25,7 @@ _ Investigate _why the request is returning a 400 error* even though the report 
 _ Ensure that the _API request for printing_ is correctly formatted and _does not contain invalid parameters*.
 _ If the request is expected to fail under certain conditions, show a _clear validation message* to the user instead of silently logging an error.
 __Severity:*
-? _Medium_ ? The report is still downloaded, but the error might indicate deeper API or validation issues that could cause failures in the future.
+? _Medium_ � The report is still downloaded, but the error might indicate deeper API or validation issues that could cause failures in the future.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -62,7 +62,7 @@ __Suggested Fix:*
 _ Implement a _filter requirement_, ensuring that users _must select at least one filter* before retrieving report data.
 _ Display an _informational message*: _""Please select filters before generating the report.""_
 __Severity:*
-? _Medium_ ? Could lead to unnecessary data exposure and performance inefficiencies.
+? _Medium_ � Could lead to unnecessary data exposure and performance inefficiencies.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -104,7 +104,7 @@ _ Implement _two separate date input fields_ for selecting _From Date_ and _To D
 _ Ensure that the validation logic _properly checks the selected date range*.
 _ Remove unnecessary _required validation errors* that occur even when valid dates are selected.
 __Severity:*
-? _Medium_ ? Causes usability issues and may prevent users from generating reports properly.
+? _Medium_ � Causes usability issues and may prevent users from generating reports properly.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -148,7 +148,7 @@ _ Investigate the _root cause* of the 400 status code error in the API request.
 _ Display a _clear error message* if there is an issue instead of logging it silently.
 _ If the error is _non-impactful_, handle it _gracefully* in the system to avoid misleading logs.
 __Severity:*
-? _Medium_ ? Functionality is working, but the error could indicate an underlying issue.
+? _Medium_ � Functionality is working, but the error could indicate an underlying issue.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -192,7 +192,7 @@ _ Replace the _single date input field_ with _two separate date pickers* for ""F
 * Ensure the validation logic correctly checks whether both dates are selected.
 _ Prevent _invalid date ranges* (e.g., ""To Date"" should not be earlier than ""From Date"").
 __Severity:*
-? _High_ ? Affects usability and accuracy of financial reports.
+? _High_ � Affects usability and accuracy of financial reports.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -233,7 +233,7 @@ _ Ensure the _validation check_ properly detects that a date is selected _after 
 _ Remove any _unnecessary validation triggers* when the user selects a date.
 _ Test the date picker behavior to ensure _consistent input handling*.
 __Severity:*
-? _Medium_ ? Causes _user confusion_ but does not block form submission.
+? _Medium_ � Causes _user confusion_ but does not block form submission.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -275,7 +275,7 @@ _ _Implement validation* to prevent the print action if required fields are empt
 _ Display a _clear informational message* before attempting to send the request.
 _ Ensure the API request _does not include invalid parameters* when no data is provided.
 __Severity:*
-?? _High_ ? The issue affects core functionality, causing errors and a poor user experience.
+?? _High_ � The issue affects core functionality, causing errors and a poor user experience.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -315,7 +315,7 @@ _ Implement _validation before printing*, preventing the action if required filt
 _ Display an _informational message_ when the user clicks _Print Summary* without selecting filters.
 * Ensure the backend does not process empty or invalid summary report requests.
 __Severity:*
-?? _Medium_ ? This issue affects report accuracy and user experience but does not cause system crashes.
+?? _Medium_ � This issue affects report accuracy and user experience but does not cause system crashes.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -355,7 +355,7 @@ _ Implement _validation before printing*, preventing the action if filters are m
 _ Display an _informational message* when the user clicks Print without selecting required filters.
 * Ensure the backend does not process empty or invalid report requests.
 __Severity:*
-?? _Medium_ ? This issue affects report accuracy and user experience but does not cause system crashes.
+?? _Medium_ � This issue affects report accuracy and user experience but does not cause system crashes.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -407,7 +407,7 @@ Browser: Chrome, Edge
 No Attachments"
 Bug,(Sp25): Treasury Statement Print Functionality Fails with 500 Server Error,Maha.muhammed,Mohamed Said,4,To Do,2025-03-11T10:02:00.000Z,2025-03-11T10:04:00.000Z,"### Description
 __Title:*
-Treasury Statement Print Functionality Fails ? No Report Printed & 500 Server Error
+Treasury Statement Print Functionality Fails � No Report Printed & 500 Server Error
 __Description:*
 When the user attempts to print the _Treasury Statement_, the system fails to generate any report. Upon inspecting the _Network Log (Developer Tools ? Network Tab)_, the print API request returns a _500 Internal Server Error_, indicating a backend failure. This issue prevents users from retrieving Treasury Statement reports, impacting financial operations.
 __Preconditions:*
@@ -435,7 +435,7 @@ _ Check if the API is receiving _correct request parameters*.
 _ Implement _error handling* to show a meaningful message instead of failing silently.
 * Ensure the print API properly processes Treasury Statement data.
 __Severity:*
-?? _Critical_ ? The issue _completely blocks_ users from printing the Treasury Statement, impacting financial reporting.
+?? _Critical_ � The issue _completely blocks_ users from printing the Treasury Statement, impacting financial reporting.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -480,7 +480,7 @@ _ Investigate why an _invalid API request* is being made when clicking the Print
 * Prevent unnecessary or duplicate API calls that may lead to errors.
 _ Implement error handling to _log and ignore failed requests* if they do not impact functionality.
 __Severity:*
-?? _Medium_ ? The report successfully downloads, but the error may indicate _underlying issues_ that could cause future failures.
+?? _Medium_ � The report successfully downloads, but the error may indicate _underlying issues_ that could cause future failures.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -497,7 +497,7 @@ Browser: Chrome, Edge
 No Attachments"
 Bug,(SP25): Payment Out Print Action Fails Due to 404 API Error,Maha.muhammed,Mohamed Said,3,To Do,2025-03-11T00:16:00.000Z,2025-03-11T10:28:00.000Z,"### Description
 __Title:*
-Payment Out Print Action Fails ? API Returns 404 Not Found
+Payment Out Print Action Fails � API Returns 404 Not Found
 __Description:*
 When users attempt to print a _Payment Out_ transaction from the _Payment Out List View_, the system does not respond, and no action is performed. Upon investigation in the browser _Developer Tools (Network Tab)_, the API request for printing returns a _404 Not Found_ error, indicating a broken API endpoint or incorrect URL mapping.
 __Preconditions:*
@@ -524,7 +524,7 @@ _ Ensure that the _correct URL* is mapped in the backend API.
 _ Implement _error handling* to inform the user when the print action fails.
 * Add logging to capture and report failed API requests for debugging purposes.
 __Severity:*
-?? _Critical_ ? This issue prevents users from printing Payment Out transactions, which may impact financial operations and reporting.
+?? _Critical_ � This issue prevents users from printing Payment Out transactions, which may impact financial operations and reporting.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -570,7 +570,7 @@ _ Implement _validation checks* on the frontend before making the API request.
 * Ensure that the API endpoint is correctly configured to handle the request.
 _ Display an _informative error message* when the API request fails.
 __Severity:*
-?? _Critical_ ? This issue prevents users from generating essential financial reports, impacting financial analysis and business operations.
+?? _Critical_ � This issue prevents users from generating essential financial reports, impacting financial analysis and business operations.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -616,7 +616,7 @@ _ Implement _validation checks* on the frontend before making the API request.
 * Ensure that the API endpoint is correctly configured to handle the request.
 _ Display an _informative error message* when the API request fails.
 __Severity:*
-?? _Critical_ ? This issue prevents users from generating financial reports, impacting decision-making and financial analysis.
+?? _Critical_ � This issue prevents users from generating financial reports, impacting decision-making and financial analysis.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -662,7 +662,7 @@ _ Implement _error handling* to display an informative message when the API requ
 _ Ensure _proper testing* of API requests before deployment to avoid similar issues.
 _ Verify if other _financial reports* using API calls also have incorrect URLs.
 __Severity:*
-?? _Critical_ ? Users are unable to generate or print account statement reports, affecting financial reporting and auditing.
+?? _Critical_ � Users are unable to generate or print account statement reports, affecting financial reporting and auditing.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -709,7 +709,7 @@ _ Implement _error handling* to display an informative message when the API requ
 _ Validate the _API response* and ensure proper data mapping before rendering the report.
 * Test other date-based reports to verify if similar API request issues exist.
 __Severity:*
-?? _Critical_ ? This issue prevents users from generating essential cost center reports, impacting financial analysis and decision-making.
+?? _Critical_ � This issue prevents users from generating essential cost center reports, impacting financial analysis and decision-making.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -728,7 +728,7 @@ Bug,(SP25): Trial Balance Print Button Not Working,Maha.muhammed,Mohamed Said,3,
 __Title:*
 Trial Balance Print Button Does Not Function After Viewing the Report
 __Description:*
-On the _Trial Balance Report_ screen, after the user _inputs valid ""From"" and ""To"" dates_ within the financial period and clicks the _View_ button, the report is correctly displayed. However, when the user clicks the _Print_ button, _no action occurs_?the print preview does not open, and no error message is shown.
+On the _Trial Balance Report_ screen, after the user _inputs valid ""From"" and ""To"" dates_ within the financial period and clicks the _View_ button, the report is correctly displayed. However, when the user clicks the _Print_ button, _no action occurs_�the print preview does not open, and no error message is shown.
 __Preconditions:*
 _ The user is logged into the ERP system with access to the _Trial Balance Report* module.
 _ A valid _financial period* exists.
@@ -738,11 +738,11 @@ __Steps to Reproduce:*
 - Input a valid _From Date_ and _To Date_ within the financial period.
 - Click the _View_ button to generate the trial balance report.
 - Click the _Print_ button.
-- Observe that _nothing happens_?the print preview does not open.
+- Observe that _nothing happens_�the print preview does not open.
 - Choose accounts have balance
 - Click the _View_ button to generate the trial balance report.
 - Click the _Print_ button.
-- Observe that _nothing happens_?the print preview does not open.
+- Observe that _nothing happens_�the print preview does not open.
 __Expected Result:*
 _ Clicking the _Print_ button should open the print preview for the _Trial Balance Report*.
 _ If an issue prevents printing, the system should display an _informative error message* instead of failing silently.
@@ -788,7 +788,7 @@ No Attachments"
 Bug,"(SP:24):Sales Invoice Add & Edit Screens, Missing The Validation of Deleting Item In Sales Invoice (Deleting Item Line Not Working).",Mohamed Fathy,Yassmin,2,Code review,2025-03-09T12:47:00.000Z,2025-03-11T12:04:00.000Z,"### Description
 When I delete the item, delete line is not working properly cause it is not calling the back-end API.
 _Expected Result:_ The Popup window should appear to the user to ask if he already want to delete this item.
-_Actual Result:_ The Popup window doesn?t appear.
+_Actual Result:_ The Popup window doesn�t appear.
 
 ### Environment
 loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
@@ -941,7 +941,7 @@ _ Implement a _validation check* before generating the print view.
 _ Display a _clear message* when no data is available.
 _ Disable the _Print button* until at least one filter is applied or relevant data is retrieved.
 __Severity:*
-?? _Medium_ ? This issue affects user experience and may cause confusion, leading to unnecessary troubleshooting.
+?? _Medium_ � This issue affects user experience and may cause confusion, leading to unnecessary troubleshooting.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -979,7 +979,7 @@ _ Remove the _duplicate Print button*.
 _ If different print functionalities are needed, label them clearly (e.g., _Print Detailed Report_ vs. _Print Summary Report*).
 * Conduct a UI review to ensure no similar redundancies exist in other modules.
 __Severity:*
-?? _Medium_ ? While this issue does not impact functionality, it leads to UI confusion and unnecessary redundancy.
+?? _Medium_ � While this issue does not impact functionality, it leads to UI confusion and unnecessary redundancy.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -1050,7 +1050,7 @@ _ Modify the query logic to _include reconciled invoices_ in the _Select Invoice
 _ Ensure that the _report correctly fetches and displays* reconciliation details.
 _ Validate that the system retrieves _both fully and partially reconciled invoices* for the selected customer.
 __Severity:*
-?? _High_ ? This issue impacts financial reporting and reconciliation tracking, leading to incorrect financial records.
+?? _High_ � This issue impacts financial reporting and reconciliation tracking, leading to incorrect financial records.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -1128,7 +1128,7 @@ No Attachments"
 Bug,"(SP:24):Chart Of Account Edit Screen, The Account Type Can be Changed When The Account Has Transaction.",Nader Moustafa,Yassmin,2,In Progress,2025-03-02T15:04:00.000Z,2025-03-04T10:29:00.000Z,"### Description
 When the account has transactions and I want to change the account type,
 _Expected Result:_ The Account Type Can be Changed When The Account Has Transaction.
-_Actual Result:_ The account type didn?t change because it has transactions.
+_Actual Result:_ The account type didn�t change because it has transactions.
 
 ### Environment
 loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
@@ -1212,7 +1212,7 @@ _ Display a clear _error message* when a negative value is entered.
 * Prevent transactions with negative amounts from being saved or posted.
 _ Conduct a _system-wide audit* to check if similar validation issues exist in other financial modules.
 __Severity:*
-?? _Critical_ ? This issue impacts financial accuracy, reconciliation, and balance calculations, leading to serious financial discrepancies.
+?? _Critical_ � This issue impacts financial accuracy, reconciliation, and balance calculations, leading to serious financial discrepancies.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -1243,9 +1243,9 @@ Subdomain: [https://testdo.microtecdev.com|https://testdo.microtecdev.com/]
 ### Attachments
 No Attachments"
 Bug,"(SP:24): Fund Transfer Add Screen, Missing Error Message When Post Button Doesn't Work Without Selecting Fund Transfer Contra Account.",Esraa.kamel,Yassmin,2,To Do,2025-03-02T12:29:00.000Z,2025-03-06T11:21:00.000Z,"### Description
-When I click the post button without selecting the ?Fund Transfer Contra Account? from the general setting screen in finance module,
-_Expected Result:_ The error message should appear as ?Failed To Post, Please Set The Fund Transfer Contra Account Form General Setting Screen?
-_Actual Result:_ The error message didn?t appear.
+When I click the post button without selecting the �Fund Transfer Contra Account� from the general setting screen in finance module,
+_Expected Result:_ The error message should appear as �Failed To Post, Please Set The Fund Transfer Contra Account Form General Setting Screen�
+_Actual Result:_ The error message didn�t appear.
 
 ### Environment
 loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
@@ -1370,7 +1370,7 @@ _ Implement _debouncing* to prevent excessive search requests.
 _ Ensure that the search function considers both _account name_ and _account code*.
 * Display an appropriate message when no matching results are found.
 __Severity:*
-_High_ ? The inability to search for accounts across multiple modules significantly impacts user workflow and system efficiency.
+_High_ � The inability to search for accounts across multiple modules significantly impacts user workflow and system efficiency.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -1414,7 +1414,7 @@ _ Implement _debouncing* to prevent excessive search requests.
 _ Ensure that the search function considers both _account name_ and _account code*.
 * Display an appropriate message when no matching results are found.
 __Severity:*
-_High_ ? Users are unable to efficiently select an account, which directly impacts their ability to complete Bank Definitions.
+_High_ � Users are unable to efficiently select an account, which directly impacts their ability to complete Bank Definitions.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -1458,7 +1458,7 @@ _ Implement _debouncing* to prevent excessive search requests.
 _ Ensure that the search function considers both _account name_ and _account code*.
 * Display an appropriate message when no matching results are found.
 __Severity:*
-_High_ ? Users are unable to efficiently select an account, which directly impacts their ability to complete Treasury Definitions.
+_High_ � Users are unable to efficiently select an account, which directly impacts their ability to complete Treasury Definitions.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -1551,10 +1551,10 @@ __Impact:*
 * This issue may lead to user frustration and errors in navigating the system.
 ----
 __Severity:*
-_Medium_ ? This is a usability issue that affects the user experience but does not prevent core functionality from working.
+_Medium_ � This is a usability issue that affects the user experience but does not prevent core functionality from working.
 ----
 __Priority:*
-_High_ ? The issues need to be addressed to improve usability and align with the application's design standards.
+_High_ � The issues need to be addressed to improve usability and align with the application's design standards.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -1620,10 +1620,10 @@ __Impact:*
 * This issue affects the user experience and may result in incorrect data entry or abandoned transactions.
 ----
 __Severity:*
-_Medium_ ? This is a usability issue that impacts the user experience but does not prevent the core functionality from working.
+_Medium_ � This is a usability issue that impacts the user experience but does not prevent the core functionality from working.
 ----
 __Priority:*
-_High_ ? The error message needs to be improved to ensure users can complete their tasks efficiently.
+_High_ � The error message needs to be improved to ensure users can complete their tasks efficiently.
 ----
 __Attachments:*
 - Screenshot of the non-descriptive error message in the pop-up.
@@ -1711,10 +1711,10 @@ __Impact:*
 * This issue disrupts the workflow of the Finance team and may lead to delays in financial operations.
 ----
 __Severity:*
-_High_ ? This is a critical functionality issue that prevents users from performing essential financial transactions.
+_High_ � This is a critical functionality issue that prevents users from performing essential financial transactions.
 ----
 __Priority:*
-_Urgent_ ? This issue needs immediate attention as it affects core functionality.
+_Urgent_ � This issue needs immediate attention as it affects core functionality.
 ----
 __Attachments:*
 - Screenshot of the error message in the network log.
@@ -1786,7 +1786,7 @@ _ Automatically _reset all fields* and update the invoice list to reflect the re
 _ Ensure that reconciled invoices are _removed from the pending list*.
 * Provide a clear confirmation message indicating that the process is complete and that no further action is required.
 __Severity:*
-_Medium-High_ ? The issue does not prevent reconciliation but causes confusion and inefficiency for users.
+_Medium-High_ � The issue does not prevent reconciliation but causes confusion and inefficiency for users.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -1832,7 +1832,7 @@ _ Implement a _confirmation popup* to confirm the cancellation of actions.
 * Ensure that unsaved changes are discarded, and the original state is restored.
 _ Validate error logs to check if there are _JavaScript errors or missing event listeners*.
 __Severity:*
-_High_ ? Prevents users from efficiently managing reconciliations, leading to potential financial inaccuracies.
+_High_ � Prevents users from efficiently managing reconciliations, leading to potential financial inaccuracies.
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -1929,7 +1929,7 @@ _Steps to Reproduce:_
 - Observe that each keystroke triggers a request without waiting for a pause in typing.
 ----
 _Expected Result:_
-_ The search functionality should implement _debouncing*, meaning it waits for a short delay (e.g., 500?800ms) after the user stops typing before sending a request.
+_ The search functionality should implement _debouncing*, meaning it waits for a short delay (e.g., 500�800ms) after the user stops typing before sending a request.
 * This reduces unnecessary server requests and improves performance.
 ----
 _Actual Result:_
@@ -1937,7 +1937,7 @@ _Actual Result:_
 * This causes excessive API calls, leading to increased server load and potential performance degradation.
 ----
 _Suggested Fix:_
-_ Implement _Debouncing* in the search functionality to delay API requests until the user has stopped typing for a defined period (e.g., 500?800ms).
+_ Implement _Debouncing* in the search functionality to delay API requests until the user has stopped typing for a defined period (e.g., 500�800ms).
 
 ### Environment
 [semob83188@maonyn.com|mailto:semob83188@maonyn.com]
@@ -1991,6 +1991,17 @@ muhammed.saeed@microtec.com.eg
 [View in Jira](https://microtec.atlassian.net/browse/ME-4124)
 
 ### Attachments
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
+https://microtec.atlassian.net/rest/api/3/attachment/content/16077
 https://microtec.atlassian.net/rest/api/3/attachment/content/16077"
 Bug,(Sp21): Unable to Save Return Purchase Invoice Due to Unposted Transaction,Abanoub.Nabil,Mohamed Said,3,To Do,2025-02-17T15:52:00.000Z,2025-03-03T15:03:00.000Z,"### Description
 __Title: Unable to Save Return Purchase Invoice Due to Unposted Transaction*
@@ -2166,7 +2177,7 @@ Browser: Chrome, Edge
 No Attachments"
 Bug,SP21:  Arabic Text Formatting and Localization Issues in Admin Portal CMS Text Editor,Maha.muhammed,Mohamed Said,2,To Do,2025-02-13T15:49:00.000Z,2025-02-13T15:51:00.000Z,"### Description
 __Title: Arabic Text Formatting and Localization Issues in Admin Portal Text Editor*
-__Module:* Admin Portal ? CMS Text Editor
+__Module:* Admin Portal � CMS Text Editor
 __Severity:_ ?? _High*
 __Priority:_ ?? _Medium*
 __Environment:*
@@ -2220,16 +2231,16 @@ undefined
 ### Attachments
 undefined"
 Bug,"(SP:22): Vendor Statement Report Screen, Missing Required Message For All Data.",Abanoub.Nabil,Yassmin,2,To Do,2025-02-06T14:45:00.000Z,2025-03-04T10:19:00.000Z,"### Description
-""- Select Vendor , From Date , To Date Fields Should Ended with (*).
+No description available.
 
 ### Environment
-Not Provided
+undefined
 
 ### Original Issue
 [View in Jira](https://microtec.atlassian.net/browse/ME-3953)
 
 ### Attachments
-No Attachments"
+undefined"
 Bug,"(SP:22): Vendor Opening Balance Screen, The Data of Distributed Popup Deleted When I Click The Discard Button. ",Mohamed Fathy,Yassmin,2,To Do,2025-02-05T16:41:00.000Z,2025-03-09T14:00:00.000Z,"### Description
 No description available.
 
@@ -2295,9 +2306,7 @@ Not Provided
 [View in Jira](https://microtec.atlassian.net/browse/ME-3917)
 
 ### Attachments
-https://testdo.microtecdev.com|https://testdo.microtecdev.com/]"",Yassmin,,,,63ecd2cf333d0e2ec16edfc9,,,,,,,,,,,,,,,,,ME-3912,,,,,,,,,05/Feb/25
-https://microtec.atlassian.net/rest/api/3/attachment/content/15676,,,,,,,,com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@13133629,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0|i01hnf:,,,,,,,,,,ME
-https://microtec.atlassian.net/rest/api/3/attachment/content/15675"
+No Attachments"
 Bug,"(SP:22):Payment Reconciliation Screen, The Required Message of Select Customer or Payment.",mohamed Nabil,Yassmin,2,In Progress,2025-02-04T15:37:00.000Z,2025-02-23T15:37:00.000Z,"### Description
 No description available.
 
@@ -2442,16 +2451,16 @@ undefined
 ### Attachments
 undefined"
 Bug,"(SP:22): Purchase Invoice Add Screen, The ""Empty"" Word Appears in The List When I Open The Advanced Search.",mohamed Nabil,Yassmin,2,To Do,2025-02-03T00:45:00.000Z,2025-03-02T23:13:00.000Z,"### Description
-""When I open the advanced search of vendor name then close it and open the list
+No description available.
 
 ### Environment
-Not Provided
+undefined
 
 ### Original Issue
 [View in Jira](https://microtec.atlassian.net/browse/ME-3883)
 
 ### Attachments
-No Attachments"
+undefined"
 Bug,"(SP:22): Purchase Invoice Add Screen, Undescriptive Error Message of required set tracking.",mohamed Nabil,Yassmin,2,To Do,2025-02-03T00:35:00.000Z,2025-02-23T15:37:00.000Z,"### Description
 No description available.
 
@@ -2665,13 +2674,13 @@ Bug,"(SP:22): Vendor Definition View Screen, The Design of Cancel Button Should 
 No description available.
 
 ### Environment
-""loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+undefined
 
 ### Original Issue
 [View in Jira](https://microtec.atlassian.net/browse/ME-3836)
 
 ### Attachments
-No Attachments"
+undefined"
 Bug,"(SP21): ""Forget Password"" Link is Missing in the Login Screen",Eslam Amgad,Mohamed Said,3,Testing,2025-01-29T14:34:00.000Z,2025-03-03T14:49:00.000Z,"### Description
 No description available.
 
@@ -2687,13 +2696,13 @@ Bug,"(SP:22): Vendor Category List View, The Show & Hide Column Icon Doesn't Wor
 No description available.
 
 ### Environment
-""loginUrl:[https://intmicrotec.neat-url.com:2006/bussiness-owners/|https://intmicrotec.neat-url.com:2006/bussiness-owners/]
+undefined
 
 ### Original Issue
 [View in Jira](https://microtec.atlassian.net/browse/ME-3830)
 
 ### Attachments
-No Attachments"
+undefined"
 Bug,"(SP21): ""Fill Items Data with Excel"" functionality not populating items in the ""Add Price Policy"" screen.",Abanoub.Nabil,Mohamed Said,3,To Do,2025-01-28T16:22:00.000Z,2025-03-03T14:48:00.000Z,"### Description
 No description available.
 

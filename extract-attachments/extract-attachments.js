@@ -1,8 +1,8 @@
 const fs = require('fs');
 const csv = require('csv-parser');
 
-const inputFile = 'extract-attachments/2.csv';  // Change this to your actual CSV file
-const outputFile = 'attachment-links.txt'; // Output file for extracted links
+const inputFile = '';  // Change this to your actual CSV file
+const outputFile = ''; // Output file for extracted links
 
 let attachmentColumns = []; // To store column names that contain "Attachment"
 const attachmentLinks = [];
